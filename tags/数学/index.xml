@@ -1,0 +1,16 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>数学 - 标签 - afeng滴blog</title>
+        <link>http://afeng616.github.io/tags/%E6%95%B0%E5%AD%A6/</link>
+        <description>数学 - 标签 - afeng滴blog</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>afeng616@gmail.com (afeng)</managingEditor>
+            <webMaster>afeng616@gmail.com (afeng)</webMaster><lastBuildDate>Sun, 14 May 2023 20:09:03 &#43;0800</lastBuildDate><atom:link href="http://afeng616.github.io/tags/%E6%95%B0%E5%AD%A6/" rel="self" type="application/rss+xml" /><item>
+    <title>混合牛顿法</title>
+    <link>http://afeng616.github.io/newton_hybrid/</link>
+    <pubDate>Sun, 14 May 2023 20:09:03 &#43;0800</pubDate>
+    <author>afeng</author>
+    <guid>http://afeng616.github.io/newton_hybrid/</guid>
+    <description><![CDATA[混合牛顿法。]]></description>
+</item>
+</channel>
+</rss>

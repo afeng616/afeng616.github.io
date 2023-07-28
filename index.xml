@@ -14,5 +14,77 @@
     <guid>http://afeng616.github.io/mydll/</guid>
     <description><![CDATA[分别使用静态调用（隐式链接）和动态调用（显式链接）的方式调用dll]]></description>
 </item>
+<item>
+    <title>Pytorch测试GPU是否可用</title>
+    <link>http://afeng616.github.io/pytorch-gpu-test/</link>
+    <pubDate>Sat, 03 Jun 2023 15:54:33 &#43;0800</pubDate>
+    <author>afeng</author>
+    <guid>http://afeng616.github.io/pytorch-gpu-test/</guid>
+    <description><![CDATA[Pytorch测试GPU是否可用。]]></description>
+</item>
+<item>
+    <title>关于近日使用京东读书APP的一些体验感受</title>
+    <link>http://afeng616.github.io/jd_reader/</link>
+    <pubDate>Sat, 27 May 2023 10:17:59 &#43;0800</pubDate>
+    <author>afeng</author>
+    <guid>http://afeng616.github.io/jd_reader/</guid>
+    <description><![CDATA[关于近日使用京东读书APP的一些体验感受。]]></description>
+</item>
+<item>
+    <title>将第三方手柄输出映射到鼠标上</title>
+    <link>http://afeng616.github.io/diy-gamepad/</link>
+    <pubDate>Sun, 21 May 2023 12:01:49 &#43;0800</pubDate>
+    <author>afeng</author>
+    <guid>http://afeng616.github.io/diy-gamepad/</guid>
+    <description><![CDATA[将第三方手柄输出映射到鼠标上。]]></description>
+</item>
+<item>
+    <title>混合牛顿法</title>
+    <link>http://afeng616.github.io/newton_hybrid/</link>
+    <pubDate>Sun, 14 May 2023 20:09:03 &#43;0800</pubDate>
+    <author>afeng</author>
+    <guid>http://afeng616.github.io/newton_hybrid/</guid>
+    <description><![CDATA[混合牛顿法。]]></description>
+</item>
+<item>
+    <title>Blog Test</title>
+    <link>http://afeng616.github.io/blog-test/</link>
+    <pubDate>Fri, 12 May 2023 13:24:48 &#43;0800</pubDate>
+    <author>afeng</author>
+    <guid>http://afeng616.github.io/blog-test/</guid>
+    <description><![CDATA[md渲染测试]]></description>
+</item>
+<item>
+    <title>快手取关脚本</title>
+    <link>http://afeng616.github.io/kuaishou-unsubscript/</link>
+    <pubDate>Mon, 04 Apr 2022 23:41:20 &#43;0800</pubDate>
+    <author>afeng</author>
+    <guid>http://afeng616.github.io/kuaishou-unsubscript/</guid>
+    <description><![CDATA[快手取关脚本。]]></description>
+</item>
+<item>
+    <title>Twitter取关脚本</title>
+    <link>http://afeng616.github.io/twitter-unsubscript/</link>
+    <pubDate>Sun, 03 Apr 2022 23:32:44 &#43;0800</pubDate>
+    <author>afeng</author>
+    <guid>http://afeng616.github.io/twitter-unsubscript/</guid>
+    <description><![CDATA[Twitter取关脚本。]]></description>
+</item>
+<item>
+    <title>删除设备和驱动器中的图标</title>
+    <link>http://afeng616.github.io/delete-win-driver-logo/</link>
+    <pubDate>Fri, 01 Apr 2022 19:06:52 &#43;0800</pubDate>
+    <author>afeng</author>
+    <guid>http://afeng616.github.io/delete-win-driver-logo/</guid>
+    <description><![CDATA[删除设备和驱动器中的图标。]]></description>
+</item>
+<item>
+    <title>计算机网络参考模型</title>
+    <link>http://afeng616.github.io/computer-network-osi/</link>
+    <pubDate>Tue, 15 Mar 2022 23:27:37 &#43;0800</pubDate>
+    <author>afeng</author>
+    <guid>http://afeng616.github.io/computer-network-osi/</guid>
+    <description><![CDATA[计算机网络参考模型。]]></description>
+</item>
 </channel>
 </rss>
