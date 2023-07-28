@@ -1,0 +1,9 @@
+<urlset
+    xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+    xmlns:xhtml="http://www.w3.org/1999/xhtml"
+    ><url>
+            <loc>http://afeng616.github.io/</loc><lastmod>2023-07-26T14:42:20&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>http://afeng616.github.io/mydll/</loc><lastmod>2023-07-26T14:42:20&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>http://afeng616.github.io/posts/</loc><lastmod>2023-07-26T14:42:20&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>http://afeng616.github.io/categories/</loc><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>http://afeng616.github.io/tags/</loc><changefreq>weekly</changefreq><priority>0.5</priority></url></urlset>

@@ -1,0 +1,40 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>笔记 - 分类 - afeng滴blog</title>
+        <link>https://afeng616.github.io/categories/%E7%AC%94%E8%AE%B0/</link>
+        <description>笔记 - 分类 - afeng滴blog</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>afeng616@gmail.com (afeng)</managingEditor>
+            <webMaster>afeng616@gmail.com (afeng)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sun, 14 May 2023 20:09:03 &#43;0800</lastBuildDate><atom:link href="https://afeng616.github.io/categories/%E7%AC%94%E8%AE%B0/" rel="self" type="application/rss+xml" /><item>
+    <title>混合牛顿法</title>
+    <link>https://afeng616.github.io/newton_hybrid/</link>
+    <pubDate>Sun, 14 May 2023 20:09:03 &#43;0800</pubDate>
+    <author>afeng</author>
+    <guid>https://afeng616.github.io/newton_hybrid/</guid>
+    <description><![CDATA[混合牛顿法说明]]></description>
+</item>
+<item>
+    <title>计算机网络参考模型</title>
+    <link>https://afeng616.github.io/computer-network-osi/</link>
+    <pubDate>Tue, 15 Mar 2022 23:27:37 &#43;0800</pubDate>
+    <author>afeng</author>
+    <guid>https://afeng616.github.io/computer-network-osi/</guid>
+    <description><![CDATA[计算机网络参考模型。]]></description>
+</item>
+<item>
+    <title>算法设计与分析——屈婉玲</title>
+    <link>https://afeng616.github.io/algorithm-design/</link>
+    <pubDate>Thu, 13 Jan 2022 22:49:03 &#43;0800</pubDate>
+    <author>afeng</author>
+    <guid>https://afeng616.github.io/algorithm-design/</guid>
+    <description><![CDATA[算法设计与分析（算法设计与分析——屈婉玲）笔记]]></description>
+</item>
+<item>
+    <title>重学操作系统</title>
+    <link>https://afeng616.github.io/relearn-os/</link>
+    <pubDate>Sun, 09 Jan 2022 20:31:16 &#43;0800</pubDate>
+    <author>afeng</author>
+    <guid>https://afeng616.github.io/relearn-os/</guid>
+    <description><![CDATA[重学操作系统。]]></description>
+</item>
+</channel>
+</rss>

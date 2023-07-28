@@ -1,0 +1,40 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>折腾 - 标签 - afeng滴blog</title>
+        <link>https://afeng616.github.io/tags/%E6%8A%98%E8%85%BE/</link>
+        <description>折腾 - 标签 - afeng滴blog</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>afeng616@gmail.com (afeng)</managingEditor>
+            <webMaster>afeng616@gmail.com (afeng)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sun, 21 May 2023 12:01:49 &#43;0800</lastBuildDate><atom:link href="https://afeng616.github.io/tags/%E6%8A%98%E8%85%BE/" rel="self" type="application/rss+xml" /><item>
+    <title>将第三方手柄输出映射到鼠标上</title>
+    <link>https://afeng616.github.io/diy-gamepad/</link>
+    <pubDate>Sun, 21 May 2023 12:01:49 &#43;0800</pubDate>
+    <author>afeng</author>
+    <guid>https://afeng616.github.io/diy-gamepad/</guid>
+    <description><![CDATA[之前pdd淘了个不知名手柄，可以正常玩游戏，后来打游戏渐少，就一直放在桌上吃灰。最近正要查看大量文献，既不想用鼠标也不想用键盘，干脆折腾一下手柄的摇杆吧，简单做个映射就能满足我的需求啦~]]></description>
+</item>
+<item>
+    <title>Blog Title Test</title>
+    <link>https://afeng616.github.io/blog-test/</link>
+    <pubDate>Fri, 12 May 2023 13:24:48 &#43;0800</pubDate>
+    <author>afeng</author>
+    <guid>https://afeng616.github.io/blog-test/</guid>
+    <description><![CDATA[事件发展 content This is a test blog. This is my first blog at GitHub Page website! This is a test blog. This is my first blog at GitHub Page website! This is a test blog. This is my first blog at GitHub Page website! This is a test blog. This is my first blog at GitHub Page website! This is a test blog. This is my first]]></description>
+</item>
+<item>
+    <title>远程开机的实现分析</title>
+    <link>https://afeng616.github.io/remote-wol/</link>
+    <pubDate>Tue, 25 Jan 2022 22:35:25 &#43;0800</pubDate>
+    <author>afeng</author>
+    <guid>https://afeng616.github.io/remote-wol/</guid>
+    <description><![CDATA[通过外网使用WOL技术开机。]]></description>
+</item>
+<item>
+    <title>B站取关脚本分析</title>
+    <link>https://afeng616.github.io/unscript-bili/</link>
+    <pubDate>Fri, 07 Jan 2022 20:21:06 &#43;0800</pubDate>
+    <author>afeng</author>
+    <guid>https://afeng616.github.io/unscript-bili/</guid>
+    <description><![CDATA[分析B站关注列表相关接口，编写取关脚本。]]></description>
+</item>
+</channel>
+</rss>
