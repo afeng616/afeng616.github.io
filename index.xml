@@ -15,6 +15,14 @@
     <description><![CDATA[分别使用静态调用（隐式链接）和动态调用（显式链接）的方式调用dll]]></description>
 </item>
 <item>
+    <title>论文那些事儿</title>
+    <link>http://afeng616.github.io/research/</link>
+    <pubDate>Sun, 16 Jul 2023 15:36:43 &#43;0800</pubDate>
+    <author>afeng</author>
+    <guid>http://afeng616.github.io/research/</guid>
+    <description><![CDATA[一些coding、论文、优化算法、强化学习、深度学习的知识。]]></description>
+</item>
+<item>
     <title>Pytorch测试GPU是否可用</title>
     <link>http://afeng616.github.io/pytorch-gpu-test/</link>
     <pubDate>Sat, 03 Jun 2023 15:54:33 &#43;0800</pubDate>
@@ -77,14 +85,6 @@
     <author>afeng</author>
     <guid>http://afeng616.github.io/delete-win-driver-logo/</guid>
     <description><![CDATA[删除设备和驱动器中的图标。]]></description>
-</item>
-<item>
-    <title>计算机网络参考模型</title>
-    <link>http://afeng616.github.io/computer-network-osi/</link>
-    <pubDate>Tue, 15 Mar 2022 23:27:37 &#43;0800</pubDate>
-    <author>afeng</author>
-    <guid>http://afeng616.github.io/computer-network-osi/</guid>
-    <description><![CDATA[计算机网络参考模型。]]></description>
 </item>
 </channel>
 </rss>
