@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <title>Windows下通过CMake调用wxWidgets库&#43;Hello World Demo - afeng滴blog</title><meta name="Description" content="在Win10系统下，使用CMake调用wxWidgets提供的头文件&#43;编译好的二进制dll，并跑通官方文档中的demo。"><meta property="og:title" content="Windows下通过CMake调用wxWidgets库&#43;Hello World Demo" />
+<meta property="og:description" content="在Win10系统下，使用CMake调用wxWidgets提供的头文件&#43;编译好的二进制dll，并跑通官方文档中的demo。" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://afeng616.github.io/use-wxwidgets/" /><meta property="og:image" content="http://afeng616.github.io/favicon.png"/><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2023-09-21T22:11:24+08:00" />
+<meta property="article:modified_time" content="2023-09-22T11:11:24+08:00" /><meta property="og:site_name" content="afeng滴blog" />
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="http://afeng616.github.io/favicon.png"/>
+
+<meta name="twitter:title" content="Windows下通过CMake调用wxWidgets库&#43;Hello World Demo"/>
+<meta name="twitter:description" content="在Win10系统下，使用CMake调用wxWidgets提供的头文件&#43;编译好的二进制dll，并跑通官方文档中的demo。"/>
+<meta name="application-name" content="afeng滴blog">
+<meta name="apple-mobile-web-app-title" content="afeng滴blog"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="http://afeng616.github.io/use-wxwidgets/" /><link rel="prev" href="http://afeng616.github.io/vue3-electron-init/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"></noscript><link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"></noscript><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Windows下通过CMake调用wxWidgets库+Hello World Demo",
+        "inLanguage": "zh-CN",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "http:\/\/afeng616.github.io\/use-wxwidgets\/"
+        },"genre": "posts","keywords": "cpp","wordcount":  1852 ,
+        "url": "http:\/\/afeng616.github.io\/use-wxwidgets\/","datePublished": "2023-09-21T22:11:24+08:00","dateModified": "2023-09-22T11:11:24+08:00","publisher": {
+            "@type": "Organization",
+            "name": "afeng"},"author": {
+                "@type": "Person",
+                "name": "afeng"
+            },"description": "在Win10系统下，使用CMake调用wxWidgets提供的头文件+编译好的二进制dll，并跑通官方文档中的demo。"
+    }
+    </script></head>
+    <body data-header-desktop="fixed" data-header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="afeng滴blog"><img
+        class="lazyload logo"
+        src="/svg/loading.min.svg"
+        data-src="/favicon.png"
+        data-srcset="/favicon.png, /favicon.png 1.5x, /favicon.png 2x"
+        data-sizes="auto"
+        alt="/favicon.png"
+        title="/favicon.png" />afeng滴blog</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/"> 所有文章 </a><a class="menu-item" href="/tags/"> 标签 </a><a class="menu-item" href="/categories/"> 分类 </a><a class="menu-item" href="/about/"> 关于 </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="搜索文章标题或内容..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="搜索">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="清空">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+                </a></div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="afeng滴blog"><img
+        class="lazyload logo"
+        src="/svg/loading.min.svg"
+        data-src="/favicon.png"
+        data-srcset="/favicon.png, /favicon.png 1.5x, /favicon.png 2x"
+        data-sizes="auto"
+        alt="/favicon.png"
+        title="/favicon.png" />afeng滴blog</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="搜索文章标题或内容..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="搜索">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="清空">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        取消
+                    </a>
+                </div><a class="menu-item" href="/posts/" title="">所有文章</a><a class="menu-item" href="/tags/" title="">标签</a><a class="menu-item" href="/categories/" title="">分类</a><a class="menu-item" href="/about/" title="">关于</a><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a></div>
+    </div>
+</header><div class="search-dropdown desktop">
+        <div id="search-dropdown-desktop"></div>
+    </div>
+    <div class="search-dropdown mobile">
+        <div id="search-dropdown-mobile"></div>
+    </div><main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">目录</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">Windows下通过CMake调用wxWidgets库+Hello World Demo</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="https://github.com/afeng616" title="Author" target="_blank" rel="noopener noreffer author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>afeng</a></span>&nbsp;<span class="post-category">收录于 <a href="/categories/%E7%A4%BA%E4%BE%8B/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>示例</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2023/09/21">2023/09/21</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;约 1852 字&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;预计阅读 4 分钟&nbsp;<span id="/use-wxwidgets/" class="leancloud_visitors" data-flag-title="Windows下通过CMake调用wxWidgets库&#43;Hello World Demo">
+                        <i class="far fa-eye fa-fw" aria-hidden="true"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
+                    </span>&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  data-kept="">
+                <div class="details-summary toc-title">
+                    <span>目录</span>
+                    <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#库文件下载">库文件下载</a></li>
+    <li><a href="#将库引入工程中">将库引入工程中</a></li>
+    <li><a href="#编写hello-demo">编写Hello Demo</a></li>
+    <li><a href="#编写cmakeliststxt">编写CMakeLists.txt</a></li>
+    <li><a href="#最终效果">最终效果</a></li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><p>使用CMake调用wxWidgets库的二进制文件，这种方式并没有在官方的文档中找到，但官方使用文档<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>还是有很大帮助的。
+本机不得已安装了VS，如果不是因为VS Code的一些局限，我可能都不会安装VS，既然已经装了就直接用它的编译环境吧MSVC。开发的时候依然还是想着使用VS Code，所以这里使用CMake编写编译时的一些细节。如果是想着用直接用VS开发可以研读官方文档<sup id="fnref1:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>尝试一下，也可以跟着我用CMake的方式生成一个VS的obj项目，然后手动点击<code>.sln</code>点击进入。</p>
+<h2 id="库文件下载">库文件下载</h2>
+<p>通过wxWidgets提供的下载网址<sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup>下载库头文件、与编译环境对应的二进制文件，点击<code>Download Windows Binaries</code>选择指定文件即可下载。
+<figure><a class="lightgallery" href="/images/blog/20230922-download-lib-files1.png" title="下载库" data-thumbnail="/images/blog/20230922-download-lib-files1.png" data-sub-html="<h2>下载wxWidgets库文件</h2><p>下载库</p>">
+        <img
+            class="lazyload"
+            src="/svg/loading.min.svg"
+            data-src="/images/blog/20230922-download-lib-files1.png"
+            data-srcset="/images/blog/20230922-download-lib-files1.png, /images/blog/20230922-download-lib-files1.png 1.5x, /images/blog/20230922-download-lib-files1.png 2x"
+            data-sizes="auto"
+            alt="/images/blog/20230922-download-lib-files1.png" />
+    </a><figcaption class="image-caption">下载wxWidgets库文件</figcaption>
+    </figure>
+<figure><a class="lightgallery" href="/images/blog/20230922-download-lib-files2.png" title="下载库" data-thumbnail="/images/blog/20230922-download-lib-files2.png" data-sub-html="<h2>下载wxWidgets库文件</h2><p>下载库</p>">
+        <img
+            class="lazyload"
+            src="/svg/loading.min.svg"
+            data-src="/images/blog/20230922-download-lib-files2.png"
+            data-srcset="/images/blog/20230922-download-lib-files2.png, /images/blog/20230922-download-lib-files2.png 1.5x, /images/blog/20230922-download-lib-files2.png 2x"
+            data-sizes="auto"
+            alt="/images/blog/20230922-download-lib-files2.png" />
+    </a><figcaption class="image-caption">下载wxWidgets库文件</figcaption>
+    </figure>
+根据本机环境选择需要下载的文件：</p>
+<ul>
+<li>Header Files（无论什么编译环境都需要下载）</li>
+<li>dll文件（根据系统编译环境选择下载，本机使用VS2019的编译器）</li>
+</ul>
+<h2 id="将库引入工程中">将库引入工程中</h2>
+<p>根据官方文档<sup id="fnref2:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>的说明，下载好库文件后需要将它们解压到同一个目录下，并且目录下应只有<code>include</code>文件夹和<code>lib</code>文件夹。
+<figure><a class="lightgallery" href="/images/blog/20230922-unzip-lib-files.png" title="解压库" data-thumbnail="/images/blog/20230922-unzip-lib-files.png" data-sub-html="<h2>解压wxWidgets库文件</h2><p>解压库</p>">
+        <img
+            class="lazyload"
+            src="/svg/loading.min.svg"
+            data-src="/images/blog/20230922-unzip-lib-files.png"
+            data-srcset="/images/blog/20230922-unzip-lib-files.png, /images/blog/20230922-unzip-lib-files.png 1.5x, /images/blog/20230922-unzip-lib-files.png 2x"
+            data-sizes="auto"
+            alt="/images/blog/20230922-unzip-lib-files.png" />
+    </a><figcaption class="image-caption">解压wxWidgets库文件</figcaption>
+    </figure>
+本机将wxWidgets放在<code>3rdparty</code>目录下。
+需要注意的是，要将目录<code>lib/vc14x_x64_dll</code>中vc的版本后缀删除掉，修改为<code>lib/vc_x64_dll</code>，不修改的话后续编译会报错无法找到xx文件（因为查找的目录不对）。
+<figure><a class="lightgallery" href="/images/blog/20230922-import-lib-files.png" title="引入库" data-thumbnail="/images/blog/20230922-import-lib-files.png" data-sub-html="<h2>引入wxWidgets库文件</h2><p>引入库</p>">
+        <img
+            class="lazyload"
+            src="/svg/loading.min.svg"
+            data-src="/images/blog/20230922-import-lib-files.png"
+            data-srcset="/images/blog/20230922-import-lib-files.png, /images/blog/20230922-import-lib-files.png 1.5x, /images/blog/20230922-import-lib-files.png 2x"
+            data-sizes="auto"
+            alt="/images/blog/20230922-import-lib-files.png" />
+    </a><figcaption class="image-caption">引入wxWidgets库文件</figcaption>
+    </figure></p>
+<h2 id="编写hello-demo">编写Hello Demo</h2>
+<p>使用官方Demo<sup id="fnref:3"><a href="#fn:3" class="footnote-ref" role="doc-noteref">3</a></sup>即可。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span><span class="lnt">46
+</span><span class="lnt">47
+</span><span class="lnt">48
+</span><span class="lnt">49
+</span><span class="lnt">50
+</span><span class="lnt">51
+</span><span class="lnt">52
+</span><span class="lnt">53
+</span><span class="lnt">54
+</span><span class="lnt">55
+</span><span class="lnt">56
+</span><span class="lnt">57
+</span><span class="lnt">58
+</span><span class="lnt">59
+</span><span class="lnt">60
+</span><span class="lnt">61
+</span><span class="lnt">62
+</span><span class="lnt">63
+</span><span class="lnt">64
+</span><span class="lnt">65
+</span><span class="lnt">66
+</span><span class="lnt">67
+</span><span class="lnt">68
+</span><span class="lnt">69
+</span><span class="lnt">70
+</span><span class="lnt">71
+</span><span class="lnt">72
+</span><span class="lnt">73
+</span><span class="lnt">74
+</span><span class="lnt">75
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="c1">// Start of wxWidgets &#34;Hello World&#34; Program
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="cp">#include</span> <span class="cpf">&lt;wx/wx.h&gt;</span><span class="cp">
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span> 
+</span></span><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">MyApp</span> <span class="o">:</span> <span class="k">public</span> <span class="n">wxApp</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl"><span class="k">public</span><span class="o">:</span>
+</span></span><span class="line"><span class="cl">    <span class="kt">bool</span> <span class="n">OnInit</span><span class="p">()</span> <span class="k">override</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">};</span>
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"><span class="n">wxIMPLEMENT_APP</span><span class="p">(</span><span class="n">MyApp</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">MyFrame</span> <span class="o">:</span> <span class="k">public</span> <span class="n">wxFrame</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl"><span class="k">public</span><span class="o">:</span>
+</span></span><span class="line"><span class="cl">    <span class="n">MyFrame</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"><span class="k">private</span><span class="o">:</span>
+</span></span><span class="line"><span class="cl">    <span class="kt">void</span> <span class="n">OnHello</span><span class="p">(</span><span class="n">wxCommandEvent</span><span class="o">&amp;</span> <span class="n">event</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="kt">void</span> <span class="nf">OnExit</span><span class="p">(</span><span class="n">wxCommandEvent</span><span class="o">&amp;</span> <span class="n">event</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="kt">void</span> <span class="nf">OnAbout</span><span class="p">(</span><span class="n">wxCommandEvent</span><span class="o">&amp;</span> <span class="n">event</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">};</span>
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"><span class="k">enum</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="n">ID_Hello</span> <span class="o">=</span> <span class="mi">1</span>
+</span></span><span class="line"><span class="cl"><span class="p">};</span>
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"><span class="kt">bool</span> <span class="n">MyApp</span><span class="o">::</span><span class="n">OnInit</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="n">MyFrame</span> <span class="o">*</span><span class="n">frame</span> <span class="o">=</span> <span class="k">new</span> <span class="n">MyFrame</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">    <span class="n">frame</span><span class="o">-&gt;</span><span class="n">Show</span><span class="p">(</span><span class="nb">true</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="nb">true</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"><span class="n">MyFrame</span><span class="o">::</span><span class="n">MyFrame</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">    <span class="o">:</span> <span class="n">wxFrame</span><span class="p">(</span><span class="k">nullptr</span><span class="p">,</span> <span class="n">wxID_ANY</span><span class="p">,</span> <span class="s">&#34;Hello World&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="n">wxMenu</span> <span class="o">*</span><span class="n">menuFile</span> <span class="o">=</span> <span class="k">new</span> <span class="n">wxMenu</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">menuFile</span><span class="o">-&gt;</span><span class="n">Append</span><span class="p">(</span><span class="n">ID_Hello</span><span class="p">,</span> <span class="s">&#34;&amp;Hello...</span><span class="se">\t</span><span class="s">Ctrl-H&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                     <span class="s">&#34;Help string shown in status bar for this menu item&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="n">menuFile</span><span class="o">-&gt;</span><span class="n">AppendSeparator</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">    <span class="n">menuFile</span><span class="o">-&gt;</span><span class="n">Append</span><span class="p">(</span><span class="n">wxID_EXIT</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl">    <span class="n">wxMenu</span> <span class="o">*</span><span class="n">menuHelp</span> <span class="o">=</span> <span class="k">new</span> <span class="n">wxMenu</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">menuHelp</span><span class="o">-&gt;</span><span class="n">Append</span><span class="p">(</span><span class="n">wxID_ABOUT</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl">    <span class="n">wxMenuBar</span> <span class="o">*</span><span class="n">menuBar</span> <span class="o">=</span> <span class="k">new</span> <span class="n">wxMenuBar</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">menuBar</span><span class="o">-&gt;</span><span class="n">Append</span><span class="p">(</span><span class="n">menuFile</span><span class="p">,</span> <span class="s">&#34;&amp;File&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="n">menuBar</span><span class="o">-&gt;</span><span class="n">Append</span><span class="p">(</span><span class="n">menuHelp</span><span class="p">,</span> <span class="s">&#34;&amp;Help&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl">    <span class="n">SetMenuBar</span><span class="p">(</span> <span class="n">menuBar</span> <span class="p">);</span>
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl">    <span class="n">CreateStatusBar</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">    <span class="n">SetStatusText</span><span class="p">(</span><span class="s">&#34;Welcome to wxWidgets!&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl">    <span class="n">Bind</span><span class="p">(</span><span class="n">wxEVT_MENU</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">MyFrame</span><span class="o">::</span><span class="n">OnHello</span><span class="p">,</span> <span class="k">this</span><span class="p">,</span> <span class="n">ID_Hello</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="n">Bind</span><span class="p">(</span><span class="n">wxEVT_MENU</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">MyFrame</span><span class="o">::</span><span class="n">OnAbout</span><span class="p">,</span> <span class="k">this</span><span class="p">,</span> <span class="n">wxID_ABOUT</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="n">Bind</span><span class="p">(</span><span class="n">wxEVT_MENU</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">MyFrame</span><span class="o">::</span><span class="n">OnExit</span><span class="p">,</span> <span class="k">this</span><span class="p">,</span> <span class="n">wxID_EXIT</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"><span class="kt">void</span> <span class="n">MyFrame</span><span class="o">::</span><span class="n">OnExit</span><span class="p">(</span><span class="n">wxCommandEvent</span><span class="o">&amp;</span> <span class="n">event</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="n">Close</span><span class="p">(</span><span class="nb">true</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"><span class="kt">void</span> <span class="n">MyFrame</span><span class="o">::</span><span class="n">OnAbout</span><span class="p">(</span><span class="n">wxCommandEvent</span><span class="o">&amp;</span> <span class="n">event</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="n">wxMessageBox</span><span class="p">(</span><span class="s">&#34;This is a wxWidgets Hello World example&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                 <span class="s">&#34;About Hello World&#34;</span><span class="p">,</span> <span class="n">wxOK</span> <span class="o">|</span> <span class="n">wxICON_INFORMATION</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"><span class="kt">void</span> <span class="n">MyFrame</span><span class="o">::</span><span class="n">OnHello</span><span class="p">(</span><span class="n">wxCommandEvent</span><span class="o">&amp;</span> <span class="n">event</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="n">wxLogMessage</span><span class="p">(</span><span class="s">&#34;Hello world from wxWidgets!&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="编写cmakeliststxt">编写CMakeLists.txt</h2>
+<p>因为对C++程序的库依赖还不是很熟，所以折腾了一个下午才搞明白使用wxWidgets库与其他库无异。正常include头文件，如果需要<code>.lib</code>的话link一下。
+本机使用官方已经编译好的binaries，所以需要指定<code>.lib</code>文件目录，当然头文件目录也是必须的。为了让<code>.exe</code>运行时查找到所需的dll，可以将<code>.dll</code>目录加入环境变量中，也可以通过<code>.bat</code>临时添加一下环境变量（环境变量只在本次<code>.bat</code>运行时有效）。</p>
+<p>为了在链接wxWidgets时寻找到目录，需要设定<code>target_compile_definitions</code>。
+由于wxWidgets使用<code>WinMain</code>作为函数入口，所以需要在<code>add_executable</code>时增加<code>WIN32</code><sup id="fnref:4"><a href="#fn:4" class="footnote-ref" role="doc-noteref">4</a></sup>。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-txt" data-lang="txt"><span class="line"><span class="cl">cmake_minimum_required(VERSION 3.24.1)
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">project(PCBRouter)
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"># set output path
+</span></span><span class="line"><span class="cl">set(INSTALL_PATH ${CMAKE_BINARY_DIR}/../)
+</span></span><span class="line"><span class="cl">set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${INSTALL_PATH}/bin)
+</span></span><span class="line"><span class="cl">set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${INSTALL_PATH}/bin)
+</span></span><span class="line"><span class="cl">set(LIBRARY_OUTPUT_PATH ${INSTALL_PATH}/lib)
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"># wxWidget3.2.2.1
+</span></span><span class="line"><span class="cl">set(WXWIDGETS_DIR ${CMAKE_SOURCE_DIR}/../3rdparty/wxWidgets)
+</span></span><span class="line"><span class="cl">set(WXWIDGETS_DLL_SUFFIX _vc14x_x64)
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">include_directories(${WXWIDGETS_DIR}/include)
+</span></span><span class="line"><span class="cl">include_directories(${WXWIDGETS_DIR}/include/msvc)
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"># source file
+</span></span><span class="line"><span class="cl">file(GLOB_RECURSE HEADER_FILES *.h*)
+</span></span><span class="line"><span class="cl">file(GLOB_RECURSE SOURCE_FILES *.c*)
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">add_executable(PCBRouter WIN32 ${HEADER_FILES} ${SOURCE_FILES})
+</span></span><span class="line"><span class="cl"># set compile mode for using wxWidgets normally
+</span></span><span class="line"><span class="cl">target_compile_definitions(PCBRouter PRIVATE WXUSINGDLL=1)
+</span></span><span class="line"><span class="cl">target_compile_definitions(PCBRouter PRIVATE _UNICODE=1)
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">target_link_directories(PCBRouter PUBLIC ${WXWIDGETS_DIR}/lib/vc_x64_dll)
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>CMakeLists.txt编写好了以后，简单写一个<code>.bat</code>脚本来方便build项目。
+最后一样将直接启动VS加载该项目，我这里不需要使用VS所以就注释掉了。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bat" data-lang="bat"><span class="line"><span class="cl"><span class="p">@</span><span class="k">echo</span> off
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">rem Please set the build type to desired one, Debug or Release</span>
+</span></span><span class="line"><span class="cl"><span class="k">set</span> <span class="nv">BUILD_TYPE</span><span class="p">=</span>Debug
+</span></span><span class="line"><span class="cl"><span class="c1">rem Default for VS2022, using &#34;Visual Studio 15 2017 Win64&#34; if your generator is VS2017</span>
+</span></span><span class="line"><span class="cl"><span class="k">set</span> <span class="nv">NMAKE_GENERATOR</span><span class="p">=</span><span class="s2">&#34;Visual Studio 16 2019&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">set</span> <span class="nv">SOURCE_DIR</span><span class="p">=</span><span class="nv">%~dp0</span>/src
+</span></span><span class="line"><span class="cl"><span class="k">set</span> <span class="nv">INSTALL_DIR</span><span class="p">=</span><span class="nv">%~dp0</span>/src_output
+</span></span><span class="line"><span class="cl"><span class="k">set</span> <span class="nv">TARGET_DIR</span><span class="p">=</span><span class="nv">%INSTALL_DIR%</span>/obj
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">call</span> cmake --no-warn-unused-cli -DCMAKE_INSTALL_PREFIX:STRING=<span class="nv">%INSTALL_DIR%</span> -DCMAKE_EXPORT_COMPILE_COMMANDS:BOOL=TRUE -S<span class="nv">%SOURCE_DIR%</span> -B<span class="nv">%TARGET_DIR%</span> -G <span class="nv">%NMAKE_GENERATOR%</span> -T host=x64 -A x64
+</span></span><span class="line"><span class="cl"><span class="k">call</span> cmake --build <span class="nv">%TARGET_DIR%</span> --config <span class="nv">%BUILD_TYPE%</span> --target ALL_BUILD -j 6 --
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">@</span><span class="c1">REM call cmake --open %TARGET_DIR%</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>运行以上这个脚本后，会在工程根目录生成<code>src_output</code>目录，目录下存在文件夹<code>obj</code>和<code>bin</code>分别存储build后的文件和生成的二进制文件。
+<figure><a class="lightgallery" href="/images/blog/20230922-build-path.png" title="编译后的文件" data-thumbnail="/images/blog/20230922-build-path.png" data-sub-html="<h2>build后生成的目录</h2><p>编译后的文件</p>">
+        <img
+            class="lazyload"
+            src="/svg/loading.min.svg"
+            data-src="/images/blog/20230922-build-path.png"
+            data-srcset="/images/blog/20230922-build-path.png, /images/blog/20230922-build-path.png 1.5x, /images/blog/20230922-build-path.png 2x"
+            data-sizes="auto"
+            alt="/images/blog/20230922-build-path.png" />
+    </a><figcaption class="image-caption">build后生成的目录</figcaption>
+    </figure></p>
+<h2 id="最终效果">最终效果</h2>
+<p>到这里整个wxWidgets库的引入已经接近尾声了，但是在运行时会发现不把指定<code>.dll</code>文件copy到<code>.exe</code>文件目录下无法运行，会报错<code>.dll</code>无法找到。针对这个问题上面也说到了两个方法，其实都是针对环境变量的修改，这里我还是比较喜欢通过<code>.bat</code>临时增加环境变量的方式来解决。</p>
+<p>如果不想让命令行在<code>.exe</code>运行时持续存在，可以在最后一行前增加<code>start</code>。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bat" data-lang="bat"><span class="line"><span class="cl"><span class="p">@</span><span class="k">echo</span> off
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">set</span> <span class="nv">BUILD_TYPE</span><span class="p">=</span>Debug
+</span></span><span class="line"><span class="cl"><span class="k">set</span> <span class="nv">PROJECT_NAME</span><span class="p">=</span>PCBRouter
+</span></span><span class="line"><span class="cl"><span class="k">set</span> <span class="nv">INSTALL_DIR</span><span class="p">=</span><span class="nv">%~dp0</span>/src_output
+</span></span><span class="line"><span class="cl"><span class="k">set</span> <span class="nv">WXWIDGETS_DIR</span><span class="p">=</span><span class="nv">%~dp0</span>\3rdparty\wxWidgets
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">rem temporarily add wxWidgets LIBS to PATH</span>
+</span></span><span class="line"><span class="cl"><span class="k">set</span> <span class="nv">PATH</span><span class="p">=</span><span class="nv">%WXWIDGETS_DIR%</span>\lib\vc_x64_dll;<span class="nv">%PATH%</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="s2">&#34;</span><span class="nv">%INSTALL_DIR%</span><span class="s2">/bin/</span><span class="nv">%BUILD_TYPE%</span><span class="s2">/</span><span class="nv">%PROJECT_NAME%</span><span class="s2">.exe&#34;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>程序运行起来后，效果如下：
+<figure><a class="lightgallery" href="/images/blog/20230922-run-Hello-Demo-example.png" title="运行效果" data-thumbnail="/images/blog/20230922-run-Hello-Demo-example.png" data-sub-html="<h2>Demo运行效果</h2><p>运行效果</p>">
+        <img
+            class="lazyload"
+            src="/svg/loading.min.svg"
+            data-src="/images/blog/20230922-run-Hello-Demo-example.png"
+            data-srcset="/images/blog/20230922-run-Hello-Demo-example.png, /images/blog/20230922-run-Hello-Demo-example.png 1.5x, /images/blog/20230922-run-Hello-Demo-example.png 2x"
+            data-sizes="auto"
+            alt="/images/blog/20230922-run-Hello-Demo-example.png" />
+    </a><figcaption class="image-caption">Demo运行效果</figcaption>
+    </figure></p>
+<p>整个项目目录如下：
+<figure><a class="lightgallery" href="/images/blog/20230922-project-dir.png" title="整体项目目录" data-thumbnail="/images/blog/20230922-project-dir.png" data-sub-html="<h2>整体项目目录</h2><p>整体项目目录</p>">
+        <img
+            class="lazyload"
+            src="/svg/loading.min.svg"
+            data-src="/images/blog/20230922-project-dir.png"
+            data-srcset="/images/blog/20230922-project-dir.png, /images/blog/20230922-project-dir.png 1.5x, /images/blog/20230922-project-dir.png 2x"
+            data-sizes="auto"
+            alt="/images/blog/20230922-project-dir.png" />
+    </a><figcaption class="image-caption">整体项目目录</figcaption>
+    </figure></p>
+<div class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1">
+<p><a href="https://docs.wxwidgets.org/latest/plat_msw_binaries.html" target="_blank" rel="noopener noreffer ">https://docs.wxwidgets.org/latest/plat_msw_binaries.html</a> wxWidgets文档: How to use wxMSW binaries&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a>&#160;<a href="#fnref1:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a>&#160;<a href="#fnref2:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:2">
+<p><a href="https://www.wxwidgets.org/downloads/" target="_blank" rel="noopener noreffer ">https://www.wxwidgets.org/downloads/</a> wxWidgets下载网址&#160;<a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:3">
+<p><a href="https://docs.wxwidgets.org/latest/overview_helloworld.html" target="_blank" rel="noopener noreffer ">https://docs.wxwidgets.org/latest/overview_helloworld.html</a> wxWidgets Demo&#160;<a href="#fnref:3" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:4">
+<p><a href="https://www.jarvis73.com/2017/11/06/CMake-Learning/#add_executable" target="_blank" rel="noopener noreffer ">https://www.jarvis73.com/2017/11/06/CMake-Learning/#add_executable</a> 博客: CMake 学习笔记&#160;<a href="#fnref:4" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</div></div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>更新于 2023/09/22</span>
+            </div></div>
+        <div class="post-info-line">
+            <div class="post-info-md"><span>
+                            <a class="link-to-markdown" href="/use-wxwidgets/index.md" target="_blank">阅读原始文档</a>
+                        </span></div>
+            <div class="post-info-share">
+                <span><a href="javascript:void(0);" title="分享到 Twitter" data-sharer="twitter" data-url="http://afeng616.github.io/use-wxwidgets/" data-title="Windows下通过CMake调用wxWidgets库&#43;Hello World Demo" data-hashtags="cpp"><i class="fab fa-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Facebook" data-sharer="facebook" data-url="http://afeng616.github.io/use-wxwidgets/" data-hashtag="cpp"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/cpp/">cpp</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/vue3-electron-init/" class="prev" rel="prev" title="windows下vue3&#43;electron的环境搭建"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>windows下vue3+electron的环境搭建</a></div>
+</div>
+<div id="comments"><div id="valine" class="comment"></div><noscript>
+                Please enable JavaScript to view the comments powered by <a href="https://valine.js.org/">Valine</a>.
+            </noscript></div></article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">由 <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.117.0">Hugo</a> 强力驱动 | 主题 - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.11"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
+                </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2022 - 2023</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="https://github.com/afeng616" target="_blank">afeng</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="回到顶部">
+                <i class="fas fa-arrow-up fa-fw" aria-hidden="true"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="查看评论">
+                <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
+            </a>
+        </div><link rel="stylesheet" href="/lib/valine/valine.min.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.5.0/css/lightgallery-bundle.min.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.0/katex.min.css"><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/valine/1.5.0/Valine.min.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.1/autocomplete.min.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.stemmer.support.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.zh.min.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.3.2/lazysizes.min.js"></script><script type="text/javascript" src="/lib/twemoji/twemoji.min.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.5.0/lightgallery.min.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.5.0/plugins/thumbnail/lg-thumbnail.min.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.5.0/plugins/zoom/lg-zoom.min.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.11/clipboard.min.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/sharer.js/0.5.1/sharer.min.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.0/katex.min.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.0/contrib/auto-render.min.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.0/contrib/copy-tex.min.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.0/contrib/mhchem.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"复制到剪贴板","maxShownLines":20},"comment":{"valine":{"appId":"fA806GiOEhaqQ5Vs2AM9ngPx-gzGzoHsz","appKey":"XJYWoeAnaa9BySXlszk8AcCK","avatar":"mp","el":"#valine","emojiCDN":"https://cdn.jsdelivr.net/npm/emoji-datasource-google@14.0.0/img/google/64/","emojiMaps":{"100":"1f4af.png","alien":"1f47d.png","anger":"1f4a2.png","angry":"1f620.png","anguished":"1f627.png","astonished":"1f632.png","black_heart":"1f5a4.png","blue_heart":"1f499.png","blush":"1f60a.png","bomb":"1f4a3.png","boom":"1f4a5.png","broken_heart":"1f494.png","brown_heart":"1f90e.png","clown_face":"1f921.png","cold_face":"1f976.png","cold_sweat":"1f630.png","confounded":"1f616.png","confused":"1f615.png","cry":"1f622.png","crying_cat_face":"1f63f.png","cupid":"1f498.png","dash":"1f4a8.png","disappointed":"1f61e.png","disappointed_relieved":"1f625.png","dizzy":"1f4ab.png","dizzy_face":"1f635.png","drooling_face":"1f924.png","exploding_head":"1f92f.png","expressionless":"1f611.png","face_vomiting":"1f92e.png","face_with_cowboy_hat":"1f920.png","face_with_hand_over_mouth":"1f92d.png","face_with_head_bandage":"1f915.png","face_with_monocle":"1f9d0.png","face_with_raised_eyebrow":"1f928.png","face_with_rolling_eyes":"1f644.png","face_with_symbols_on_mouth":"1f92c.png","face_with_thermometer":"1f912.png","fearful":"1f628.png","flushed":"1f633.png","frowning":"1f626.png","ghost":"1f47b.png","gift_heart":"1f49d.png","green_heart":"1f49a.png","grimacing":"1f62c.png","grin":"1f601.png","grinning":"1f600.png","hankey":"1f4a9.png","hear_no_evil":"1f649.png","heart":"2764-fe0f.png","heart_decoration":"1f49f.png","heart_eyes":"1f60d.png","heart_eyes_cat":"1f63b.png","heartbeat":"1f493.png","heartpulse":"1f497.png","heavy_heart_exclamation_mark_ornament":"2763-fe0f.png","hole":"1f573-fe0f.png","hot_face":"1f975.png","hugging_face":"1f917.png","hushed":"1f62f.png","imp":"1f47f.png","innocent":"1f607.png","japanese_goblin":"1f47a.png","japanese_ogre":"1f479.png","joy":"1f602.png","joy_cat":"1f639.png","kiss":"1f48b.png","kissing":"1f617.png","kissing_cat":"1f63d.png","kissing_closed_eyes":"1f61a.png","kissing_heart":"1f618.png","kissing_smiling_eyes":"1f619.png","laughing":"1f606.png","left_speech_bubble":"1f5e8-fe0f.png","love_letter":"1f48c.png","lying_face":"1f925.png","mask":"1f637.png","money_mouth_face":"1f911.png","nauseated_face":"1f922.png","nerd_face":"1f913.png","neutral_face":"1f610.png","no_mouth":"1f636.png","open_mouth":"1f62e.png","orange_heart":"1f9e1.png","partying_face":"1f973.png","pensive":"1f614.png","persevere":"1f623.png","pleading_face":"1f97a.png","pouting_cat":"1f63e.png","purple_heart":"1f49c.png","rage":"1f621.png","relaxed":"263a-fe0f.png","relieved":"1f60c.png","revolving_hearts":"1f49e.png","right_anger_bubble":"1f5ef-fe0f.png","robot_face":"1f916.png","rolling_on_the_floor_laughing":"1f923.png","scream":"1f631.png","scream_cat":"1f640.png","see_no_evil":"1f648.png","shushing_face":"1f92b.png","skull":"1f480.png","skull_and_crossbones":"2620-fe0f.png","sleeping":"1f634.png","sleepy":"1f62a.png","slightly_frowning_face":"1f641.png","slightly_smiling_face":"1f642.png","smile":"1f604.png","smile_cat":"1f638.png","smiley":"1f603.png","smiley_cat":"1f63a.png","smiling_face_with_3_hearts":"1f970.png","smiling_imp":"1f608.png","smirk":"1f60f.png","smirk_cat":"1f63c.png","sneezing_face":"1f927.png","sob":"1f62d.png","space_invader":"1f47e.png","sparkling_heart":"1f496.png","speak_no_evil":"1f64a.png","speech_balloon":"1f4ac.png","star-struck":"1f929.png","stuck_out_tongue":"1f61b.png","stuck_out_tongue_closed_eyes":"1f61d.png","stuck_out_tongue_winking_eye":"1f61c.png","sunglasses":"1f60e.png","sweat":"1f613.png","sweat_drops":"1f4a6.png","sweat_smile":"1f605.png","thinking_face":"1f914.png","thought_balloon":"1f4ad.png","tired_face":"1f62b.png","triumph":"1f624.png","two_hearts":"1f495.png","unamused":"1f612.png","upside_down_face":"1f643.png","weary":"1f629.png","white_frowning_face":"2639-fe0f.png","white_heart":"1f90d.png","wink":"1f609.png","woozy_face":"1f974.png","worried":"1f61f.png","yawning_face":"1f971.png","yellow_heart":"1f49b.png","yum":"1f60b.png","zany_face":"1f92a.png","zipper_mouth_face":"1f910.png","zzz":"1f4a4.png"},"enableQQ":true,"highlight":true,"lang":"zh-CN","pageSize":10,"placeholder":"Leave something here...","recordIP":true,"serverURLs":"https://fa806gio.lc-cn-n1-shared.com","visitor":true}},"lightgallery":true,"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":true,"left":"\\begin{equation}","right":"\\end{equation}"},{"display":true,"left":"\\begin{equation*}","right":"\\end{equation*}"},{"display":true,"left":"\\begin{align}","right":"\\end{align}"},{"display":true,"left":"\\begin{align*}","right":"\\end{align*}"},{"display":true,"left":"\\begin{alignat}","right":"\\end{alignat}"},{"display":true,"left":"\\begin{alignat*}","right":"\\end{alignat*}"},{"display":true,"left":"\\begin{gather}","right":"\\end{gather}"},{"display":true,"left":"\\begin{CD}","right":"\\end{CD}"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"highlightTag":"em","lunrIndexURL":"/index.json","lunrLanguageCode":"zh","lunrSegmentitURL":"/lib/lunr/lunr.segmentit.js","maxResultLength":10,"noResultsFound":"没有找到结果","snippetLength":50,"type":"lunr"},"twemoji":true};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+</html>

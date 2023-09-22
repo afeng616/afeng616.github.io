@@ -4,7 +4,15 @@
         <link>http://afeng616.github.io/posts/</link>
         <description>所有文章 | afeng滴blog</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>afeng616@gmail.com (afeng)</managingEditor>
-            <webMaster>afeng616@gmail.com (afeng)</webMaster><lastBuildDate>Wed, 30 Aug 2023 20:37:24 &#43;0800</lastBuildDate><atom:link href="http://afeng616.github.io/posts/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>afeng616@gmail.com (afeng)</webMaster><lastBuildDate>Thu, 21 Sep 2023 22:11:24 &#43;0800</lastBuildDate><atom:link href="http://afeng616.github.io/posts/" rel="self" type="application/rss+xml" /><item>
+    <title>Windows下通过CMake调用wxWidgets库&#43;Hello World Demo</title>
+    <link>http://afeng616.github.io/use-wxwidgets/</link>
+    <pubDate>Thu, 21 Sep 2023 22:11:24 &#43;0800</pubDate>
+    <author>afeng</author>
+    <guid>http://afeng616.github.io/use-wxwidgets/</guid>
+    <description><![CDATA[在Win10系统下，使用CMake调用wxWidgets提供的头文件+编译好的二进制dll，并跑通官方文档中的demo。]]></description>
+</item>
+<item>
     <title>windows下vue3&#43;electron的环境搭建</title>
     <link>http://afeng616.github.io/vue3-electron-init/</link>
     <pubDate>Wed, 30 Aug 2023 20:37:24 &#43;0800</pubDate>
@@ -75,14 +83,6 @@
     <author>afeng</author>
     <guid>http://afeng616.github.io/kuaishou-unsubscript/</guid>
     <description><![CDATA[快手取关脚本。]]></description>
-</item>
-<item>
-    <title>Twitter取关脚本</title>
-    <link>http://afeng616.github.io/twitter-unsubscript/</link>
-    <pubDate>Sun, 03 Apr 2022 23:32:44 &#43;0800</pubDate>
-    <author>afeng</author>
-    <guid>http://afeng616.github.io/twitter-unsubscript/</guid>
-    <description><![CDATA[Twitter取关脚本。]]></description>
 </item>
 </channel>
 </rss>

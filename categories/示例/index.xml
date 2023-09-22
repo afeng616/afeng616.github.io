@@ -4,7 +4,15 @@
         <link>http://afeng616.github.io/categories/%E7%A4%BA%E4%BE%8B/</link>
         <description>示例 - 分类 - afeng滴blog</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>afeng616@gmail.com (afeng)</managingEditor>
-            <webMaster>afeng616@gmail.com (afeng)</webMaster><lastBuildDate>Wed, 26 Jul 2023 14:42:20 &#43;0800</lastBuildDate><atom:link href="http://afeng616.github.io/categories/%E7%A4%BA%E4%BE%8B/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>afeng616@gmail.com (afeng)</webMaster><lastBuildDate>Thu, 21 Sep 2023 22:11:24 &#43;0800</lastBuildDate><atom:link href="http://afeng616.github.io/categories/%E7%A4%BA%E4%BE%8B/" rel="self" type="application/rss+xml" /><item>
+    <title>Windows下通过CMake调用wxWidgets库&#43;Hello World Demo</title>
+    <link>http://afeng616.github.io/use-wxwidgets/</link>
+    <pubDate>Thu, 21 Sep 2023 22:11:24 &#43;0800</pubDate>
+    <author>afeng</author>
+    <guid>http://afeng616.github.io/use-wxwidgets/</guid>
+    <description><![CDATA[在Win10系统下，使用CMake调用wxWidgets提供的头文件+编译好的二进制dll，并跑通官方文档中的demo。]]></description>
+</item>
+<item>
     <title>DLL调用方式测试</title>
     <link>http://afeng616.github.io/mydll/</link>
     <pubDate>Wed, 26 Jul 2023 14:42:20 &#43;0800</pubDate>
