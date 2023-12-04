@@ -32,18 +32,19 @@ GRU效果与LSTM相近，减少了计算量。
 Attention，详解[^8]，视频[^9] [^11]  
 Transformer，详解[^10]  
 
+## 强化学习 Reinforcement Learning
+
+SARSA，详解[^12]
+
+Q-Learning，详解[^13]
+{{< admonition tip "小结" false >}}
 {{< raw >}}
 \[ 
     \forall s, a: Q^{*}(s, a)=\sum_{s^{\prime}} P_{s a}^{s^{\prime}}\left(R_{s a}^{s^{\prime}}+\gamma \max _{a} Q^{*}\left(s^{\prime}, a\right)\right) \\
     Q_{t+1}\left(s_{t}, a_{t}\right)=Q_{t}\left(s_{t}, a_{t}\right)+\alpha_{t}\left(s_{t}, a_{t}\right)\left(r_{t}+\gamma \max _{a} Q_{t}\left(s_{t+1}, a\right)-Q_{t}\left(s_{t}, a_{t}\right)\right)
 \]
 {{< /raw >}}
-
-## 强化学习 Reinforcement Learning
-
-SARSA，详解[^12]
-
-Q-Learning，详解[^13]
+{{< /admonition >}}
 
 DQN，详解[^14]
 
