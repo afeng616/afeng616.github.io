@@ -4,9 +4,17 @@
         <link>http://afeng616.github.io/</link>
         <description>This is afeng&#39;s blog!</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>afeng616@gmail.com (afeng)</managingEditor>
-            <webMaster>afeng616@gmail.com (afeng)</webMaster><lastBuildDate>Wed, 26 Jul 2023 14:42:20 &#43;0800</lastBuildDate>
+            <webMaster>afeng616@gmail.com (afeng)</webMaster><lastBuildDate>Wed, 20 Mar 2024 14:53:25 &#43;0800</lastBuildDate>
             <atom:link href="http://afeng616.github.io/index.xml" rel="self" type="application/rss+xml" />
         <item>
+    <title>Clash for Linux/Ubuntu的使用说明</title>
+    <link>http://afeng616.github.io/clash-for-ubuntu/</link>
+    <pubDate>Wed, 20 Mar 2024 14:53:25 &#43;0800</pubDate>
+    <author>afeng</author>
+    <guid>http://afeng616.github.io/clash-for-ubuntu/</guid>
+    <description><![CDATA[Clash for Linux/Ubuntu的使用说明，包含下载地址及详细配置过程。]]></description>
+</item>
+<item>
     <title>DLL调用方式测试</title>
     <link>http://afeng616.github.io/mydll/</link>
     <pubDate>Wed, 26 Jul 2023 14:42:20 &#43;0800</pubDate>
@@ -77,14 +85,6 @@
     <author>afeng</author>
     <guid>http://afeng616.github.io/twitter-unsubscript/</guid>
     <description><![CDATA[Twitter取关脚本。]]></description>
-</item>
-<item>
-    <title>删除设备和驱动器中的图标</title>
-    <link>http://afeng616.github.io/delete-win-driver-logo/</link>
-    <pubDate>Fri, 01 Apr 2022 19:06:52 &#43;0800</pubDate>
-    <author>afeng</author>
-    <guid>http://afeng616.github.io/delete-win-driver-logo/</guid>
-    <description><![CDATA[删除设备和驱动器中的图标。]]></description>
 </item>
 </channel>
 </rss>
