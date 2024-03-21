@@ -79,7 +79,7 @@ sudo systemctl status clash
 ### 设置本机网络代理
 打开`设置->网络`，在网络代理一栏选择`手动`，并做出以下配置。
 
-![网络代理设置](../images/20240320-ubuntu-network-proxy.png)
+![网络代理设置](/images/blog/20240320-ubuntu-network-proxy.png)
 
 http代理、https代理: `127.0.0.1` `7890`
 

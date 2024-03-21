@@ -4,7 +4,15 @@
         <link>http://afeng616.github.io/posts/</link>
         <description>所有文章 | afeng滴blog</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>afeng616@gmail.com (afeng)</managingEditor>
-            <webMaster>afeng616@gmail.com (afeng)</webMaster><lastBuildDate>Wed, 20 Mar 2024 14:53:25 &#43;0800</lastBuildDate><atom:link href="http://afeng616.github.io/posts/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>afeng616@gmail.com (afeng)</webMaster><lastBuildDate>Thu, 21 Mar 2024 08:48:35 &#43;0800</lastBuildDate><atom:link href="http://afeng616.github.io/posts/" rel="self" type="application/rss+xml" /><item>
+    <title>修复Ubuntu引导问题</title>
+    <link>http://afeng616.github.io/ubuntu-boot-repair/</link>
+    <pubDate>Thu, 21 Mar 2024 08:48:35 &#43;0800</pubDate>
+    <author>afeng</author>
+    <guid>http://afeng616.github.io/ubuntu-boot-repair/</guid>
+    <description><![CDATA[最近重装win10系统，导致开机无法找到之前的Ubuntu引导，无法进入Ubuntu系统。]]></description>
+</item>
+<item>
     <title>Clash for Linux/Ubuntu的使用说明</title>
     <link>http://afeng616.github.io/clash-for-ubuntu/</link>
     <pubDate>Wed, 20 Mar 2024 14:53:25 &#43;0800</pubDate>
@@ -75,14 +83,6 @@
     <author>afeng</author>
     <guid>http://afeng616.github.io/kuaishou-unsubscript/</guid>
     <description><![CDATA[快手取关脚本。]]></description>
-</item>
-<item>
-    <title>Twitter取关脚本</title>
-    <link>http://afeng616.github.io/twitter-unsubscript/</link>
-    <pubDate>Sun, 03 Apr 2022 23:32:44 &#43;0800</pubDate>
-    <author>afeng</author>
-    <guid>http://afeng616.github.io/twitter-unsubscript/</guid>
-    <description><![CDATA[Twitter取关脚本。]]></description>
 </item>
 </channel>
 </rss>
