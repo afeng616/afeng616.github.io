@@ -4,9 +4,17 @@
         <link>http://afeng616.github.io/</link>
         <description>This is afeng&#39;s blog!</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>afeng616@gmail.com (afeng)</managingEditor>
-            <webMaster>afeng616@gmail.com (afeng)</webMaster><lastBuildDate>Tue, 25 Jun 2024 22:05:51 &#43;0800</lastBuildDate>
+            <webMaster>afeng616@gmail.com (afeng)</webMaster><lastBuildDate>Tue, 25 Jun 2024 22:47:51 &#43;0800</lastBuildDate>
             <atom:link href="http://afeng616.github.io/index.xml" rel="self" type="application/rss+xml" />
         <item>
+    <title>OpenCV绘制圆弧的坑</title>
+    <link>http://afeng616.github.io/cv-arc-problem/</link>
+    <pubDate>Tue, 25 Jun 2024 22:47:51 &#43;0800</pubDate>
+    <author>afeng</author>
+    <guid>http://afeng616.github.io/cv-arc-problem/</guid>
+    <description><![CDATA[OpenCV的ellipse画弧真的反人类！！！]]></description>
+</item>
+<item>
     <title>弧方向（顺逆时针）的计算方法</title>
     <link>http://afeng616.github.io/arc-dir/</link>
     <pubDate>Tue, 25 Jun 2024 22:05:51 &#43;0800</pubDate>
@@ -77,14 +85,6 @@
     <author>afeng</author>
     <guid>http://afeng616.github.io/newton_hybrid/</guid>
     <description><![CDATA[混合牛顿法。]]></description>
-</item>
-<item>
-    <title>Blog Test</title>
-    <link>http://afeng616.github.io/blog-test/</link>
-    <pubDate>Fri, 12 May 2023 13:24:48 &#43;0800</pubDate>
-    <author>afeng</author>
-    <guid>http://afeng616.github.io/blog-test/</guid>
-    <description><![CDATA[md渲染测试]]></description>
 </item>
 </channel>
 </rss>

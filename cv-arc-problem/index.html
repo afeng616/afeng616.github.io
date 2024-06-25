@@ -4,38 +4,38 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="robots" content="noodp" />
-        <title>弧方向（顺逆时针）的计算方法 - afeng滴blog</title><meta name="Description" content="已知弧的中心点、起点和终点，该如何计算该弧的旋转方向？"><meta property="og:title" content="弧方向（顺逆时针）的计算方法" />
-<meta property="og:description" content="已知弧的中心点、起点和终点，该如何计算该弧的旋转方向？" />
+        <title>OpenCV绘制圆弧的坑 - afeng滴blog</title><meta name="Description" content="OpenCV的ellipse画弧真的反人类！！！"><meta property="og:title" content="OpenCV绘制圆弧的坑" />
+<meta property="og:description" content="OpenCV的ellipse画弧真的反人类！！！" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://afeng616.github.io/arc-dir/" /><meta property="og:image" content="http://afeng616.github.io/favicon.png"/><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2024-06-25T22:05:51+08:00" />
-<meta property="article:modified_time" content="2024-06-25T22:05:51+08:00" /><meta property="og:site_name" content="afeng滴blog" />
+<meta property="og:url" content="http://afeng616.github.io/cv-arc-problem/" /><meta property="og:image" content="http://afeng616.github.io/favicon.png"/><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2024-06-25T22:47:51+08:00" />
+<meta property="article:modified_time" content="2024-06-25T22:47:51+08:00" /><meta property="og:site_name" content="afeng滴blog" />
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="http://afeng616.github.io/favicon.png"/>
 
-<meta name="twitter:title" content="弧方向（顺逆时针）的计算方法"/>
-<meta name="twitter:description" content="已知弧的中心点、起点和终点，该如何计算该弧的旋转方向？"/>
+<meta name="twitter:title" content="OpenCV绘制圆弧的坑"/>
+<meta name="twitter:description" content="OpenCV的ellipse画弧真的反人类！！！"/>
 <meta name="application-name" content="afeng滴blog">
 <meta name="apple-mobile-web-app-title" content="afeng滴blog"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="http://afeng616.github.io/arc-dir/" /><link rel="prev" href="http://afeng616.github.io/use-wxwidgets/" /><link rel="next" href="http://afeng616.github.io/cv-arc-problem/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="http://afeng616.github.io/cv-arc-problem/" /><link rel="prev" href="http://afeng616.github.io/arc-dir/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
         <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"></noscript><link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
         <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"></noscript><script type="application/ld+json">
     {
         "@context": "http://schema.org",
         "@type": "BlogPosting",
-        "headline": "弧方向（顺逆时针）的计算方法",
+        "headline": "OpenCV绘制圆弧的坑",
         "inLanguage": "zh-CN",
         "mainEntityOfPage": {
             "@type": "WebPage",
-            "@id": "http:\/\/afeng616.github.io\/arc-dir\/"
-        },"genre": "posts","keywords": "算法, 数学","wordcount":  159 ,
-        "url": "http:\/\/afeng616.github.io\/arc-dir\/","datePublished": "2024-06-25T22:05:51+08:00","dateModified": "2024-06-25T22:05:51+08:00","publisher": {
+            "@id": "http:\/\/afeng616.github.io\/cv-arc-problem\/"
+        },"genre": "posts","keywords": "python","wordcount":  385 ,
+        "url": "http:\/\/afeng616.github.io\/cv-arc-problem\/","datePublished": "2024-06-25T22:47:51+08:00","dateModified": "2024-06-25T22:47:51+08:00","publisher": {
             "@type": "Organization",
             "name": "afeng"},"author": {
                 "@type": "Person",
                 "name": "afeng"
-            },"description": "已知弧的中心点、起点和终点，该如何计算该弧的旋转方向？"
+            },"description": "OpenCV的ellipse画弧真的反人类！！！"
     }
     </script></head>
     <body data-header-desktop="fixed" data-header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
@@ -115,10 +115,10 @@
                 <div class="container"><div class="toc" id="toc-auto">
             <h2 class="toc-title">目录</h2>
             <div class="toc-content" id="toc-content-auto"></div>
-        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">弧方向（顺逆时针）的计算方法</h1><div class="post-meta">
-            <div class="post-meta-line"><span class="post-author"><a href="https://github.com/afeng616" title="Author" target="_blank" rel="noopener noreffer author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>afeng</a></span>&nbsp;<span class="post-category">收录于 <a href="/categories/%E7%AC%94%E8%AE%B0/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>笔记</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2024/06/25">2024/06/25</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;约 159 字&nbsp;
-                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;预计阅读 1 分钟&nbsp;<span id="/arc-dir/" class="leancloud_visitors" data-flag-title="弧方向（顺逆时针）的计算方法">
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">OpenCV绘制圆弧的坑</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="https://github.com/afeng616" title="Author" target="_blank" rel="noopener noreffer author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>afeng</a></span>&nbsp;<span class="post-category">收录于 <a href="/categories/%E7%A4%BA%E4%BE%8B/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>示例</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2024/06/25">2024/06/25</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;约 385 字&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;预计阅读 1 分钟&nbsp;<span id="/cv-arc-problem/" class="leancloud_visitors" data-flag-title="OpenCV绘制圆弧的坑">
                         <i class="far fa-eye fa-fw" aria-hidden="true"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
         </div><div class="details toc" id="toc-static"  data-kept="">
@@ -127,17 +127,62 @@
                     <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
                 </div>
                 <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents"></nav></div>
-            </div><div class="content" id="content"><p>已知弧的中心点、起点和终点，该如何计算该弧的旋转方向？</p>
-<p>假设一段弧如下图所示，起点为$M$，终点为$N$，中心点为$P$。</p>
+            </div><div class="content" id="content"><p>使用函数<code>cv2.ellipse</code>可以进行圆弧绘制，该函数传入的主要参数为：弧中心、弧半径、弧起始角度、弧终止角度。<br>
+但这个函数在使用时着实有些反人类！！！</p>
+<p>首先在cv中取向下为y轴正方向，因此它的角度表示与笛卡尔系是相反的；<br>
+其次绘制时并非是从angle1-&gt;angle2按规定方向绘制，而是在传入的两个angle中从小angle-&gt;大angle按顺时针绘制的，即angle传入顺序先后并不代表着起始和终止。</p>
+<p>在用的时候真是无语住了，直到我单独测试才发现这个问题！！！</p>
 <p><img
         class="lazyload"
         src="/svg/loading.min.svg"
-        data-src="/images/blog/20240625-arc-dir.png"
-        data-srcset="/images/blog/20240625-arc-dir.png, /images/blog/20240625-arc-dir.png 1.5x, /images/blog/20240625-arc-dir.png 2x"
+        data-src="/images/blog/20240625-cv-arc-problem.png"
+        data-srcset="/images/blog/20240625-cv-arc-problem.png, /images/blog/20240625-cv-arc-problem.png 1.5x, /images/blog/20240625-cv-arc-problem.png 2x"
         data-sizes="auto"
-        alt="/images/blog/20240625-arc-dir.png"
-        title="弧" /></p>
-<p>通过计算得到两个向量$PM,PN$，再通过$PM\times PN$叉乘结果进行判断，若结果为正则说明圆弧从M到N为逆时针旋转，否则相反。<em>需要注意此时xy轴正方向分别为右、上，其他情况则需要另外判断。</em></p></div><div class="post-footer" id="post-footer">
+        alt="/images/blog/20240625-cv-arc-problem.png"
+        title="OpenCV画弧" /></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">numpy==1.23.2
+</span></span><span class="line"><span class="cl">opencv_python==4.6.0.66
+</span></span></code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">cv2</span>
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="n">img</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="mi">100</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">uint8</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="n">cv2</span><span class="o">.</span><span class="n">ellipse</span><span class="p">(</span><span class="n">img</span><span class="p">,</span> <span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">),</span> <span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">10</span><span class="p">),</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">45</span><span class="p">,</span> <span class="o">-</span><span class="mi">135</span><span class="p">,</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span> <span class="mi">255</span><span class="p">),</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">cv2</span><span class="o">.</span><span class="n">ellipse</span><span class="p">(</span><span class="n">img</span><span class="p">,</span> <span class="p">(</span><span class="mi">40</span><span class="p">,</span> <span class="mi">10</span><span class="p">),</span> <span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">10</span><span class="p">),</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">135</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span>  <span class="p">(</span><span class="mi">255</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span> <span class="mi">255</span><span class="p">),</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">cv2</span><span class="o">.</span><span class="n">ellipse</span><span class="p">(</span><span class="n">img</span><span class="p">,</span> <span class="p">(</span><span class="mi">80</span><span class="p">,</span> <span class="mi">10</span><span class="p">),</span> <span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">10</span><span class="p">),</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">135</span><span class="p">,</span>  <span class="p">(</span><span class="mi">255</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span> <span class="mi">255</span><span class="p">),</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">cv2</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="s1">&#39;image&#39;</span><span class="p">,</span> <span class="n">img</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    <span class="n">cv2</span><span class="o">.</span><span class="n">waitKey</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>这里刻意采用图形填充来显示弧的角度范围。<br>
+弧1可以看出在cv世界中，向右为0°，顺时针转动为正。<br>
+弧2、弧3的函数使用则可以看出angle传入的顺序对圆弧绘制没有影响。</p></div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">
             <div class="post-info-mod">
@@ -145,23 +190,22 @@
             </div></div>
         <div class="post-info-line">
             <div class="post-info-md"><span>
-                            <a class="link-to-markdown" href="/arc-dir/index.md" target="_blank">阅读原始文档</a>
+                            <a class="link-to-markdown" href="/cv-arc-problem/index.md" target="_blank">阅读原始文档</a>
                         </span></div>
             <div class="post-info-share">
-                <span><a href="javascript:void(0);" title="分享到 Twitter" data-sharer="twitter" data-url="http://afeng616.github.io/arc-dir/" data-title="弧方向（顺逆时针）的计算方法" data-hashtags="算法,数学"><i class="fab fa-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Facebook" data-sharer="facebook" data-url="http://afeng616.github.io/arc-dir/" data-hashtag="算法"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a></span>
+                <span><a href="javascript:void(0);" title="分享到 Twitter" data-sharer="twitter" data-url="http://afeng616.github.io/cv-arc-problem/" data-title="OpenCV绘制圆弧的坑" data-hashtags="python"><i class="fab fa-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Facebook" data-sharer="facebook" data-url="http://afeng616.github.io/cv-arc-problem/" data-hashtag="python"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a></span>
             </div>
         </div>
     </div>
 
     <div class="post-info-more">
-        <section class="post-tags"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/%E7%AE%97%E6%B3%95/">算法</a>,&nbsp;<a href="/tags/%E6%95%B0%E5%AD%A6/">数学</a></section>
+        <section class="post-tags"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/python/">python</a></section>
         <section>
             <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
         </section>
     </div>
 
-    <div class="post-nav"><a href="/use-wxwidgets/" class="prev" rel="prev" title="Windows下通过CMake调用wxWidgets库&#43;Hello World Demo"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>Windows下通过CMake调用wxWidgets库+Hello World Demo</a>
-            <a href="/cv-arc-problem/" class="next" rel="next" title="OpenCV绘制圆弧的坑">OpenCV绘制圆弧的坑<i class="fas fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
+    <div class="post-nav"><a href="/arc-dir/" class="prev" rel="prev" title="弧方向（顺逆时针）的计算方法"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>弧方向（顺逆时针）的计算方法</a></div>
 </div>
 <div id="comments"><div id="valine" class="comment"></div><noscript>
                 Please enable JavaScript to view the comments powered by <a href="https://valine.js.org/">Valine</a>.
