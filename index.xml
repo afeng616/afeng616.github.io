@@ -4,9 +4,17 @@
         <link>http://afeng616.github.io/</link>
         <description>This is afeng&#39;s blog!</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>afeng616@gmail.com (afeng)</managingEditor>
-            <webMaster>afeng616@gmail.com (afeng)</webMaster><lastBuildDate>Thu, 21 Sep 2023 22:11:24 &#43;0800</lastBuildDate>
+            <webMaster>afeng616@gmail.com (afeng)</webMaster><lastBuildDate>Tue, 25 Jun 2024 22:05:51 &#43;0800</lastBuildDate>
             <atom:link href="http://afeng616.github.io/index.xml" rel="self" type="application/rss+xml" />
         <item>
+    <title>弧方向（顺逆时针）的计算方法</title>
+    <link>http://afeng616.github.io/arc-dir/</link>
+    <pubDate>Tue, 25 Jun 2024 22:05:51 &#43;0800</pubDate>
+    <author>afeng</author>
+    <guid>http://afeng616.github.io/arc-dir/</guid>
+    <description><![CDATA[已知弧的中心点、起点和终点，该如何计算该弧的旋转方向？]]></description>
+</item>
+<item>
     <title>Windows下通过CMake调用wxWidgets库&#43;Hello World Demo</title>
     <link>http://afeng616.github.io/use-wxwidgets/</link>
     <pubDate>Thu, 21 Sep 2023 22:11:24 &#43;0800</pubDate>
@@ -77,14 +85,6 @@
     <author>afeng</author>
     <guid>http://afeng616.github.io/blog-test/</guid>
     <description><![CDATA[md渲染测试]]></description>
-</item>
-<item>
-    <title>快手取关脚本</title>
-    <link>http://afeng616.github.io/kuaishou-unsubscript/</link>
-    <pubDate>Mon, 04 Apr 2022 23:41:20 &#43;0800</pubDate>
-    <author>afeng</author>
-    <guid>http://afeng616.github.io/kuaishou-unsubscript/</guid>
-    <description><![CDATA[快手取关脚本。]]></description>
 </item>
 </channel>
 </rss>

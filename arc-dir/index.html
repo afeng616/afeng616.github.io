@@ -4,38 +4,38 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="robots" content="noodp" />
-        <title>windows下vue3&#43;electron的环境搭建 - afeng滴blog</title><meta name="Description" content="windows从零新建一个vue3&#43;electron的项目说明，包括各种环境安装。"><meta property="og:title" content="windows下vue3&#43;electron的环境搭建" />
-<meta property="og:description" content="windows从零新建一个vue3&#43;electron的项目说明，包括各种环境安装。" />
+        <title>弧方向（顺逆时针）的计算方法 - afeng滴blog</title><meta name="Description" content="已知弧的中心点、起点和终点，该如何计算该弧的旋转方向？"><meta property="og:title" content="弧方向（顺逆时针）的计算方法" />
+<meta property="og:description" content="已知弧的中心点、起点和终点，该如何计算该弧的旋转方向？" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://afeng616.github.io/vue3-electron-init/" /><meta property="og:image" content="http://afeng616.github.io/favicon.png"/><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2023-08-30T20:37:24+08:00" />
-<meta property="article:modified_time" content="2023-08-30T20:37:24+08:00" /><meta property="og:site_name" content="afeng滴blog" />
+<meta property="og:url" content="http://afeng616.github.io/arc-dir/" /><meta property="og:image" content="http://afeng616.github.io/favicon.png"/><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2024-06-25T22:05:51+08:00" />
+<meta property="article:modified_time" content="2024-06-25T22:05:51+08:00" /><meta property="og:site_name" content="afeng滴blog" />
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="http://afeng616.github.io/favicon.png"/>
 
-<meta name="twitter:title" content="windows下vue3&#43;electron的环境搭建"/>
-<meta name="twitter:description" content="windows从零新建一个vue3&#43;electron的项目说明，包括各种环境安装。"/>
+<meta name="twitter:title" content="弧方向（顺逆时针）的计算方法"/>
+<meta name="twitter:description" content="已知弧的中心点、起点和终点，该如何计算该弧的旋转方向？"/>
 <meta name="application-name" content="afeng滴blog">
 <meta name="apple-mobile-web-app-title" content="afeng滴blog"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="http://afeng616.github.io/vue3-electron-init/" /><link rel="prev" href="http://afeng616.github.io/mydll/" /><link rel="next" href="http://afeng616.github.io/use-wxwidgets/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="http://afeng616.github.io/arc-dir/" /><link rel="prev" href="http://afeng616.github.io/use-wxwidgets/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
         <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"></noscript><link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
         <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"></noscript><script type="application/ld+json">
     {
         "@context": "http://schema.org",
         "@type": "BlogPosting",
-        "headline": "windows下vue3+electron的环境搭建",
+        "headline": "弧方向（顺逆时针）的计算方法",
         "inLanguage": "zh-CN",
         "mainEntityOfPage": {
             "@type": "WebPage",
-            "@id": "http:\/\/afeng616.github.io\/vue3-electron-init\/"
-        },"genre": "posts","keywords": "javascript","wordcount":  745 ,
-        "url": "http:\/\/afeng616.github.io\/vue3-electron-init\/","datePublished": "2023-08-30T20:37:24+08:00","dateModified": "2023-08-30T20:37:24+08:00","publisher": {
+            "@id": "http:\/\/afeng616.github.io\/arc-dir\/"
+        },"genre": "posts","keywords": "算法, 数学","wordcount":  159 ,
+        "url": "http:\/\/afeng616.github.io\/arc-dir\/","datePublished": "2024-06-25T22:05:51+08:00","dateModified": "2024-06-25T22:05:51+08:00","publisher": {
             "@type": "Organization",
             "name": "afeng"},"author": {
                 "@type": "Person",
                 "name": "afeng"
-            },"description": "windows从零新建一个vue3+electron的项目说明，包括各种环境安装。"
+            },"description": "已知弧的中心点、起点和终点，该如何计算该弧的旋转方向？"
     }
     </script></head>
     <body data-header-desktop="fixed" data-header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
@@ -115,10 +115,10 @@
                 <div class="container"><div class="toc" id="toc-auto">
             <h2 class="toc-title">目录</h2>
             <div class="toc-content" id="toc-content-auto"></div>
-        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">windows下vue3+electron的环境搭建</h1><div class="post-meta">
-            <div class="post-meta-line"><span class="post-author"><a href="https://github.com/afeng616" title="Author" target="_blank" rel="noopener noreffer author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>afeng</a></span>&nbsp;<span class="post-category">收录于 <a href="/categories/%E6%8A%98%E8%85%BE/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>折腾</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2023/08/30">2023/08/30</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;约 745 字&nbsp;
-                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;预计阅读 2 分钟&nbsp;<span id="/vue3-electron-init/" class="leancloud_visitors" data-flag-title="windows下vue3&#43;electron的环境搭建">
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">弧方向（顺逆时针）的计算方法</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="https://github.com/afeng616" title="Author" target="_blank" rel="noopener noreffer author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>afeng</a></span>&nbsp;<span class="post-category">收录于 <a href="/categories/%E7%AC%94%E8%AE%B0/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>笔记</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2024/06/25">2024/06/25</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;约 159 字&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;预计阅读 1 分钟&nbsp;<span id="/arc-dir/" class="leancloud_visitors" data-flag-title="弧方向（顺逆时针）的计算方法">
                         <i class="far fa-eye fa-fw" aria-hidden="true"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
         </div><div class="details toc" id="toc-static"  data-kept="">
@@ -126,173 +126,41 @@
                     <span>目录</span>
                     <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
                 </div>
-                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
-  <ul>
-    <li><a href="#项目初始化">项目初始化</a>
-      <ul>
-        <li><a href="#环境准备">环境准备</a></li>
-        <li><a href="#新建架构vue3electron">新建架构vue3+electron</a></li>
-      </ul>
-    </li>
-    <li><a href="#项目共享">项目共享</a></li>
-    <li><a href="#references">References</a></li>
-  </ul>
-</nav></div>
-            </div><div class="content" id="content"><h2 id="项目初始化">项目初始化</h2>
-<p>基于vue3+electron开发桌面应用。</p>
-<h3 id="环境准备">环境准备</h3>
-<p>windows从零新建一个vue3+electron的项目说明，包括各种环境安装。</p>
-<ol>
-<li>安装npm</li>
-</ol>
-<ul>
-<li>
-<p>npm的安装可以直接使用官方的.exe文件<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>。</p>
-</li>
-<li>
-<p>当然也可以使用nvm<sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup>进行安装，相比起来更方便，还可以进行npm的版本管理。</p>
-<p>nvm安装完毕以后，打开命令行，安装node版本V16（V18版本在安装electron时会有openssl-legacy-provider问题，比较难解决）。</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">nvm install <span class="m">16</span>
-</span></span><span class="line"><span class="cl">nvm use <span class="m">16</span>
-</span></span></code></pre></td></tr></table>
-</div>
-</div></li>
-</ul>
-<ol start="2">
-<li>
-<p>安装vue-cli</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">npm install -g @vue/cli
-</span></span></code></pre></td></tr></table>
-</div>
-</div></li>
-<li>
-<p>安装electron</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">npm install electron --save-dev
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>安装过程中可能会遇到下载失败的问题<sup id="fnref:3"><a href="#fn:3" class="footnote-ref" role="doc-noteref">3</a></sup>，解决方法如下：</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">npm config edit
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>修改<code>.npmrc</code>文件配置并保存。</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">registry=https://registry.npmmirror.com
-</span></span><span class="line"><span class="cl">electron_mirror=https://cdn.npmmirror.com/binaries/electron/
-</span></span><span class="line"><span class="cl">electron_builder_binaries_mirror=https://npmmirror.com/mirrors/electron-builder-binaries/
-</span></span></code></pre></td></tr></table>
-</div>
-</div></li>
-</ol>
-<h3 id="新建架构vue3electron">新建架构vue3+electron</h3>
-<p>vue3+electron环境初始化<sup id="fnref:4"><a href="#fn:4" class="footnote-ref" role="doc-noteref">4</a></sup>步骤如下：</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl"><span class="c1"># 新建vue项目，myproject为项目名称，只能小写</span>
-</span></span><span class="line"><span class="cl">vue create myproject
-</span></span><span class="line"><span class="cl"><span class="nb">cd</span> myproject
-</span></span><span class="line"><span class="cl"><span class="c1"># 添加electron</span>
-</span></span><span class="line"><span class="cl">vue add electron-builder
-</span></span></code></pre></td></tr></table>
-</div>
-</div><div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl"><span class="c1"># 项目启动</span>
-</span></span><span class="line"><span class="cl">npm run electron:serve
-</span></span></code></pre></td></tr></table>
-</div>
-</div><h2 id="项目共享">项目共享</h2>
-<p>当与他人共享源码时，不需要拷贝<code>/node_modules</code>和<code>/dist_electron</code>文件夹以及<code>package-lock.json</code>文件。<br>
-由于npm环境不同，很可能导致不必要的错误，它们直接由以下命令生成。</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl"><span class="c1"># vue和electron安装完毕后</span>
-</span></span><span class="line"><span class="cl">npm install
-</span></span></code></pre></td></tr></table>
-</div>
-</div><h2 id="references">References</h2>
-<div class="footnotes" role="doc-endnotes">
-<hr>
-<ol>
-<li id="fn:1">
-<p><a href="https://nodejs.org/zh-cn/download" target="_blank" rel="noopener noreffer ">https://nodejs.org/zh-cn/download</a> &ldquo;nodejs官方下载网址&rdquo;&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
-</li>
-<li id="fn:2">
-<p><a href="https://github.com/coreybutler/nvm-windows/releases" target="_blank" rel="noopener noreffer ">https://github.com/coreybutler/nvm-windows/releases</a> &ldquo;nvm-windows下载网址&rdquo;&#160;<a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
-</li>
-<li id="fn:3">
-<p><a href="https://www.cnblogs.com/makalochen/p/16154510.html" target="_blank" rel="noopener noreffer ">https://www.cnblogs.com/makalochen/p/16154510.html</a> &ldquo;cnblog: npm 安装electron 失败的问题和解决办法&rdquo;&#160;<a href="#fnref:3" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
-</li>
-<li id="fn:4">
-<p><a href="https://segmentfault.com/a/1190000038463122" target="_blank" rel="noopener noreffer ">https://segmentfault.com/a/1190000038463122</a> &ldquo;segmentfault: Vue+Electron项目简洁快速搭建教程&rdquo;&#160;<a href="#fnref:4" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
-</li>
-</ol>
-</div></div><div class="post-footer" id="post-footer">
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents"></nav></div>
+            </div><div class="content" id="content"><p>已知弧的中心点、起点和终点，该如何计算该弧的旋转方向？</p>
+<p>假设一段弧如下图所示，起点为$M$，终点为$N$，中心点为$P$。</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="/images/blog/20240625-arc-dir.png"
+        data-srcset="/images/blog/20240625-arc-dir.png, /images/blog/20240625-arc-dir.png 1.5x, /images/blog/20240625-arc-dir.png 2x"
+        data-sizes="auto"
+        alt="/images/blog/20240625-arc-dir.png"
+        title="弧" /></p>
+<p>通过计算得到两个向量$PM,PN$，再通过$PM\times PN$叉乘结果进行判断，若结果为正则说明圆弧从M到N为逆时针旋转，否则相反。<em>需要注意此时xy轴正方向分别为右、上，其他情况则需要另外判断。</em></p></div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">
             <div class="post-info-mod">
-                <span>更新于 2023/08/30</span>
+                <span>更新于 2024/06/25</span>
             </div></div>
         <div class="post-info-line">
             <div class="post-info-md"><span>
-                            <a class="link-to-markdown" href="/vue3-electron-init/index.md" target="_blank">阅读原始文档</a>
+                            <a class="link-to-markdown" href="/arc-dir/index.md" target="_blank">阅读原始文档</a>
                         </span></div>
             <div class="post-info-share">
-                <span><a href="javascript:void(0);" title="分享到 Twitter" data-sharer="twitter" data-url="http://afeng616.github.io/vue3-electron-init/" data-title="windows下vue3&#43;electron的环境搭建" data-hashtags="javascript"><i class="fab fa-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Facebook" data-sharer="facebook" data-url="http://afeng616.github.io/vue3-electron-init/" data-hashtag="javascript"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a></span>
+                <span><a href="javascript:void(0);" title="分享到 Twitter" data-sharer="twitter" data-url="http://afeng616.github.io/arc-dir/" data-title="弧方向（顺逆时针）的计算方法" data-hashtags="算法,数学"><i class="fab fa-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Facebook" data-sharer="facebook" data-url="http://afeng616.github.io/arc-dir/" data-hashtag="算法"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a></span>
             </div>
         </div>
     </div>
 
     <div class="post-info-more">
-        <section class="post-tags"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/javascript/">javascript</a></section>
+        <section class="post-tags"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/%E7%AE%97%E6%B3%95/">算法</a>,&nbsp;<a href="/tags/%E6%95%B0%E5%AD%A6/">数学</a></section>
         <section>
             <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
         </section>
     </div>
 
-    <div class="post-nav"><a href="/mydll/" class="prev" rel="prev" title="DLL调用方式测试"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>DLL调用方式测试</a>
-            <a href="/use-wxwidgets/" class="next" rel="next" title="Windows下通过CMake调用wxWidgets库&#43;Hello World Demo">Windows下通过CMake调用wxWidgets库+Hello World Demo<i class="fas fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
+    <div class="post-nav"><a href="/use-wxwidgets/" class="prev" rel="prev" title="Windows下通过CMake调用wxWidgets库&#43;Hello World Demo"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>Windows下通过CMake调用wxWidgets库+Hello World Demo</a></div>
 </div>
 <div id="comments"><div id="valine" class="comment"></div><noscript>
                 Please enable JavaScript to view the comments powered by <a href="https://valine.js.org/">Valine</a>.
