@@ -4,13 +4,29 @@
         <link>http://afeng616.github.io/categories/%E7%AC%94%E8%AE%B0/</link>
         <description>笔记 - 分类 - afeng滴blog</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>afeng616@gmail.com (afeng)</managingEditor>
-            <webMaster>afeng616@gmail.com (afeng)</webMaster><lastBuildDate>Tue, 25 Jun 2024 22:05:51 &#43;0800</lastBuildDate><atom:link href="http://afeng616.github.io/categories/%E7%AC%94%E8%AE%B0/" rel="self" type="application/rss+xml" /><item>
-    <title>弧方向（顺逆时针）的计算方法</title>
-    <link>http://afeng616.github.io/arc-dir/</link>
-    <pubDate>Tue, 25 Jun 2024 22:05:51 &#43;0800</pubDate>
+            <webMaster>afeng616@gmail.com (afeng)</webMaster><lastBuildDate>Mon, 31 Mar 2025 22:37:29 &#43;0800</lastBuildDate><atom:link href="http://afeng616.github.io/categories/%E7%AC%94%E8%AE%B0/" rel="self" type="application/rss+xml" /><item>
+    <title>爬楼问题笔记</title>
+    <link>http://afeng616.github.io/climb/</link>
+    <pubDate>Mon, 31 Mar 2025 22:37:29 &#43;0800</pubDate>
     <author>afeng</author>
-    <guid>http://afeng616.github.io/arc-dir/</guid>
-    <description><![CDATA[已知弧的中心点、起点和终点，该如何计算该弧的旋转方向？]]></description>
+    <guid>http://afeng616.github.io/climb/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
+    <title>修复Ubuntu引导问题</title>
+    <link>http://afeng616.github.io/ubuntu-boot-repair/</link>
+    <pubDate>Thu, 21 Mar 2024 08:48:35 &#43;0800</pubDate>
+    <author>afeng</author>
+    <guid>http://afeng616.github.io/ubuntu-boot-repair/</guid>
+    <description><![CDATA[最近重装win10系统，导致开机无法找到之前的Ubuntu引导，无法进入Ubuntu系统。]]></description>
+</item>
+<item>
+    <title>Clash for Linux/Ubuntu的使用说明</title>
+    <link>http://afeng616.github.io/clash-for-ubuntu/</link>
+    <pubDate>Wed, 20 Mar 2024 14:53:25 &#43;0800</pubDate>
+    <author>afeng</author>
+    <guid>http://afeng616.github.io/clash-for-ubuntu/</guid>
+    <description><![CDATA[Clash for Linux/Ubuntu的使用说明，包含下载地址及详细配置过程。]]></description>
 </item>
 <item>
     <title>论文那些事儿</title>

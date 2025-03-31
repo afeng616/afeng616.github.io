@@ -4,15 +4,7 @@
         <link>http://afeng616.github.io/categories/%E6%8A%98%E8%85%BE/</link>
         <description>折腾 - 分类 - afeng滴blog</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>afeng616@gmail.com (afeng)</managingEditor>
-            <webMaster>afeng616@gmail.com (afeng)</webMaster><lastBuildDate>Wed, 30 Aug 2023 20:37:24 &#43;0800</lastBuildDate><atom:link href="http://afeng616.github.io/categories/%E6%8A%98%E8%85%BE/" rel="self" type="application/rss+xml" /><item>
-    <title>windows下vue3&#43;electron的环境搭建</title>
-    <link>http://afeng616.github.io/vue3-electron-init/</link>
-    <pubDate>Wed, 30 Aug 2023 20:37:24 &#43;0800</pubDate>
-    <author>afeng</author>
-    <guid>http://afeng616.github.io/vue3-electron-init/</guid>
-    <description><![CDATA[windows从零新建一个vue3+electron的项目说明，包括各种环境安装。]]></description>
-</item>
-<item>
+            <webMaster>afeng616@gmail.com (afeng)</webMaster><lastBuildDate>Sun, 21 May 2023 12:01:49 &#43;0800</lastBuildDate><atom:link href="http://afeng616.github.io/categories/%E6%8A%98%E8%85%BE/" rel="self" type="application/rss+xml" /><item>
     <title>将第三方手柄输出映射到鼠标上</title>
     <link>http://afeng616.github.io/diy-gamepad/</link>
     <pubDate>Sun, 21 May 2023 12:01:49 &#43;0800</pubDate>

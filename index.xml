@@ -4,39 +4,31 @@
         <link>http://afeng616.github.io/</link>
         <description>This is afeng&#39;s blog!</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>afeng616@gmail.com (afeng)</managingEditor>
-            <webMaster>afeng616@gmail.com (afeng)</webMaster><lastBuildDate>Tue, 25 Jun 2024 22:47:51 &#43;0800</lastBuildDate>
+            <webMaster>afeng616@gmail.com (afeng)</webMaster><lastBuildDate>Mon, 31 Mar 2025 22:37:29 &#43;0800</lastBuildDate>
             <atom:link href="http://afeng616.github.io/index.xml" rel="self" type="application/rss+xml" />
         <item>
-    <title>OpenCV绘制圆弧的坑</title>
-    <link>http://afeng616.github.io/cv-arc-problem/</link>
-    <pubDate>Tue, 25 Jun 2024 22:47:51 &#43;0800</pubDate>
+    <title>爬楼问题笔记</title>
+    <link>http://afeng616.github.io/climb/</link>
+    <pubDate>Mon, 31 Mar 2025 22:37:29 &#43;0800</pubDate>
     <author>afeng</author>
-    <guid>http://afeng616.github.io/cv-arc-problem/</guid>
-    <description><![CDATA[OpenCV的ellipse画弧真的反人类！！！]]></description>
+    <guid>http://afeng616.github.io/climb/</guid>
+    <description><![CDATA[]]></description>
 </item>
 <item>
-    <title>弧方向（顺逆时针）的计算方法</title>
-    <link>http://afeng616.github.io/arc-dir/</link>
-    <pubDate>Tue, 25 Jun 2024 22:05:51 &#43;0800</pubDate>
+    <title>修复Ubuntu引导问题</title>
+    <link>http://afeng616.github.io/ubuntu-boot-repair/</link>
+    <pubDate>Thu, 21 Mar 2024 08:48:35 &#43;0800</pubDate>
     <author>afeng</author>
-    <guid>http://afeng616.github.io/arc-dir/</guid>
-    <description><![CDATA[已知弧的中心点、起点和终点，该如何计算该弧的旋转方向？]]></description>
+    <guid>http://afeng616.github.io/ubuntu-boot-repair/</guid>
+    <description><![CDATA[最近重装win10系统，导致开机无法找到之前的Ubuntu引导，无法进入Ubuntu系统。]]></description>
 </item>
 <item>
-    <title>Windows下通过CMake调用wxWidgets库&#43;Hello World Demo</title>
-    <link>http://afeng616.github.io/use-wxwidgets/</link>
-    <pubDate>Thu, 21 Sep 2023 22:11:24 &#43;0800</pubDate>
+    <title>Clash for Linux/Ubuntu的使用说明</title>
+    <link>http://afeng616.github.io/clash-for-ubuntu/</link>
+    <pubDate>Wed, 20 Mar 2024 14:53:25 &#43;0800</pubDate>
     <author>afeng</author>
-    <guid>http://afeng616.github.io/use-wxwidgets/</guid>
-    <description><![CDATA[在Win10系统下，使用CMake调用wxWidgets提供的头文件+编译好的二进制dll，并跑通官方文档中的demo。]]></description>
-</item>
-<item>
-    <title>windows下vue3&#43;electron的环境搭建</title>
-    <link>http://afeng616.github.io/vue3-electron-init/</link>
-    <pubDate>Wed, 30 Aug 2023 20:37:24 &#43;0800</pubDate>
-    <author>afeng</author>
-    <guid>http://afeng616.github.io/vue3-electron-init/</guid>
-    <description><![CDATA[windows从零新建一个vue3+electron的项目说明，包括各种环境安装。]]></description>
+    <guid>http://afeng616.github.io/clash-for-ubuntu/</guid>
+    <description><![CDATA[Clash for Linux/Ubuntu的使用说明，包含下载地址及详细配置过程。]]></description>
 </item>
 <item>
     <title>DLL调用方式测试</title>
@@ -85,6 +77,14 @@
     <author>afeng</author>
     <guid>http://afeng616.github.io/newton_hybrid/</guid>
     <description><![CDATA[混合牛顿法。]]></description>
+</item>
+<item>
+    <title>Blog Test</title>
+    <link>http://afeng616.github.io/blog-test/</link>
+    <pubDate>Fri, 12 May 2023 13:24:48 &#43;0800</pubDate>
+    <author>afeng</author>
+    <guid>http://afeng616.github.io/blog-test/</guid>
+    <description><![CDATA[md渲染测试]]></description>
 </item>
 </channel>
 </rss>

@@ -4,13 +4,13 @@
         <link>http://afeng616.github.io/tags/python/</link>
         <description>python - 标签 - afeng滴blog</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>afeng616@gmail.com (afeng)</managingEditor>
-            <webMaster>afeng616@gmail.com (afeng)</webMaster><lastBuildDate>Tue, 25 Jun 2024 22:47:51 &#43;0800</lastBuildDate><atom:link href="http://afeng616.github.io/tags/python/" rel="self" type="application/rss+xml" /><item>
-    <title>OpenCV绘制圆弧的坑</title>
-    <link>http://afeng616.github.io/cv-arc-problem/</link>
-    <pubDate>Tue, 25 Jun 2024 22:47:51 &#43;0800</pubDate>
+            <webMaster>afeng616@gmail.com (afeng)</webMaster><lastBuildDate>Mon, 31 Mar 2025 22:37:29 &#43;0800</lastBuildDate><atom:link href="http://afeng616.github.io/tags/python/" rel="self" type="application/rss+xml" /><item>
+    <title>爬楼问题笔记</title>
+    <link>http://afeng616.github.io/climb/</link>
+    <pubDate>Mon, 31 Mar 2025 22:37:29 &#43;0800</pubDate>
     <author>afeng</author>
-    <guid>http://afeng616.github.io/cv-arc-problem/</guid>
-    <description><![CDATA[OpenCV的ellipse画弧真的反人类！！！]]></description>
+    <guid>http://afeng616.github.io/climb/</guid>
+    <description><![CDATA[]]></description>
 </item>
 <item>
     <title>Pytorch测试GPU是否可用</title>

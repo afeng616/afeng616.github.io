@@ -4,13 +4,13 @@
         <link>http://afeng616.github.io/tags/%E7%AE%97%E6%B3%95/</link>
         <description>算法 - 标签 - afeng滴blog</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>afeng616@gmail.com (afeng)</managingEditor>
-            <webMaster>afeng616@gmail.com (afeng)</webMaster><lastBuildDate>Tue, 25 Jun 2024 22:05:51 &#43;0800</lastBuildDate><atom:link href="http://afeng616.github.io/tags/%E7%AE%97%E6%B3%95/" rel="self" type="application/rss+xml" /><item>
-    <title>弧方向（顺逆时针）的计算方法</title>
-    <link>http://afeng616.github.io/arc-dir/</link>
-    <pubDate>Tue, 25 Jun 2024 22:05:51 &#43;0800</pubDate>
+            <webMaster>afeng616@gmail.com (afeng)</webMaster><lastBuildDate>Mon, 31 Mar 2025 22:37:29 &#43;0800</lastBuildDate><atom:link href="http://afeng616.github.io/tags/%E7%AE%97%E6%B3%95/" rel="self" type="application/rss+xml" /><item>
+    <title>爬楼问题笔记</title>
+    <link>http://afeng616.github.io/climb/</link>
+    <pubDate>Mon, 31 Mar 2025 22:37:29 &#43;0800</pubDate>
     <author>afeng</author>
-    <guid>http://afeng616.github.io/arc-dir/</guid>
-    <description><![CDATA[已知弧的中心点、起点和终点，该如何计算该弧的旋转方向？]]></description>
+    <guid>http://afeng616.github.io/climb/</guid>
+    <description><![CDATA[]]></description>
 </item>
 <item>
     <title>混合牛顿法</title>
