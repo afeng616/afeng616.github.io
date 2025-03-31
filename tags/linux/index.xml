@@ -1,8 +1,8 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-        <title>linux - 标签 - afeng滴blog</title>
+        <title>Linux - 标签 - afeng滴blog</title>
         <link>http://afeng616.github.io/tags/linux/</link>
-        <description>linux - 标签 - afeng滴blog</description>
+        <description>Linux - 标签 - afeng滴blog</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>afeng616@gmail.com (afeng)</managingEditor>
             <webMaster>afeng616@gmail.com (afeng)</webMaster><lastBuildDate>Thu, 21 Mar 2024 08:48:35 &#43;0800</lastBuildDate><atom:link href="http://afeng616.github.io/tags/linux/" rel="self" type="application/rss+xml" /><item>
     <title>修复Ubuntu引导问题</title>

@@ -4,48 +4,32 @@
         <link>http://afeng616.github.io/tags/</link>
         <description>Tags - 标签 - afeng滴blog</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>afeng616@gmail.com (afeng)</managingEditor>
-            <webMaster>afeng616@gmail.com (afeng)</webMaster><lastBuildDate>Tue, 25 Jun 2024 22:47:51 &#43;0800</lastBuildDate><atom:link href="http://afeng616.github.io/tags/" rel="self" type="application/rss+xml" /><item>
-    <title>python</title>
+            <webMaster>afeng616@gmail.com (afeng)</webMaster><lastBuildDate>Mon, 31 Mar 2025 22:37:29 &#43;0800</lastBuildDate><atom:link href="http://afeng616.github.io/tags/" rel="self" type="application/rss+xml" /><item>
+    <title>Python</title>
     <link>http://afeng616.github.io/tags/python/</link>
-    <pubDate>Tue, 25 Jun 2024 22:47:51 &#43;0800</pubDate>
+    <pubDate>Mon, 31 Mar 2025 22:37:29 &#43;0800</pubDate>
     <author>afeng</author>
     <guid>http://afeng616.github.io/tags/python/</guid>
     <description><![CDATA[]]></description>
 </item>
 <item>
-    <title>数学</title>
-    <link>http://afeng616.github.io/tags/%E6%95%B0%E5%AD%A6/</link>
-    <pubDate>Tue, 25 Jun 2024 22:05:51 &#43;0800</pubDate>
-    <author>afeng</author>
-    <guid>http://afeng616.github.io/tags/%E6%95%B0%E5%AD%A6/</guid>
-    <description><![CDATA[]]></description>
-</item>
-<item>
     <title>算法</title>
     <link>http://afeng616.github.io/tags/%E7%AE%97%E6%B3%95/</link>
-    <pubDate>Tue, 25 Jun 2024 22:05:51 &#43;0800</pubDate>
+    <pubDate>Mon, 31 Mar 2025 22:37:29 &#43;0800</pubDate>
     <author>afeng</author>
     <guid>http://afeng616.github.io/tags/%E7%AE%97%E6%B3%95/</guid>
     <description><![CDATA[]]></description>
 </item>
 <item>
-    <title>cpp</title>
-    <link>http://afeng616.github.io/tags/cpp/</link>
-    <pubDate>Thu, 21 Sep 2023 22:11:24 &#43;0800</pubDate>
+    <title>Linux</title>
+    <link>http://afeng616.github.io/tags/linux/</link>
+    <pubDate>Thu, 21 Mar 2024 08:48:35 &#43;0800</pubDate>
     <author>afeng</author>
-    <guid>http://afeng616.github.io/tags/cpp/</guid>
+    <guid>http://afeng616.github.io/tags/linux/</guid>
     <description><![CDATA[]]></description>
 </item>
 <item>
-    <title>javascript</title>
-    <link>http://afeng616.github.io/tags/javascript/</link>
-    <pubDate>Wed, 30 Aug 2023 20:37:24 &#43;0800</pubDate>
-    <author>afeng</author>
-    <guid>http://afeng616.github.io/tags/javascript/</guid>
-    <description><![CDATA[]]></description>
-</item>
-<item>
-    <title>c&#43;&#43;</title>
+    <title>C&#43;&#43;</title>
     <link>http://afeng616.github.io/tags/c&#43;&#43;/</link>
     <pubDate>Wed, 26 Jul 2023 14:42:20 &#43;0800</pubDate>
     <author>afeng</author>
@@ -53,7 +37,7 @@
     <description><![CDATA[]]></description>
 </item>
 <item>
-    <title>research</title>
+    <title>Research</title>
     <link>http://afeng616.github.io/tags/research/</link>
     <pubDate>Sun, 16 Jul 2023 15:36:43 &#43;0800</pubDate>
     <author>afeng</author>
@@ -61,7 +45,15 @@
     <description><![CDATA[]]></description>
 </item>
 <item>
-    <title>markdown</title>
+    <title>数学</title>
+    <link>http://afeng616.github.io/tags/%E6%95%B0%E5%AD%A6/</link>
+    <pubDate>Sun, 14 May 2023 20:09:03 &#43;0800</pubDate>
+    <author>afeng</author>
+    <guid>http://afeng616.github.io/tags/%E6%95%B0%E5%AD%A6/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
+    <title>Markdown</title>
     <link>http://afeng616.github.io/tags/markdown/</link>
     <pubDate>Fri, 12 May 2023 13:24:48 &#43;0800</pubDate>
     <author>afeng</author>
@@ -69,7 +61,15 @@
     <description><![CDATA[]]></description>
 </item>
 <item>
-    <title>windows</title>
+    <title>Javascript</title>
+    <link>http://afeng616.github.io/tags/javascript/</link>
+    <pubDate>Mon, 04 Apr 2022 23:41:20 &#43;0800</pubDate>
+    <author>afeng</author>
+    <guid>http://afeng616.github.io/tags/javascript/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
+    <title>Windows</title>
     <link>http://afeng616.github.io/tags/windows/</link>
     <pubDate>Fri, 01 Apr 2022 19:06:52 &#43;0800</pubDate>
     <author>afeng</author>

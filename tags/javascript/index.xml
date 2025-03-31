@@ -1,8 +1,8 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-        <title>javascript - 标签 - afeng滴blog</title>
+        <title>Javascript - 标签 - afeng滴blog</title>
         <link>http://afeng616.github.io/tags/javascript/</link>
-        <description>javascript - 标签 - afeng滴blog</description>
+        <description>Javascript - 标签 - afeng滴blog</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>afeng616@gmail.com (afeng)</managingEditor>
             <webMaster>afeng616@gmail.com (afeng)</webMaster><lastBuildDate>Mon, 04 Apr 2022 23:41:20 &#43;0800</lastBuildDate><atom:link href="http://afeng616.github.io/tags/javascript/" rel="self" type="application/rss+xml" /><item>
     <title>快手取关脚本</title>

@@ -1,8 +1,8 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-        <title>python - 标签 - afeng滴blog</title>
+        <title>Python - 标签 - afeng滴blog</title>
         <link>http://afeng616.github.io/tags/python/</link>
-        <description>python - 标签 - afeng滴blog</description>
+        <description>Python - 标签 - afeng滴blog</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>afeng616@gmail.com (afeng)</managingEditor>
             <webMaster>afeng616@gmail.com (afeng)</webMaster><lastBuildDate>Mon, 31 Mar 2025 22:37:29 &#43;0800</lastBuildDate><atom:link href="http://afeng616.github.io/tags/python/" rel="self" type="application/rss+xml" /><item>
     <title>爬楼问题笔记</title>
@@ -10,7 +10,7 @@
     <pubDate>Mon, 31 Mar 2025 22:37:29 &#43;0800</pubDate>
     <author>afeng</author>
     <guid>http://afeng616.github.io/climb/</guid>
-    <description><![CDATA[]]></description>
+    <description><![CDATA[记录爬楼问题求解的分析过程。]]></description>
 </item>
 <item>
     <title>Pytorch测试GPU是否可用</title>

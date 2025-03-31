@@ -4,28 +4,20 @@
         <link>http://afeng616.github.io/categories/</link>
         <description>Categories - 分类 - afeng滴blog</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>afeng616@gmail.com (afeng)</managingEditor>
-            <webMaster>afeng616@gmail.com (afeng)</webMaster><lastBuildDate>Tue, 25 Jun 2024 22:47:51 &#43;0800</lastBuildDate><atom:link href="http://afeng616.github.io/categories/" rel="self" type="application/rss+xml" /><item>
-    <title>示例</title>
-    <link>http://afeng616.github.io/categories/%E7%A4%BA%E4%BE%8B/</link>
-    <pubDate>Tue, 25 Jun 2024 22:47:51 &#43;0800</pubDate>
-    <author>afeng</author>
-    <guid>http://afeng616.github.io/categories/%E7%A4%BA%E4%BE%8B/</guid>
-    <description><![CDATA[]]></description>
-</item>
-<item>
+            <webMaster>afeng616@gmail.com (afeng)</webMaster><lastBuildDate>Mon, 31 Mar 2025 22:37:29 &#43;0800</lastBuildDate><atom:link href="http://afeng616.github.io/categories/" rel="self" type="application/rss+xml" /><item>
     <title>笔记</title>
     <link>http://afeng616.github.io/categories/%E7%AC%94%E8%AE%B0/</link>
-    <pubDate>Tue, 25 Jun 2024 22:05:51 &#43;0800</pubDate>
+    <pubDate>Mon, 31 Mar 2025 22:37:29 &#43;0800</pubDate>
     <author>afeng</author>
     <guid>http://afeng616.github.io/categories/%E7%AC%94%E8%AE%B0/</guid>
     <description><![CDATA[]]></description>
 </item>
 <item>
-    <title>折腾</title>
-    <link>http://afeng616.github.io/categories/%E6%8A%98%E8%85%BE/</link>
-    <pubDate>Wed, 30 Aug 2023 20:37:24 &#43;0800</pubDate>
+    <title>示例</title>
+    <link>http://afeng616.github.io/categories/%E7%A4%BA%E4%BE%8B/</link>
+    <pubDate>Wed, 26 Jul 2023 14:42:20 &#43;0800</pubDate>
     <author>afeng</author>
-    <guid>http://afeng616.github.io/categories/%E6%8A%98%E8%85%BE/</guid>
+    <guid>http://afeng616.github.io/categories/%E7%A4%BA%E4%BE%8B/</guid>
     <description><![CDATA[]]></description>
 </item>
 <item>
@@ -34,6 +26,14 @@
     <pubDate>Sat, 27 May 2023 10:17:59 &#43;0800</pubDate>
     <author>afeng</author>
     <guid>http://afeng616.github.io/categories/%E6%9D%82%E8%B0%88/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
+    <title>折腾</title>
+    <link>http://afeng616.github.io/categories/%E6%8A%98%E8%85%BE/</link>
+    <pubDate>Sun, 21 May 2023 12:01:49 &#43;0800</pubDate>
+    <author>afeng</author>
+    <guid>http://afeng616.github.io/categories/%E6%8A%98%E8%85%BE/</guid>
     <description><![CDATA[]]></description>
 </item>
 </channel>
