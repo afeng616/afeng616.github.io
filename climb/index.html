@@ -35,7 +35,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "http:\/\/afeng616.github.io\/climb\/"
-        },"genre": "posts","keywords": "python, 算法","wordcount":  728 ,
+        },"genre": "posts","keywords": "python, 算法","wordcount":  767 ,
         "url": "http:\/\/afeng616.github.io\/climb\/","datePublished": "2025-03-31T22:37:29+08:00","dateModified": "2025-03-31T22:37:29+08:00","publisher": {
             "@type": "Organization",
             "name": "afeng"},"author": {
@@ -123,7 +123,7 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">爬楼问题笔记</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>作者</a></span>&nbsp;<span class="post-category">收录于 <a href="/categories/%E7%AC%94%E8%AE%B0/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>笔记</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2025/03/31">2025/03/31</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;约 728 字&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2025/03/31">2025/03/31</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;约 767 字&nbsp;
                 <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;预计阅读 2 分钟&nbsp;</div>
         </div><div class="details toc" id="toc-static"  data-kept="">
                 <div class="details-summary toc-title">
@@ -136,6 +136,7 @@
     <li><a href="#记忆优化">记忆优化</a></li>
     <li><a href="#递推优化">递推优化</a></li>
     <li><a href="#问题推广">问题推广</a></li>
+    <li><a href="#总结">总结</a></li>
   </ul>
 </nav></div>
             </div><div class="content" id="content"><p><a href="https://leetcode.cn/problems/climbing-stairs/description/" target="_blank" rel="noopener noreffer ">LeetCode.70.爬楼梯</a>被列为一道简单题，巧合下这几天又遇到了这道题的变种，于是又回头研究了一番。
@@ -251,7 +252,9 @@
 </span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">cnt</span><span class="p">[(</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="o">%</span> <span class="n">m</span><span class="p">]</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p>为了节约空间，可以循环使用一个长度为$m$的数组，存储前$m$项的值。在求解$f(n)$前，需要先计算出$f(1)$到$f(m)$的值。</p></div><div class="post-footer" id="post-footer">
+</div><p>为了节约空间，可以循环使用一个长度为$m$的数组，存储前$m$项的值。在求解$f(n)$前，需要先计算出$f(1)$到$f(m)$的值。</p>
+<h2 id="总结">总结</h2>
+<p>这是一个考察动态规划、递归和递推分析的问题，重点在于分析，还是挺有意思的。</p></div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">
             <div class="post-info-mod">
