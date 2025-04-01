@@ -3,12 +3,11 @@
         <title>所有文章 - afeng滴blog</title>
         <link>http://afeng616.github.io/posts/</link>
         <description>所有文章 | afeng滴blog</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>afeng616@gmail.com (afeng)</managingEditor>
-            <webMaster>afeng616@gmail.com (afeng)</webMaster><lastBuildDate>Mon, 31 Mar 2025 22:37:29 &#43;0800</lastBuildDate><atom:link href="http://afeng616.github.io/posts/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Mon, 31 Mar 2025 22:37:29 &#43;0800</lastBuildDate><atom:link href="http://afeng616.github.io/posts/" rel="self" type="application/rss+xml" /><item>
     <title>爬楼问题笔记</title>
     <link>http://afeng616.github.io/climb/</link>
     <pubDate>Mon, 31 Mar 2025 22:37:29 &#43;0800</pubDate>
-    <author>afeng</author>
+    <author>作者</author>
     <guid>http://afeng616.github.io/climb/</guid>
     <description><![CDATA[记录爬楼问题求解的分析过程。]]></description>
 </item>
@@ -16,7 +15,7 @@
     <title>修复Ubuntu引导问题</title>
     <link>http://afeng616.github.io/ubuntu-boot-repair/</link>
     <pubDate>Thu, 21 Mar 2024 08:48:35 &#43;0800</pubDate>
-    <author>afeng</author>
+    <author>作者</author>
     <guid>http://afeng616.github.io/ubuntu-boot-repair/</guid>
     <description><![CDATA[最近重装win10系统，导致开机无法找到之前的Ubuntu引导，无法进入Ubuntu系统。]]></description>
 </item>
@@ -24,7 +23,7 @@
     <title>Clash for Linux/Ubuntu的使用说明</title>
     <link>http://afeng616.github.io/clash-for-ubuntu/</link>
     <pubDate>Wed, 20 Mar 2024 14:53:25 &#43;0800</pubDate>
-    <author>afeng</author>
+    <author>作者</author>
     <guid>http://afeng616.github.io/clash-for-ubuntu/</guid>
     <description><![CDATA[Clash for Linux/Ubuntu的使用说明，包含下载地址及详细配置过程。]]></description>
 </item>
@@ -32,7 +31,7 @@
     <title>DLL调用方式测试</title>
     <link>http://afeng616.github.io/mydll/</link>
     <pubDate>Wed, 26 Jul 2023 14:42:20 &#43;0800</pubDate>
-    <author>afeng</author>
+    <author>作者</author>
     <guid>http://afeng616.github.io/mydll/</guid>
     <description><![CDATA[分别使用静态调用（隐式链接）和动态调用（显式链接）的方式调用dll]]></description>
 </item>
@@ -40,7 +39,7 @@
     <title>论文那些事儿</title>
     <link>http://afeng616.github.io/research/</link>
     <pubDate>Sun, 16 Jul 2023 15:36:43 &#43;0800</pubDate>
-    <author>afeng</author>
+    <author>作者</author>
     <guid>http://afeng616.github.io/research/</guid>
     <description><![CDATA[一些coding、论文、优化算法、强化学习、深度学习的知识。]]></description>
 </item>
@@ -48,7 +47,7 @@
     <title>Pytorch测试GPU是否可用</title>
     <link>http://afeng616.github.io/pytorch-gpu-test/</link>
     <pubDate>Sat, 03 Jun 2023 15:54:33 &#43;0800</pubDate>
-    <author>afeng</author>
+    <author>作者</author>
     <guid>http://afeng616.github.io/pytorch-gpu-test/</guid>
     <description><![CDATA[Pytorch测试GPU是否可用。]]></description>
 </item>
@@ -56,7 +55,7 @@
     <title>关于近日使用京东读书APP的一些体验感受</title>
     <link>http://afeng616.github.io/jd_reader/</link>
     <pubDate>Sat, 27 May 2023 10:17:59 &#43;0800</pubDate>
-    <author>afeng</author>
+    <author>作者</author>
     <guid>http://afeng616.github.io/jd_reader/</guid>
     <description><![CDATA[关于近日使用京东读书APP的一些体验感受。]]></description>
 </item>
@@ -64,7 +63,7 @@
     <title>将第三方手柄输出映射到鼠标上</title>
     <link>http://afeng616.github.io/diy-gamepad/</link>
     <pubDate>Sun, 21 May 2023 12:01:49 &#43;0800</pubDate>
-    <author>afeng</author>
+    <author>作者</author>
     <guid>http://afeng616.github.io/diy-gamepad/</guid>
     <description><![CDATA[将第三方手柄输出映射到鼠标上。]]></description>
 </item>
@@ -72,7 +71,7 @@
     <title>混合牛顿法</title>
     <link>http://afeng616.github.io/newton_hybrid/</link>
     <pubDate>Sun, 14 May 2023 20:09:03 &#43;0800</pubDate>
-    <author>afeng</author>
+    <author>作者</author>
     <guid>http://afeng616.github.io/newton_hybrid/</guid>
     <description><![CDATA[混合牛顿法。]]></description>
 </item>
@@ -80,7 +79,7 @@
     <title>Blog Test</title>
     <link>http://afeng616.github.io/blog-test/</link>
     <pubDate>Fri, 12 May 2023 13:24:48 &#43;0800</pubDate>
-    <author>afeng</author>
+    <author>作者</author>
     <guid>http://afeng616.github.io/blog-test/</guid>
     <description><![CDATA[md渲染测试]]></description>
 </item>
