@@ -3,7 +3,8 @@
         <title>笔记 - 分类 - afeng滴blog</title>
         <link>http://afeng616.github.io/categories/%E7%AC%94%E8%AE%B0/</link>
         <description>笔记 - 分类 - afeng滴blog</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Thu, 03 Apr 2025 19:20:44 &#43;0800</lastBuildDate><atom:link href="http://afeng616.github.io/categories/%E7%AC%94%E8%AE%B0/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>afeng616@gmail.com (afeng)</managingEditor>
+            <webMaster>afeng616@gmail.com (afeng)</webMaster><lastBuildDate>Thu, 03 Apr 2025 19:20:44 &#43;0800</lastBuildDate><atom:link href="http://afeng616.github.io/categories/%E7%AC%94%E8%AE%B0/" rel="self" type="application/rss+xml" /><item>
     <title>pdd算法工程师二面</title>
     <link>http://afeng616.github.io/pdd-2-interview/</link>
     <pubDate>Thu, 03 Apr 2025 19:20:44 &#43;0800</pubDate>
@@ -15,7 +16,7 @@
     <title>备战深度学习算法工程师</title>
     <link>http://afeng616.github.io/dl-engineer/</link>
     <pubDate>Thu, 03 Apr 2025 09:20:21 &#43;0800</pubDate>
-    <author>作者</author>
+    <author>afeng</author>
     <guid>http://afeng616.github.io/dl-engineer/</guid>
     <description><![CDATA[备考深度学习算法工程师面试题]]></description>
 </item>
@@ -23,7 +24,7 @@
     <title>爬楼问题笔记</title>
     <link>http://afeng616.github.io/climb/</link>
     <pubDate>Mon, 31 Mar 2025 22:37:29 &#43;0800</pubDate>
-    <author>作者</author>
+    <author>afeng</author>
     <guid>http://afeng616.github.io/climb/</guid>
     <description><![CDATA[LeetCode.70.爬楼梯，记录爬楼问题求解的分析过程。]]></description>
 </item>
@@ -31,7 +32,7 @@
     <title>修复Ubuntu引导问题</title>
     <link>http://afeng616.github.io/ubuntu-boot-repair/</link>
     <pubDate>Thu, 21 Mar 2024 08:48:35 &#43;0800</pubDate>
-    <author>作者</author>
+    <author>afeng</author>
     <guid>http://afeng616.github.io/ubuntu-boot-repair/</guid>
     <description><![CDATA[最近重装win10系统，导致开机无法找到之前的Ubuntu引导，无法进入Ubuntu系统。]]></description>
 </item>
@@ -39,7 +40,7 @@
     <title>Clash for Linux/Ubuntu的使用说明</title>
     <link>http://afeng616.github.io/clash-for-ubuntu/</link>
     <pubDate>Wed, 20 Mar 2024 14:53:25 &#43;0800</pubDate>
-    <author>作者</author>
+    <author>afeng</author>
     <guid>http://afeng616.github.io/clash-for-ubuntu/</guid>
     <description><![CDATA[Clash for Linux/Ubuntu的使用说明，包含下载地址及详细配置过程。]]></description>
 </item>
@@ -47,7 +48,7 @@
     <title>论文那些事儿</title>
     <link>http://afeng616.github.io/research/</link>
     <pubDate>Sun, 16 Jul 2023 15:36:43 &#43;0800</pubDate>
-    <author>作者</author>
+    <author>afeng</author>
     <guid>http://afeng616.github.io/research/</guid>
     <description><![CDATA[一些coding、论文、优化算法、强化学习、深度学习的知识。]]></description>
 </item>
@@ -55,7 +56,7 @@
     <title>混合牛顿法</title>
     <link>http://afeng616.github.io/newton_hybrid/</link>
     <pubDate>Sun, 14 May 2023 20:09:03 &#43;0800</pubDate>
-    <author>作者</author>
+    <author>afeng</author>
     <guid>http://afeng616.github.io/newton_hybrid/</guid>
     <description><![CDATA[混合牛顿法。]]></description>
 </item>
@@ -63,7 +64,7 @@
     <title>计算机网络参考模型</title>
     <link>http://afeng616.github.io/computer-network-osi/</link>
     <pubDate>Tue, 15 Mar 2022 23:27:37 &#43;0800</pubDate>
-    <author>作者</author>
+    <author>afeng</author>
     <guid>http://afeng616.github.io/computer-network-osi/</guid>
     <description><![CDATA[计算机网络参考模型。]]></description>
 </item>
