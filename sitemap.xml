@@ -2,12 +2,15 @@
     xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
     xmlns:xhtml="http://www.w3.org/1999/xhtml"
     ><url>
-            <loc>http://afeng616.github.io/</loc><lastmod>2025-03-31T22:37:29&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>http://afeng616.github.io/categories/</loc><lastmod>2025-03-31T22:37:29&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>http://afeng616.github.io/posts/</loc><lastmod>2025-03-31T22:37:29&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>http://afeng616.github.io/</loc><lastmod>2025-04-03T19:20:44&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>http://afeng616.github.io/categories/</loc><lastmod>2025-04-03T19:20:44&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>http://afeng616.github.io/pdd-2-interview/</loc><lastmod>2025-04-03T19:20:44&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>http://afeng616.github.io/posts/</loc><lastmod>2025-04-03T19:20:44&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>http://afeng616.github.io/categories/%E7%AC%94%E8%AE%B0/</loc><lastmod>2025-04-03T19:20:44&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>http://afeng616.github.io/tags/</loc><lastmod>2025-04-03T09:20:21&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>http://afeng616.github.io/dl-engineer/</loc><lastmod>2025-04-03T09:20:21&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>http://afeng616.github.io/tags/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/</loc><lastmod>2025-04-03T09:20:21&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
             <loc>http://afeng616.github.io/tags/python/</loc><lastmod>2025-03-31T22:37:29&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>http://afeng616.github.io/tags/</loc><lastmod>2025-03-31T22:37:29&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>http://afeng616.github.io/categories/%E7%AC%94%E8%AE%B0/</loc><lastmod>2025-03-31T22:37:29&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
             <loc>http://afeng616.github.io/climb/</loc><lastmod>2025-03-31T22:37:29&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
             <loc>http://afeng616.github.io/tags/%E7%AE%97%E6%B3%95/</loc><lastmod>2025-03-31T22:37:29&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
             <loc>http://afeng616.github.io/tags/linux/</loc><lastmod>2024-03-21T08:48:35&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
