@@ -4,7 +4,15 @@
         <link>http://afeng616.github.io/tags/%E7%AE%97%E6%B3%95/</link>
         <description>算法 - 标签 - afeng滴blog</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>afeng616@gmail.com (afeng)</managingEditor>
-            <webMaster>afeng616@gmail.com (afeng)</webMaster><lastBuildDate>Mon, 31 Mar 2025 22:37:29 &#43;0800</lastBuildDate><atom:link href="http://afeng616.github.io/tags/%E7%AE%97%E6%B3%95/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>afeng616@gmail.com (afeng)</webMaster><lastBuildDate>Sun, 06 Apr 2025 09:27:23 &#43;0800</lastBuildDate><atom:link href="http://afeng616.github.io/tags/%E7%AE%97%E6%B3%95/" rel="self" type="application/rss+xml" /><item>
+    <title>寻找子集问题</title>
+    <link>http://afeng616.github.io/find-subsets/</link>
+    <pubDate>Sun, 06 Apr 2025 09:27:23 &#43;0800</pubDate>
+    <author>afeng</author>
+    <guid>http://afeng616.github.io/find-subsets/</guid>
+    <description><![CDATA[记录列表寻找子集的求解方法。]]></description>
+</item>
+<item>
     <title>爬楼问题笔记</title>
     <link>http://afeng616.github.io/climb/</link>
     <pubDate>Mon, 31 Mar 2025 22:37:29 &#43;0800</pubDate>
