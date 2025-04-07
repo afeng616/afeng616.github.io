@@ -16,6 +16,19 @@ def find_subsets(nums):
     return sub
 ```
 
+## 位运算求解
+实际上，一个长度为$n$的列表有$2^n$个子集。对于每一个子集，可以用一个长度为$n$的二进制数来表示，每一个二进制位表示列表中对应位置的元素是否在子集中。如，列表`[1, 2, 3]`的某个子集为`[1, 3]`，可以用二进制数`101`表示；子集`[3]`可以用`001`表示。  
+
+```python
+def find_subsets(nums):
+    n = len(nums)
+    subsets = []
+    for i in range(2<<n):
+        subsets.append([nums[j] for j in range(n) if i>>j & 1])
+    return subsets
+```
+
+
 
 
 
