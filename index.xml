@@ -4,9 +4,17 @@
         <link>http://afeng616.github.io/</link>
         <description>This is afeng&#39;s blog!</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>afeng616@gmail.com (afeng)</managingEditor>
-            <webMaster>afeng616@gmail.com (afeng)</webMaster><lastBuildDate>Fri, 11 Apr 2025 18:48:32 &#43;0800</lastBuildDate>
+            <webMaster>afeng616@gmail.com (afeng)</webMaster><lastBuildDate>Sat, 12 Apr 2025 09:57:45 &#43;0800</lastBuildDate>
             <atom:link href="http://afeng616.github.io/index.xml" rel="self" type="application/rss+xml" />
         <item>
+    <title>操作系统学习</title>
+    <link>http://afeng616.github.io/operation-system/</link>
+    <pubDate>Sat, 12 Apr 2025 09:57:45 &#43;0800</pubDate>
+    <author>afeng</author>
+    <guid>http://afeng616.github.io/operation-system/</guid>
+    <description><![CDATA[记录操作系统学习的美妙时刻。]]></description>
+</item>
+<item>
     <title>数据结构学习</title>
     <link>http://afeng616.github.io/data-structure/</link>
     <pubDate>Fri, 11 Apr 2025 18:48:32 &#43;0800</pubDate>
@@ -77,14 +85,6 @@
     <author>afeng</author>
     <guid>http://afeng616.github.io/research/</guid>
     <description><![CDATA[一些coding、论文、优化算法、强化学习、深度学习的知识。]]></description>
-</item>
-<item>
-    <title>Pytorch测试GPU是否可用</title>
-    <link>http://afeng616.github.io/pytorch-gpu-test/</link>
-    <pubDate>Sat, 03 Jun 2023 15:54:33 &#43;0800</pubDate>
-    <author>afeng</author>
-    <guid>http://afeng616.github.io/pytorch-gpu-test/</guid>
-    <description><![CDATA[Pytorch测试GPU是否可用。]]></description>
 </item>
 </channel>
 </rss>
