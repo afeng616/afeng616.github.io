@@ -4,9 +4,17 @@
         <link>http://afeng616.github.io/</link>
         <description>This is afeng&#39;s blog!</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>afeng616@gmail.com (afeng)</managingEditor>
-            <webMaster>afeng616@gmail.com (afeng)</webMaster><lastBuildDate>Sat, 12 Apr 2025 09:57:45 &#43;0800</lastBuildDate>
+            <webMaster>afeng616@gmail.com (afeng)</webMaster><lastBuildDate>Tue, 15 Apr 2025 15:35:46 &#43;0800</lastBuildDate>
             <atom:link href="http://afeng616.github.io/index.xml" rel="self" type="application/rss+xml" />
         <item>
+    <title>理解Transformer</title>
+    <link>http://afeng616.github.io/transformer/</link>
+    <pubDate>Tue, 15 Apr 2025 15:35:46 &#43;0800</pubDate>
+    <author>afeng</author>
+    <guid>http://afeng616.github.io/transformer/</guid>
+    <description><![CDATA[学习Transformer的基本原理和应用]]></description>
+</item>
+<item>
     <title>操作系统学习</title>
     <link>http://afeng616.github.io/operation-system/</link>
     <pubDate>Sat, 12 Apr 2025 09:57:45 &#43;0800</pubDate>
@@ -77,14 +85,6 @@
     <author>afeng</author>
     <guid>http://afeng616.github.io/mydll/</guid>
     <description><![CDATA[分别使用静态调用（隐式链接）和动态调用（显式链接）的方式调用dll]]></description>
-</item>
-<item>
-    <title>论文那些事儿</title>
-    <link>http://afeng616.github.io/research/</link>
-    <pubDate>Sun, 16 Jul 2023 15:36:43 &#43;0800</pubDate>
-    <author>afeng</author>
-    <guid>http://afeng616.github.io/research/</guid>
-    <description><![CDATA[一些coding、论文、优化算法、强化学习、深度学习的知识。]]></description>
 </item>
 </channel>
 </rss>
