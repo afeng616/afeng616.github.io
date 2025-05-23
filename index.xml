@@ -4,9 +4,17 @@
         <link>http://afeng616.github.io/</link>
         <description>This is afeng&#39;s blog!</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>afeng616@gmail.com (afeng)</managingEditor>
-            <webMaster>afeng616@gmail.com (afeng)</webMaster><lastBuildDate>Tue, 15 Apr 2025 18:40:27 &#43;0800</lastBuildDate>
+            <webMaster>afeng616@gmail.com (afeng)</webMaster><lastBuildDate>Fri, 23 May 2025 15:15:09 &#43;0800</lastBuildDate>
             <atom:link href="http://afeng616.github.io/index.xml" rel="self" type="application/rss+xml" />
         <item>
+    <title>agent的关键环节</title>
+    <link>http://afeng616.github.io/llm-agent/</link>
+    <pubDate>Fri, 23 May 2025 15:15:09 &#43;0800</pubDate>
+    <author>afeng</author>
+    <guid>http://afeng616.github.io/llm-agent/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
     <title>组合求和问题</title>
     <link>http://afeng616.github.io/group-sum/</link>
     <pubDate>Tue, 15 Apr 2025 18:40:27 &#43;0800</pubDate>
@@ -77,14 +85,6 @@
     <author>afeng</author>
     <guid>http://afeng616.github.io/ubuntu-boot-repair/</guid>
     <description><![CDATA[最近重装win10系统，导致开机无法找到之前的Ubuntu引导，无法进入Ubuntu系统。]]></description>
-</item>
-<item>
-    <title>Clash for Linux/Ubuntu的使用说明</title>
-    <link>http://afeng616.github.io/clash-for-ubuntu/</link>
-    <pubDate>Wed, 20 Mar 2024 14:53:25 &#43;0800</pubDate>
-    <author>afeng</author>
-    <guid>http://afeng616.github.io/clash-for-ubuntu/</guid>
-    <description><![CDATA[Clash for Linux/Ubuntu的使用说明，包含下载地址及详细配置过程。]]></description>
 </item>
 </channel>
 </rss>
