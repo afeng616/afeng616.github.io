@@ -1,0 +1,32 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Javascript - 标签 - afeng滴blog</title>
+        <link>http://afeng616.github.io/tags/javascript/</link>
+        <description>Javascript - 标签 - afeng滴blog</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>afeng616@gmail.com (afeng)</managingEditor>
+            <webMaster>afeng616@gmail.com (afeng)</webMaster><lastBuildDate>Mon, 04 Apr 2022 23:41:20 &#43;0800</lastBuildDate><atom:link href="http://afeng616.github.io/tags/javascript/" rel="self" type="application/rss+xml" /><item>
+    <title>快手取关脚本</title>
+    <link>http://afeng616.github.io/kuaishou-unsubscript/</link>
+    <pubDate>Mon, 04 Apr 2022 23:41:20 &#43;0800</pubDate>
+    <author>afeng</author>
+    <guid>http://afeng616.github.io/kuaishou-unsubscript/</guid>
+    <description><![CDATA[快手取关脚本。]]></description>
+</item>
+<item>
+    <title>Twitter取关脚本</title>
+    <link>http://afeng616.github.io/twitter-unsubscript/</link>
+    <pubDate>Sun, 03 Apr 2022 23:32:44 &#43;0800</pubDate>
+    <author>afeng</author>
+    <guid>http://afeng616.github.io/twitter-unsubscript/</guid>
+    <description><![CDATA[Twitter取关脚本。]]></description>
+</item>
+<item>
+    <title>Clipboard.js使用实例</title>
+    <link>http://afeng616.github.io/demo-clipboardjs/</link>
+    <pubDate>Thu, 13 Jan 2022 21:01:13 &#43;0800</pubDate>
+    <author>afeng</author>
+    <guid>http://afeng616.github.io/demo-clipboardjs/</guid>
+    <description><![CDATA[Clipboard.js使用实例。]]></description>
+</item>
+</channel>
+</rss>

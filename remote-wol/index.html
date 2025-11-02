@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <title>远程开机的实现分析 - afeng滴blog</title><meta name="Description" content="远程开机的实现分析。"><meta property="og:url" content="http://afeng616.github.io/remote-wol/">
+  <meta property="og:site_name" content="afeng滴blog">
+  <meta property="og:title" content="远程开机的实现分析">
+  <meta property="og:description" content="远程开机的实现分析。">
+  <meta property="og:locale" content="zh_CN">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2022-01-25T22:35:25+08:00">
+    <meta property="article:modified_time" content="2023-07-28T11:25:49+08:00">
+    <meta property="og:image" content="http://afeng616.github.io/favicon.png">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="http://afeng616.github.io/favicon.png">
+  <meta name="twitter:title" content="远程开机的实现分析">
+  <meta name="twitter:description" content="远程开机的实现分析。">
+<meta name="application-name" content="afeng滴blog">
+<meta name="apple-mobile-web-app-title" content="afeng滴blog">
+<meta name="referrer" content="no-referrer" /><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="http://afeng616.github.io/remote-wol/" /><link rel="prev" href="http://afeng616.github.io/demo-clipboardjs/" /><link rel="next" href="http://afeng616.github.io/centos-reinstall-sth/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"></noscript><link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"></noscript><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "远程开机的实现分析",
+        "inLanguage": "zh-CN",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "http:\/\/afeng616.github.io\/remote-wol\/"
+        },"genre": "posts","wordcount":  2197 ,
+        "url": "http:\/\/afeng616.github.io\/remote-wol\/","datePublished": "2022-01-25T22:35:25+08:00","dateModified": "2023-07-28T11:25:49+08:00","publisher": {
+            "@type": "Organization",
+            "name": "afeng"},"author": {
+                "@type": "Person",
+                "name": "afeng"
+            },"description": "远程开机的实现分析。"
+    }
+    </script></head>
+    <body data-header-desktop="fixed" data-header-mobile="auto"><script>(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="afeng滴blog"><img
+        class="lazyload logo"
+        src="/svg/loading.min.svg"
+        data-src="/favicon.png"
+        data-srcset="/favicon.png, /favicon.png 1.5x, /favicon.png 2x"
+        data-sizes="auto"
+        alt="/favicon.png"
+        title="/favicon.png" />afeng滴blog</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/"> 所有文章 </a><a class="menu-item" href="/tags/"> 标签 </a><a class="menu-item" href="/categories/"> 分类 </a><a class="menu-item" href="/about/"> 关于 </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="搜索文章标题或内容..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="搜索">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="清空">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+                </a></div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="afeng滴blog"><img
+        class="lazyload logo"
+        src="/svg/loading.min.svg"
+        data-src="/favicon.png"
+        data-srcset="/favicon.png, /favicon.png 1.5x, /favicon.png 2x"
+        data-sizes="auto"
+        alt="/favicon.png"
+        title="/favicon.png" />afeng滴blog</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="搜索文章标题或内容..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="搜索">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="清空">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        取消
+                    </a>
+                </div><a class="menu-item" href="/posts/" title="">所有文章</a><a class="menu-item" href="/tags/" title="">标签</a><a class="menu-item" href="/categories/" title="">分类</a><a class="menu-item" href="/about/" title="">关于</a><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a></div>
+    </div>
+</header><div class="search-dropdown desktop">
+        <div id="search-dropdown-desktop"></div>
+    </div>
+    <div class="search-dropdown mobile">
+        <div id="search-dropdown-mobile"></div>
+    </div><main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">目录</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">远程开机的实现分析</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="https://github.com/afeng616" title="Author" target="_blank" rel="noopener noreffer author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>afeng</a></span>&nbsp;<span class="post-category">收录于 <a href="/categories/%E6%8A%98%E8%85%BE/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>折腾</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2022/01/25">2022/01/25</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;约 2197 字&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;预计阅读 5 分钟&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  data-kept="">
+                <div class="details-summary toc-title">
+                    <span>目录</span>
+                    <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#hipc的实现思路">HiPC的实现思路</a>
+      <ul>
+        <li><a href="#除开机外其他控制的实现">除开机外其他控制的实现</a></li>
+        <li><a href="#开机功能的实现">开机功能的实现</a></li>
+      </ul>
+    </li>
+    <li><a href="#方案">方案</a></li>
+    <li><a href="#远程开机实现细节">远程开机实现细节</a></li>
+    <li><a href="#总结">总结</a></li>
+    <li><a href="#references">References</a></li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><!--kg-card-begin: markdown--><p>这次开发的需求很简单，就是想使用移动端通过互联网实现对主机的开机、关机、休眠、睡眠以及重启的控制。</p><p>明确了需求后就开始构思解决方案，在此过程中，通过互联网了解到市场上存在能完成该任务的产品。于是我就开始对其中的<code>HiPC</code><sup class=footnote-ref><a href=#fn1 id=fnref1>[1]</a></sup>进行了了解，发现该产品由软件端（小程序及pc端应用）和硬件端（类似二次开发的网卡）组成，再结合搜索到的资料，我大致了解整个过程的实现思路。</p>
+<h2 id="hipc的实现思路">HiPC的实现思路</h2>
+<p><em><strong>该实现思路为本人摸索得出，仅供参考，侵权删！</strong></em></p><p>下载并使用<code>HiPC</code>的PC端应用程序后不难发现，仅使用该程序就可以配合小程序<strong>经过互联网</strong>完成对PC的远程<strong>关机、休眠、睡眠以及重启</strong>控制，而想使用<strong>开机</strong>功能（无论通过局域网还是广域网）则需要购买其硬件产品。将焦点放在PC端程序还发现，若想完成上述操作，该程序还必须在PC上正常运行。</p>
+<h3 id="除开机外其他控制的实现">除开机外其他控制的实现</h3>
+<p>经过简单的分析发现，此应用与云服务器建立了<code>WebSocket</code>连接，使得该应用能够将PC的实时状态上传至服务器，同时使小程序能及时更新PC数据，并完成对PC的操作控制。</p><ol><li>HiPC.exe后台监控PC状态，并通过<code>WebSocket</code>传输数据给服务器</li><li>小程序发送指令至服务器，服务器通过<code>WebSocket</code>将指令转发给HiPC.exe使其执行相应指令</li></ol><p>
+![HiPC实现逻辑][hipc-process]
+</p><p>通过以上的方式使得用户能脱离局域网完成对PC除开机以外的其他控制。</p>
+<h3 id="开机功能的实现">开机功能的实现</h3>
+<p>开机功能实质是唤醒PC，在PC进入关机、休眠、睡眠状态下，系统中原有的运行程序将停止正常工作。因此，无法再通过上述的逻辑实现远程唤醒操作。</p><p>这时候再将关注点放在硬件设备上，即<code>HiPC</code>售卖的PCI-E设备。经过简单分析，初步判断该设备为经过特定编程开发的网卡，实质通过WoL<sup class=footnote-ref><a href=#fn2 id=fnref2>[2]</a></sup>完成对主机的唤醒。使用WoL需要有两个前提：1.主板支持；2.网卡支持。实现简单的局域网唤醒<sup class=footnote-ref><a href=#fn3 id=fnref3>[3]</a></sup>满足以上两个条件经过简单设置就能实现，简单的原理就是处在同一局域网内的某设备向目标PC的网卡地址发送UDP数据包，网卡接收到指定格式数据后通过主板唤醒主机。</p><p>
+<p><figure><a class="lightgallery" href="/images/blog/20220125-local-startup.png" title="本地唤醒" data-thumbnail="/images/blog/20220125-local-startup.png" data-sub-html="<h2>本地唤醒</h2><p>本地唤醒</p>">
+        <img
+            class="lazyload"
+            src="/svg/loading.min.svg"
+            data-src="/images/blog/20220125-local-startup.png"
+            data-srcset="/images/blog/20220125-local-startup.png, /images/blog/20220125-local-startup.png 1.5x, /images/blog/20220125-local-startup.png 2x"
+            data-sizes="auto"
+            alt="/images/blog/20220125-local-startup.png" />
+    </a><figcaption class="image-caption">本地唤醒</figcaption>
+    </figure></p>
+</p><p>然而想完成远程唤醒，还需要满足一个较苛刻的条件，即实现外网向内网指定网卡发包。绝大部分家庭使用的网络IP都是动态的，大部分家庭网络IP更是经过多层路由转发，因此其网关WAN IP都有可能是内网IP，而内网对于外网而言是透明的。由此，实现精准发包就需要下一点功夫了，这也是<code>HiPC</code>配合硬件端完成的工作。</p><p>在已经实现局域网内开机功能后，经过了几天的探索，最终确立了能够实现远程控制的方案。</p>
+<h2 id="方案">方案</h2>
+<ol><li><p>局域网实现对PC的控制</p><p>需要：主板支持；网卡支持；</p><ul><li>局域网开机可以根据WoL网络唤醒实现</li><li>其他操作完全可以下载<code>HiPC.exe</code>完成</li></ul></li><li><p>广域网实现对PC的控制</p><p>需要：主板支持；网卡支持；路由器支持；服务器；公网IP；</p><ul><li>依照WoL原理，从服务器发送udp数据包，经过互联网传输到有公网IP的网关WAN口，通过端口映射进入内网，通过路由器将数据包转发给指定网卡</li></ul><p>
+<p><figure><a class="lightgallery" href="/images/blog/20220125-remote-startup.png" title="远程唤醒" data-thumbnail="/images/blog/20220125-remote-startup.png" data-sub-html="<h2>远程唤醒</h2><p>远程唤醒</p>">
+        <img
+            class="lazyload"
+            src="/svg/loading.min.svg"
+            data-src="/images/blog/20220125-remote-startup.png"
+            data-srcset="/images/blog/20220125-remote-startup.png, /images/blog/20220125-remote-startup.png 1.5x, /images/blog/20220125-remote-startup.png 2x"
+            data-sizes="auto"
+            alt="/images/blog/20220125-remote-startup.png" />
+    </a><figcaption class="image-caption">远程唤醒</figcaption>
+    </figure></p>
+</p><ul><li>其他操作依赖<code>HiPC.exe</code></li></ul></li></ol><p>对于除开机外的其他操作，虽然可以完全手写，但个人觉得完全没必要。</p>
+<h2 id="远程开机实现细节">远程开机实现细节</h2>
+<p><em>该实现细节建立在方案1完成的前提下，依照【局域网使用WoL网络唤醒】可完成方案1实施</em></p><p>依照上述方案2实现通过互联网远程唤醒主机，需要考虑的问题如下：</p><p><em><strong>Q</strong></em>：为什么不使用花生壳做内网穿透？</p><p><em><strong>A</strong></em>：在进行方案尝试时，是存在使用花生壳的想法的，但是在具体实施时发现了问题：计算机需要<strong>保持花生壳客户端的运行才能使内网穿透正常</strong>，对于待唤醒的PC，这点自然无法满足。个人认为<strong>花生壳适合用于搭建服务器，使用户能通过互联网访问到本地服务器资源，与本需求相悖，同时也确实没有必要</strong>。在路由器上使用花生壳提供的DDNS服务时，总是会有莫名的错误导致无法达到预期效果，最终放弃了这个方案。</p><p><em><strong>Q</strong></em>：为什么要进行网关和路由器的端口映射？</p><p><em><strong>A</strong></em>：本需求只<strong>要求某PC网卡能接收到来自公网的数据包</strong>。拥有公网IP的WAN口可以直接收到来自互联网的数据包，这时对网关进行端口映射使指定外部端口映射到内网某IP的端口，使得来自公网的数据能够被内网的设备接收到。若目标PC与网关间存在其他路由器，则相应路由器中也应该做好端口映射，以保证目标设备能接收到转发的数据包。</p><p><em><strong>Q</strong></em>：即便申请到了公网IP，家庭用网的公网IP是动态的，如何确保发包目的地址为目标PC网卡？</p><p><em><strong>A</strong></em>：网络运营商虽然可以接受个人申请使用公网IP，但是非专线（固定公网IP）的用户使用的公网IP是动态的。由于同一网关下的所有连接设备都共用一个公网IP，所以一开始设想让目标PC定时发送公网IP给服务器供其更新。随后觉得这个想法不合理，如果公网IP在PC未启动时更新，奈何？所以想到使用移动端代替原设想中PC的功能。<strong>移动设备设置自动化任务，通过指定API获取最新的公网IP发送至服务器供其更新。</strong></p>
+<h2 id="总结">总结</h2>
+<p>在网卡和主板支持的前提下，基本可以无压力的实现局域网内的开机控制。而仅使用<code>HiPC</code>开发的应用程序就能实现远程（通过互联网也可）控制PC关机、休眠、重启等操作。若在不购置开机卡的前提下想通过互联网完成开机控制，就多少需要花些心思了。</p>
+<h2 id="references">References</h2>
+<hr class=footnotes-sep><section class=footnotes><ol class=footnotes-list><li id=fn1 class=footnote-item><p><a href=https://hipc.cn>HiPC</a> &quot;HiPC官网&quot; <a href=#fnref1 class=footnote-backref>↩︎</a></p></li><li id=fn2 class=footnote-item><p><a href=https://zhuanlan.zhihu.com/p/29100480>Wake on Lan原理</a> &quot;向指定网卡发送指定格式的UDP数据包&quot; <a href=#fnref2 class=footnote-backref>↩︎</a></p></li><li id=fn3 class=footnote-item><p><a href=https://sspai.com/post/67003>局域网使用WoL网络唤醒</a> &quot;局域网某设备向目标PC网卡发送WoL包&quot; <a href=#fnref3 class=footnote-backref>↩︎</a></p></li></ol></section><!--kg-card-end: markdown--></div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>更新于 2023/07/28</span>
+            </div></div>
+        <div class="post-info-line">
+            <div class="post-info-md"><span>
+                            <a class="link-to-markdown" href="/remote-wol/index.md" target="_blank">阅读原始文档</a>
+                        </span></div>
+            <div class="post-info-share">
+                <span><a href="javascript:void(0);" title="分享到 X" data-sharer="x" data-url="http://afeng616.github.io/remote-wol/" data-title="远程开机的实现分析"><i class="fab fa-x-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Threads" data-sharer="threads" data-url="http://afeng616.github.io/remote-wol/" data-title="远程开机的实现分析"><i class="fab fa-threads fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Facebook" data-sharer="facebook" data-url="http://afeng616.github.io/remote-wol/"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Diaspora" data-sharer="diaspora" data-url="http://afeng616.github.io/remote-wol/" data-title="远程开机的实现分析" data-description="远程开机的实现分析。"><i class="fab fa-diaspora fa-fw" aria-hidden="true"></i></a><a href="https://t.me/share/url?url=http%3a%2f%2fafeng616.github.io%2fremote-wol%2f&amp;text=%e8%bf%9c%e7%a8%8b%e5%bc%80%e6%9c%ba%e7%9a%84%e5%ae%9e%e7%8e%b0%e5%88%86%e6%9e%90" target="_blank" title="分享到 Telegram"><i class="fab fa-telegram fa-fw" aria-hidden="true"></i></a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/demo-clipboardjs/" class="prev" rel="prev" title="Clipboard.js使用实例"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>Clipboard.js使用实例</a>
+            <a href="/centos-reinstall-sth/" class="next" rel="next" title="重装CentOS环境">重装CentOS环境<i class="fas fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
+</div>
+<div id="comments"><div id="giscus" class="comment"></div><noscript>
+                Please enable JavaScript to view the comments powered by <a href="https://giscus.app">Giscus</a>.
+            </noscript></div></article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">由 <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.145.0">Hugo</a> 强力驱动 | 主题 - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.3.1-DEV"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
+                </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2022 - 2025</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="https://github.com/afeng616" target="_blank">afeng</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="回到顶部">
+                <i class="fas fa-arrow-up fa-fw" aria-hidden="true"></i>
+            </a>
+        </div>
+
+        <div id="fixed-buttons-hidden"><a href="#" id="view-comments" class="fixed-button" title="查看评论">
+                <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
+            </a>
+        </div><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.5.0/css/lightgallery-bundle.min.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.0/katex.min.css"><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.1/autocomplete.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js"></script><script src="/lib/lunr/lunr.stemmer.support.min.js"></script><script src="/lib/lunr/lunr.zh.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.3.2/lazysizes.min.js"></script><script src="/lib/twemoji/twemoji.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.5.0/lightgallery.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.5.0/plugins/thumbnail/lg-thumbnail.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.5.0/plugins/zoom/lg-zoom.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.11/clipboard.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/sharer.js/0.5.1/sharer.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.0/katex.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.0/contrib/auto-render.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.0/contrib/copy-tex.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.0/contrib/mhchem.min.js"></script><script>window.config={"comment":{"giscus":{"category":"Announcements","categoryId":"DIC_kwDOJifAtM4Cbeom","darkTheme":"dark","emitMetadata":"0","inputPosition":"bottom","lang":"en","lazyLoading":true,"lightTheme":"light","mapping":"pathname","reactionsEnabled":"1","repo":"afeng616/afeng616.github.io","repoId":"R_kgDOJifAtA"}},"lightgallery":true,"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":true,"left":"\\begin{equation}","right":"\\end{equation}"},{"display":true,"left":"\\begin{equation*}","right":"\\end{equation*}"},{"display":true,"left":"\\begin{align}","right":"\\end{align}"},{"display":true,"left":"\\begin{align*}","right":"\\end{align*}"},{"display":true,"left":"\\begin{alignat}","right":"\\end{alignat}"},{"display":true,"left":"\\begin{alignat*}","right":"\\end{alignat*}"},{"display":true,"left":"\\begin{gather}","right":"\\end{gather}"},{"display":true,"left":"\\begin{CD}","right":"\\end{CD}"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"highlightTag":"em","lunrIndexURL":"/index.json","lunrLanguageCode":"zh","lunrSegmentitURL":"/lib/lunr/lunr.segmentit.js","maxResultLength":10,"noResultsFound":"没有找到结果","snippetLength":50,"type":"lunr"},"twemoji":true};</script><script src="/js/theme.min.js"></script></body>
+</html>

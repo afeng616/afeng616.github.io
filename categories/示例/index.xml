@@ -1,0 +1,72 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>示例 - 分类 - afeng滴blog</title>
+        <link>http://afeng616.github.io/categories/%E7%A4%BA%E4%BE%8B/</link>
+        <description>示例 - 分类 - afeng滴blog</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>afeng616@gmail.com (afeng)</managingEditor>
+            <webMaster>afeng616@gmail.com (afeng)</webMaster><lastBuildDate>Wed, 26 Jul 2023 14:42:20 &#43;0800</lastBuildDate><atom:link href="http://afeng616.github.io/categories/%E7%A4%BA%E4%BE%8B/" rel="self" type="application/rss+xml" /><item>
+    <title>DLL调用方式测试</title>
+    <link>http://afeng616.github.io/mydll/</link>
+    <pubDate>Wed, 26 Jul 2023 14:42:20 &#43;0800</pubDate>
+    <author>afeng</author>
+    <guid>http://afeng616.github.io/mydll/</guid>
+    <description><![CDATA[分别使用静态调用（隐式链接）和动态调用（显式链接）的方式调用dll]]></description>
+</item>
+<item>
+    <title>Pytorch测试GPU是否可用</title>
+    <link>http://afeng616.github.io/pytorch-gpu-test/</link>
+    <pubDate>Sat, 03 Jun 2023 15:54:33 &#43;0800</pubDate>
+    <author>afeng</author>
+    <guid>http://afeng616.github.io/pytorch-gpu-test/</guid>
+    <description><![CDATA[Pytorch测试GPU是否可用。]]></description>
+</item>
+<item>
+    <title>将第三方手柄输出映射到鼠标上</title>
+    <link>http://afeng616.github.io/diy-gamepad/</link>
+    <pubDate>Sun, 21 May 2023 12:01:49 &#43;0800</pubDate>
+    <author>afeng</author>
+    <guid>http://afeng616.github.io/diy-gamepad/</guid>
+    <description><![CDATA[将第三方手柄输出映射到鼠标上。]]></description>
+</item>
+<item>
+    <title>Blog Test</title>
+    <link>http://afeng616.github.io/blog-test/</link>
+    <pubDate>Fri, 12 May 2023 13:24:48 &#43;0800</pubDate>
+    <author>afeng</author>
+    <guid>http://afeng616.github.io/blog-test/</guid>
+    <description><![CDATA[md渲染测试]]></description>
+</item>
+<item>
+    <title>快手取关脚本</title>
+    <link>http://afeng616.github.io/kuaishou-unsubscript/</link>
+    <pubDate>Mon, 04 Apr 2022 23:41:20 &#43;0800</pubDate>
+    <author>afeng</author>
+    <guid>http://afeng616.github.io/kuaishou-unsubscript/</guid>
+    <description><![CDATA[快手取关脚本。]]></description>
+</item>
+<item>
+    <title>Twitter取关脚本</title>
+    <link>http://afeng616.github.io/twitter-unsubscript/</link>
+    <pubDate>Sun, 03 Apr 2022 23:32:44 &#43;0800</pubDate>
+    <author>afeng</author>
+    <guid>http://afeng616.github.io/twitter-unsubscript/</guid>
+    <description><![CDATA[Twitter取关脚本。]]></description>
+</item>
+<item>
+    <title>Clipboard.js使用实例</title>
+    <link>http://afeng616.github.io/demo-clipboardjs/</link>
+    <pubDate>Thu, 13 Jan 2022 21:01:13 &#43;0800</pubDate>
+    <author>afeng</author>
+    <guid>http://afeng616.github.io/demo-clipboardjs/</guid>
+    <description><![CDATA[Clipboard.js使用实例。]]></description>
+</item>
+<item>
+    <title>B站取关脚本分析</title>
+    <link>http://afeng616.github.io/unscript-bili/</link>
+    <pubDate>Fri, 07 Jan 2022 20:21:06 &#43;0800</pubDate>
+    <author>afeng</author>
+    <guid>http://afeng616.github.io/unscript-bili/</guid>
+    <description><![CDATA[B站取关脚本分析。]]></description>
+</item>
+</channel>
+</rss>

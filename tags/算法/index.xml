@@ -1,0 +1,56 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>算法 - 标签 - afeng滴blog</title>
+        <link>http://afeng616.github.io/tags/%E7%AE%97%E6%B3%95/</link>
+        <description>算法 - 标签 - afeng滴blog</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>afeng616@gmail.com (afeng)</managingEditor>
+            <webMaster>afeng616@gmail.com (afeng)</webMaster><lastBuildDate>Tue, 15 Apr 2025 18:40:27 &#43;0800</lastBuildDate><atom:link href="http://afeng616.github.io/tags/%E7%AE%97%E6%B3%95/" rel="self" type="application/rss+xml" /><item>
+    <title>组合求和问题</title>
+    <link>http://afeng616.github.io/group-sum/</link>
+    <pubDate>Tue, 15 Apr 2025 18:40:27 &#43;0800</pubDate>
+    <author>afeng</author>
+    <guid>http://afeng616.github.io/group-sum/</guid>
+    <description><![CDATA[一组数中，能否选出一些数，使得它们的和为目标值？]]></description>
+</item>
+<item>
+    <title>操作系统学习</title>
+    <link>http://afeng616.github.io/operation-system/</link>
+    <pubDate>Sat, 12 Apr 2025 09:57:45 &#43;0800</pubDate>
+    <author>afeng</author>
+    <guid>http://afeng616.github.io/operation-system/</guid>
+    <description><![CDATA[记录操作系统学习的美妙时刻。]]></description>
+</item>
+<item>
+    <title>数据结构学习</title>
+    <link>http://afeng616.github.io/data-structure/</link>
+    <pubDate>Fri, 11 Apr 2025 18:48:32 &#43;0800</pubDate>
+    <author>afeng</author>
+    <guid>http://afeng616.github.io/data-structure/</guid>
+    <description><![CDATA[记录数据结构学习的奇妙旅程。]]></description>
+</item>
+<item>
+    <title>寻找子集问题</title>
+    <link>http://afeng616.github.io/find-subsets/</link>
+    <pubDate>Sun, 06 Apr 2025 09:27:23 &#43;0800</pubDate>
+    <author>afeng</author>
+    <guid>http://afeng616.github.io/find-subsets/</guid>
+    <description><![CDATA[记录列表寻找子集的求解方法。]]></description>
+</item>
+<item>
+    <title>爬楼问题笔记</title>
+    <link>http://afeng616.github.io/climb/</link>
+    <pubDate>Mon, 31 Mar 2025 22:37:29 &#43;0800</pubDate>
+    <author>afeng</author>
+    <guid>http://afeng616.github.io/climb/</guid>
+    <description><![CDATA[LeetCode.70.爬楼梯，记录爬楼问题求解的分析过程。]]></description>
+</item>
+<item>
+    <title>混合牛顿法</title>
+    <link>http://afeng616.github.io/newton_hybrid/</link>
+    <pubDate>Sun, 14 May 2023 20:09:03 &#43;0800</pubDate>
+    <author>afeng</author>
+    <guid>http://afeng616.github.io/newton_hybrid/</guid>
+    <description><![CDATA[混合牛顿法。]]></description>
+</item>
+</channel>
+</rss>

@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <title>混合牛顿法 - afeng滴blog</title><meta name="Description" content="混合牛顿法。"><meta property="og:url" content="http://afeng616.github.io/newton_hybrid/">
+  <meta property="og:site_name" content="afeng滴blog">
+  <meta property="og:title" content="混合牛顿法">
+  <meta property="og:description" content="混合牛顿法。">
+  <meta property="og:locale" content="zh_CN">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2023-05-14T20:09:03+08:00">
+    <meta property="article:modified_time" content="2023-07-28T11:20:58+08:00">
+    <meta property="article:tag" content="算法">
+    <meta property="article:tag" content="数学">
+    <meta property="og:image" content="http://afeng616.github.io/favicon.png">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="http://afeng616.github.io/favicon.png">
+  <meta name="twitter:title" content="混合牛顿法">
+  <meta name="twitter:description" content="混合牛顿法。">
+<meta name="application-name" content="afeng滴blog">
+<meta name="apple-mobile-web-app-title" content="afeng滴blog">
+<meta name="referrer" content="no-referrer" /><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="http://afeng616.github.io/newton_hybrid/" /><link rel="prev" href="http://afeng616.github.io/blog-test/" /><link rel="next" href="http://afeng616.github.io/diy-gamepad/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"></noscript><link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"></noscript><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "混合牛顿法",
+        "inLanguage": "zh-CN",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "http:\/\/afeng616.github.io\/newton_hybrid\/"
+        },"genre": "posts","keywords": "算法, 数学","wordcount":  1516 ,
+        "url": "http:\/\/afeng616.github.io\/newton_hybrid\/","datePublished": "2023-05-14T20:09:03+08:00","dateModified": "2023-07-28T11:20:58+08:00","publisher": {
+            "@type": "Organization",
+            "name": "afeng"},"author": {
+                "@type": "Person",
+                "name": "afeng"
+            },"description": "混合牛顿法。"
+    }
+    </script></head>
+    <body data-header-desktop="fixed" data-header-mobile="auto"><script>(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="afeng滴blog"><img
+        class="lazyload logo"
+        src="/svg/loading.min.svg"
+        data-src="/favicon.png"
+        data-srcset="/favicon.png, /favicon.png 1.5x, /favicon.png 2x"
+        data-sizes="auto"
+        alt="/favicon.png"
+        title="/favicon.png" />afeng滴blog</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/"> 所有文章 </a><a class="menu-item" href="/tags/"> 标签 </a><a class="menu-item" href="/categories/"> 分类 </a><a class="menu-item" href="/about/"> 关于 </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="搜索文章标题或内容..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="搜索">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="清空">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+                </a></div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="afeng滴blog"><img
+        class="lazyload logo"
+        src="/svg/loading.min.svg"
+        data-src="/favicon.png"
+        data-srcset="/favicon.png, /favicon.png 1.5x, /favicon.png 2x"
+        data-sizes="auto"
+        alt="/favicon.png"
+        title="/favicon.png" />afeng滴blog</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="搜索文章标题或内容..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="搜索">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="清空">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        取消
+                    </a>
+                </div><a class="menu-item" href="/posts/" title="">所有文章</a><a class="menu-item" href="/tags/" title="">标签</a><a class="menu-item" href="/categories/" title="">分类</a><a class="menu-item" href="/about/" title="">关于</a><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a></div>
+    </div>
+</header><div class="search-dropdown desktop">
+        <div id="search-dropdown-desktop"></div>
+    </div>
+    <div class="search-dropdown mobile">
+        <div id="search-dropdown-mobile"></div>
+    </div><main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">目录</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">混合牛顿法</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="https://github.com/afeng616" title="Author" target="_blank" rel="noopener noreffer author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>afeng</a></span>&nbsp;<span class="post-category">收录于 <a href="/categories/%E7%AC%94%E8%AE%B0/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>笔记</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2023/05/14">2023/05/14</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;约 1516 字&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;预计阅读 4 分钟&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  data-kept="">
+                <div class="details-summary toc-title">
+                    <span>目录</span>
+                    <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#综述">综述</a></li>
+    <li><a href="#细节说明">细节说明</a>
+      <ul>
+        <li><a href="#hessian矩阵">Hessian矩阵</a></li>
+        <li><a href="#牛顿法">牛顿法</a>
+          <ul>
+            <li><a href="#牛顿法求解方程近似解">牛顿法求解方程近似解</a></li>
+            <li><a href="#牛顿法在最优化上的应用">牛顿法在最优化上的应用</a></li>
+            <li><a href="#牛顿法优化函数算法过程">牛顿法优化函数算法过程</a></li>
+          </ul>
+        </li>
+        <li><a href="#与梯度下降法比较">与梯度下降法比较</a></li>
+      </ul>
+    </li>
+    <li><a href="#参考">参考</a></li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><h2 id="综述">综述</h2>
+<p>所谓混合牛顿法<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>是指结合牛顿法和梯度下降法的特点，若牛顿方向可行，则使用牛顿法进行迭代，若不行，则使用梯度下降法确定搜索方向。<br>
+具体搜索方向选取的逻辑可以是这样的：<br>
+$$
+\begin{align}
+&amp;if\ \nabla^2 f(x_k)正定,则\quad d_k=-\nabla^2f(x_k)^{-1}\nabla f(x_k)\\
+&amp;if\ \nabla^2f(x_k)负定,则\quad d_k=\nabla^2f(x_k)^{-1}\nabla f(x_k)\\
+&amp;else\ \quad\quad d_k=-\nabla f(x_k) \end{align}
+$$</p>
+<h2 id="细节说明">细节说明</h2>
+<h3 id="hessian矩阵">Hessian矩阵</h3>
+<p>关于Hessian矩阵（$\nabla^2 f(x_k)$）的正定性说明<sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup>。<br>
+简单地说，如果Hessian矩阵正定，则</p>
+<ol>
+<li>函数的二阶偏导数恒 &gt; 0</li>
+<li>函数的变化率（斜率）即一阶导数始终处于递增状态</li>
+<li>函数为凸</li>
+</ol>
+<h3 id="牛顿法">牛顿法</h3>
+<h4 id="牛顿法求解方程近似解">牛顿法求解方程近似解</h4>
+<p>若求解$f(x)=0$在$\mathbb R$上的解$x^*$，通过选取迭代初值$x_0$，使用牛顿迭代公式逼近$x^*$。<br>
+$$
+x_{t+1}=x_t-\frac{f(x_t)}{f'(x_t)}
+$$
+将​$f(x)$在迭代初值$x_0$​处Taylor展开可得：
+$$
+f(x)=f(x_0)+f'(x_0)(x-x_0)+o(|x-x_0|)
+$$
+舍去高阶项，可得：
+$$
+f(x)=f(x_0)+f'(x_0)(x-x_0)
+$$
+将零点$x^*$代入可得：
+$$
+f(x^*)=0=f(x_0)+f'(x_0)(x^*-x_0) \\
+x^*=x_0-\frac{f(x_0)}{f'(x_0)}
+$$
+由于上式是舍去了高阶项后的近似，因此我们实际上并不能根据上式一步得到$x^*$​。而要通过多步迭代，由此得到牛顿迭代方程：
+$$
+x_{t+1}=x_t-\frac{f(x_t)}{f'(x_{t})}
+$$</p>
+<h4 id="牛顿法在最优化上的应用">牛顿法在最优化上的应用</h4>
+<p>对于一阶可微的函数​$f:\mathbb R\to\mathbb R$ ，根据费马定理，其极值点$x^*$​满足$f'(x^*)=0$，而最优化方法的目的也就是通过种种手段，求出或近似这个极值点$x^*$。注意到牛顿法是用来求解函数$g(x)$​的一个零点的近似值​$\hat x$的，而最优化则是求解导数的零点的近似解，那么令$g(x)=f'(x)$​，迭代出来的​$\hat x$不就是极值点$x^*$​的近似解了吗？</p>
+<p>因此，使用牛顿法优化函数$f$的迭代方程也就呼之欲出了：
+$$
+x_{t+1}=x_t-\frac{g(x_t)}{g'(x_t)}=x_t-\frac{f'(x_t)}{f''(x_t)}=x_t-f''(x_t)^{-1}f'(x_t)
+$$
+当然，这需要​$f$是二阶可导的，此处就默许我们研究的函数足够正定。</p>
+<p>上述为一维输入的情形，对于​$f:\mathbb R^n\to\mathbb R$也有类似的迭代式：
+$$
+x_{t+1}=x_t-\nabla^2f(x_t)^{-1}\nabla f(x_t)\quad\quad x_t\in\mathbb R^n\
+$$
+其证明方法和一维情形几乎一致。</p>
+<h4 id="牛顿法优化函数算法过程">牛顿法优化函数算法过程</h4>
+<p>牛顿法优化函数的算法：
+$$
+\begin{align}
+选定&amp;迭代初值x_0\in\Omega,选取\epsilon&gt;0,重复以下操作:\\
+&amp;若||\nabla f(x_t)||&lt;\epsilon，停止循环\\
+&amp;计算梯度:\nabla f(x_t)\\
+&amp;计算Hessian矩阵:\nabla^2f(x_t)\\
+&amp;计算方向:d_t=-\nabla^2f(x_t)^{-1}\nabla f(x_t)\\
+&amp;更新迭代点:x_{t+1}=x_t-d\\
+\end{align}
+$$</p>
+<h3 id="与梯度下降法比较">与梯度下降法比较</h3>
+<p>牛顿法：
+$$
+x_{t+1}=x_t-\nabla^2f(x_t)^{-1}\nabla f(x_t)
+$$
+梯度下降法：
+$$
+x_{t+1}=x_t-\gamma\nabla f(x_t)
+$$
+可以发现，这两个方法都是基于当前迭代点的梯度信息进行搜索方向的选择的，只不过梯队下降法是在梯度的反方向上进行线搜得到下一个迭代点，而牛顿法则是通过Hessian矩阵在梯度上进行线性变换得到搜索方向（甚至步长都不需要确定）。<br>
+所以牛顿法对函数在迭代点处的信息利用更加充分，直观来看，相比于梯度下降法，函数足够正则的情况下牛顿法迭代得更加准确，收敛速率也会更快。</p>
+<p>所有基于梯度的迭代方程可以写成如下的形式：
+$$
+x_{t+1}=x_t-H(x_t)\nabla f(x_t)
+$$
+其中$x\in\mathbb R^n,H(x_t)\in\mathbb R^{n\times n}$。</p>
+<p>对于牛顿法来说，$H(x_t)=\nabla^2f(x_t)^{-1}$</p>
+<p>对于梯度下降法来说，$H(x_t)=\gamma I$</p>
+<p>可以看到，牛顿法$H$的​是随着当前迭代点的变化动态变化的，因此，相比于梯度下降法，牛顿法具有更加灵活的迭代过程。有的书上直接说牛顿法就是“自适应的梯度下降法”。</p>
+<h2 id="参考">参考</h2>
+<div class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1">
+<p><a href="https://zhuanlan.zhihu.com/p/293951317" target="_blank" rel="noopener noreffer ">https://zhuanlan.zhihu.com/p/293951317</a> &ldquo;知乎: 最优化方法复习笔记（三）牛顿法及其收敛性分析&rdquo;&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:2">
+<p><a href="https://blog.csdn.net/qq_39521554/article/details/78895869" target="_blank" rel="noopener noreffer ">https://blog.csdn.net/qq_39521554/article/details/78895869</a> &ldquo;CSDN: Hessian矩阵正定与函数凹凸性的关系&rdquo;&#160;<a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</div></div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>更新于 2023/07/28</span>
+            </div></div>
+        <div class="post-info-line">
+            <div class="post-info-md"><span>
+                            <a class="link-to-markdown" href="/newton_hybrid/index.md" target="_blank">阅读原始文档</a>
+                        </span></div>
+            <div class="post-info-share">
+                <span><a href="javascript:void(0);" title="分享到 X" data-sharer="x" data-url="http://afeng616.github.io/newton_hybrid/" data-title="混合牛顿法" data-hashtags="算法,数学"><i class="fab fa-x-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Threads" data-sharer="threads" data-url="http://afeng616.github.io/newton_hybrid/" data-title="混合牛顿法"><i class="fab fa-threads fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Facebook" data-sharer="facebook" data-url="http://afeng616.github.io/newton_hybrid/" data-hashtag="算法"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Diaspora" data-sharer="diaspora" data-url="http://afeng616.github.io/newton_hybrid/" data-title="混合牛顿法" data-description="混合牛顿法。"><i class="fab fa-diaspora fa-fw" aria-hidden="true"></i></a><a href="https://t.me/share/url?url=http%3a%2f%2fafeng616.github.io%2fnewton_hybrid%2f&amp;text=%e6%b7%b7%e5%90%88%e7%89%9b%e9%a1%bf%e6%b3%95" target="_blank" title="分享到 Telegram"><i class="fab fa-telegram fa-fw" aria-hidden="true"></i></a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/%E7%AE%97%E6%B3%95/">算法</a>,&nbsp;<a href="/tags/%E6%95%B0%E5%AD%A6/">数学</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/blog-test/" class="prev" rel="prev" title="Blog Test"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>Blog Test</a>
+            <a href="/diy-gamepad/" class="next" rel="next" title="将第三方手柄输出映射到鼠标上">将第三方手柄输出映射到鼠标上<i class="fas fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
+</div>
+<div id="comments"><div id="giscus" class="comment"></div><noscript>
+                Please enable JavaScript to view the comments powered by <a href="https://giscus.app">Giscus</a>.
+            </noscript></div></article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">由 <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.145.0">Hugo</a> 强力驱动 | 主题 - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.3.1-DEV"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
+                </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2022 - 2025</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="https://github.com/afeng616" target="_blank">afeng</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="回到顶部">
+                <i class="fas fa-arrow-up fa-fw" aria-hidden="true"></i>
+            </a>
+        </div>
+
+        <div id="fixed-buttons-hidden"><a href="#" id="view-comments" class="fixed-button" title="查看评论">
+                <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
+            </a>
+        </div><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.5.0/css/lightgallery-bundle.min.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.0/katex.min.css"><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.1/autocomplete.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js"></script><script src="/lib/lunr/lunr.stemmer.support.min.js"></script><script src="/lib/lunr/lunr.zh.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.3.2/lazysizes.min.js"></script><script src="/lib/twemoji/twemoji.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.5.0/lightgallery.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.5.0/plugins/thumbnail/lg-thumbnail.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.5.0/plugins/zoom/lg-zoom.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.11/clipboard.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/sharer.js/0.5.1/sharer.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.0/katex.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.0/contrib/auto-render.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.0/contrib/copy-tex.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.0/contrib/mhchem.min.js"></script><script>window.config={"comment":{"giscus":{"category":"Announcements","categoryId":"DIC_kwDOJifAtM4Cbeom","darkTheme":"dark","emitMetadata":"0","inputPosition":"bottom","lang":"en","lazyLoading":true,"lightTheme":"light","mapping":"pathname","reactionsEnabled":"1","repo":"afeng616/afeng616.github.io","repoId":"R_kgDOJifAtA"}},"lightgallery":true,"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":true,"left":"\\begin{equation}","right":"\\end{equation}"},{"display":true,"left":"\\begin{equation*}","right":"\\end{equation*}"},{"display":true,"left":"\\begin{align}","right":"\\end{align}"},{"display":true,"left":"\\begin{align*}","right":"\\end{align*}"},{"display":true,"left":"\\begin{alignat}","right":"\\end{alignat}"},{"display":true,"left":"\\begin{alignat*}","right":"\\end{alignat*}"},{"display":true,"left":"\\begin{gather}","right":"\\end{gather}"},{"display":true,"left":"\\begin{CD}","right":"\\end{CD}"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"highlightTag":"em","lunrIndexURL":"/index.json","lunrLanguageCode":"zh","lunrSegmentitURL":"/lib/lunr/lunr.segmentit.js","maxResultLength":10,"noResultsFound":"没有找到结果","snippetLength":50,"type":"lunr"},"twemoji":true};</script><script src="/js/theme.min.js"></script></body>
+</html>

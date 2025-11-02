@@ -1,0 +1,24 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Windows - 标签 - afeng滴blog</title>
+        <link>http://afeng616.github.io/tags/windows/</link>
+        <description>Windows - 标签 - afeng滴blog</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>afeng616@gmail.com (afeng)</managingEditor>
+            <webMaster>afeng616@gmail.com (afeng)</webMaster><lastBuildDate>Fri, 01 Apr 2022 19:06:52 &#43;0800</lastBuildDate><atom:link href="http://afeng616.github.io/tags/windows/" rel="self" type="application/rss+xml" /><item>
+    <title>删除设备和驱动器中的图标</title>
+    <link>http://afeng616.github.io/delete-win-driver-logo/</link>
+    <pubDate>Fri, 01 Apr 2022 19:06:52 &#43;0800</pubDate>
+    <author>afeng</author>
+    <guid>http://afeng616.github.io/delete-win-driver-logo/</guid>
+    <description><![CDATA[删除设备和驱动器中的图标。]]></description>
+</item>
+<item>
+    <title>Win10自启动管理</title>
+    <link>http://afeng616.github.io/win-self-startup/</link>
+    <pubDate>Wed, 12 Jan 2022 20:51:18 &#43;0800</pubDate>
+    <author>afeng</author>
+    <guid>http://afeng616.github.io/win-self-startup/</guid>
+    <description><![CDATA[Win10自启动管理。]]></description>
+</item>
+</channel>
+</rss>

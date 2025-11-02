@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <title>论文那些事儿 - afeng滴blog</title><meta name="Description" content="一些coding、论文、优化算法、强化学习、深度学习的知识。"><meta property="og:url" content="http://afeng616.github.io/research/">
+  <meta property="og:site_name" content="afeng滴blog">
+  <meta property="og:title" content="论文那些事儿">
+  <meta property="og:description" content="一些coding、论文、优化算法、强化学习、深度学习的知识。">
+  <meta property="og:locale" content="zh_CN">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2023-07-16T15:36:43+08:00">
+    <meta property="article:modified_time" content="2023-07-31T09:36:43+08:00">
+    <meta property="article:tag" content="Research">
+    <meta property="og:image" content="http://afeng616.github.io/favicon.png">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="http://afeng616.github.io/favicon.png">
+  <meta name="twitter:title" content="论文那些事儿">
+  <meta name="twitter:description" content="一些coding、论文、优化算法、强化学习、深度学习的知识。">
+<meta name="application-name" content="afeng滴blog">
+<meta name="apple-mobile-web-app-title" content="afeng滴blog">
+<meta name="referrer" content="no-referrer" /><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="http://afeng616.github.io/research/" /><link rel="prev" href="http://afeng616.github.io/pytorch-gpu-test/" /><link rel="next" href="http://afeng616.github.io/mydll/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"></noscript><link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"></noscript><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "论文那些事儿",
+        "inLanguage": "zh-CN",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "http:\/\/afeng616.github.io\/research\/"
+        },"genre": "posts","keywords": "research","wordcount":  969 ,
+        "url": "http:\/\/afeng616.github.io\/research\/","datePublished": "2023-07-16T15:36:43+08:00","dateModified": "2023-07-31T09:36:43+08:00","publisher": {
+            "@type": "Organization",
+            "name": "afeng"},"author": {
+                "@type": "Person",
+                "name": "afeng"
+            },"description": "一些coding、论文、优化算法、强化学习、深度学习的知识。"
+    }
+    </script></head>
+    <body data-header-desktop="fixed" data-header-mobile="auto"><script>(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="afeng滴blog"><img
+        class="lazyload logo"
+        src="/svg/loading.min.svg"
+        data-src="/favicon.png"
+        data-srcset="/favicon.png, /favicon.png 1.5x, /favicon.png 2x"
+        data-sizes="auto"
+        alt="/favicon.png"
+        title="/favicon.png" />afeng滴blog</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/"> 所有文章 </a><a class="menu-item" href="/tags/"> 标签 </a><a class="menu-item" href="/categories/"> 分类 </a><a class="menu-item" href="/about/"> 关于 </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="搜索文章标题或内容..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="搜索">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="清空">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+                </a></div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="afeng滴blog"><img
+        class="lazyload logo"
+        src="/svg/loading.min.svg"
+        data-src="/favicon.png"
+        data-srcset="/favicon.png, /favicon.png 1.5x, /favicon.png 2x"
+        data-sizes="auto"
+        alt="/favicon.png"
+        title="/favicon.png" />afeng滴blog</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="搜索文章标题或内容..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="搜索">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="清空">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        取消
+                    </a>
+                </div><a class="menu-item" href="/posts/" title="">所有文章</a><a class="menu-item" href="/tags/" title="">标签</a><a class="menu-item" href="/categories/" title="">分类</a><a class="menu-item" href="/about/" title="">关于</a><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a></div>
+    </div>
+</header><div class="search-dropdown desktop">
+        <div id="search-dropdown-desktop"></div>
+    </div>
+    <div class="search-dropdown mobile">
+        <div id="search-dropdown-mobile"></div>
+    </div><main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">目录</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">论文那些事儿</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="https://github.com/afeng616" title="Author" target="_blank" rel="noopener noreffer author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>afeng</a></span>&nbsp;<span class="post-category">收录于 <a href="/categories/%E7%AC%94%E8%AE%B0/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>笔记</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2023/07/16">2023/07/16</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;约 969 字&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;预计阅读 2 分钟&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  data-kept="">
+                <div class="details-summary toc-title">
+                    <span>目录</span>
+                    <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#基础知识-base">基础知识 Base</a></li>
+    <li><a href="#深度学习-deep-learning">深度学习 Deep Learning</a></li>
+    <li><a href="#强化学习-reinforcement-learning">强化学习 Reinforcement Learning</a></li>
+    <li><a href="#参考资料-reference">参考资料 Reference</a></li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><h2 id="基础知识-base">基础知识 Base</h2>
+<p>Softmax和Sigmoid，详解<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup> <sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup></p>
+<div class="details admonition tip">
+        <div class="details-summary admonition-title">
+            <i class="icon fas fa-lightbulb fa-fw" aria-hidden="true"></i>小结<i class="details-icon fas fa-angle-right fa-fw" aria-hidden="true"></i>
+        </div>
+        <div class="details-content">
+            <div class="admonition-content">都可用于多分类问题中，Sigmoid函数常用于有多个正确答案的分类问题，Softmax函数常用于有一个正确答案的分类问题。</div>
+        </div>
+    </div>
+<p>tanh，详解<sup id="fnref:3"><a href="#fn:3" class="footnote-ref" role="doc-noteref">3</a></sup></p>
+<p>torch.gather函数详解<sup id="fnref:4"><a href="#fn:4" class="footnote-ref" role="doc-noteref">4</a></sup>，见汤胤评论</p>
+<h2 id="深度学习-deep-learning">深度学习 Deep Learning</h2>
+<p>LSTM，详解<sup id="fnref:5"><a href="#fn:5" class="footnote-ref" role="doc-noteref">5</a></sup> <sup id="fnref:6"><a href="#fn:6" class="footnote-ref" role="doc-noteref">6</a></sup>
+<div class="details admonition tip">
+        <div class="details-summary admonition-title">
+            <i class="icon fas fa-lightbulb fa-fw" aria-hidden="true"></i>小结<i class="details-icon fas fa-angle-right fa-fw" aria-hidden="true"></i>
+        </div>
+        <div class="details-content">
+            <div class="admonition-content">LSTM通过门控状态来控制传输状态，忘记+选择性记忆=输出。</div>
+        </div>
+    </div></p>
+<p>GRU，详解<sup id="fnref:7"><a href="#fn:7" class="footnote-ref" role="doc-noteref">7</a></sup>，论文<sup id="fnref:8"><a href="#fn:8" class="footnote-ref" role="doc-noteref">8</a></sup>
+<div class="details admonition tip">
+        <div class="details-summary admonition-title">
+            <i class="icon fas fa-lightbulb fa-fw" aria-hidden="true"></i>小结<i class="details-icon fas fa-angle-right fa-fw" aria-hidden="true"></i>
+        </div>
+        <div class="details-content">
+            <div class="admonition-content">GRU效果与LSTM相近，减少了计算量。</div>
+        </div>
+    </div></p>
+<p>Attention，详解<sup id="fnref:9"><a href="#fn:9" class="footnote-ref" role="doc-noteref">9</a></sup>，视频<sup id="fnref:10"><a href="#fn:10" class="footnote-ref" role="doc-noteref">10</a></sup> <sup id="fnref:11"><a href="#fn:11" class="footnote-ref" role="doc-noteref">11</a></sup><br>
+Transformer，详解<sup id="fnref:12"><a href="#fn:12" class="footnote-ref" role="doc-noteref">12</a></sup></p>
+<h2 id="强化学习-reinforcement-learning">强化学习 Reinforcement Learning</h2>
+<p>SARSA，详解<sup id="fnref:13"><a href="#fn:13" class="footnote-ref" role="doc-noteref">13</a></sup></p>
+<p>Q-Learning，详解<sup id="fnref:14"><a href="#fn:14" class="footnote-ref" role="doc-noteref">14</a></sup>
+<div class="details admonition tip">
+        <div class="details-summary admonition-title">
+            <i class="icon fas fa-lightbulb fa-fw" aria-hidden="true"></i>小结<i class="details-icon fas fa-angle-right fa-fw" aria-hidden="true"></i>
+        </div>
+        <div class="details-content">
+            <div class="admonition-content"><data id="id-1" data-raw></data></div>
+        </div>
+    </div></p>
+<p>DQN，详解<sup id="fnref:15"><a href="#fn:15" class="footnote-ref" role="doc-noteref">15</a></sup></p>
+<h2 id="参考资料-reference">参考资料 Reference</h2>
+<div class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1">
+<p><a href="https://www.jianshu.com/p/037bf733713f" target="_blank" rel="noopener noreffer ">https://www.jianshu.com/p/037bf733713f</a> &ldquo;简书: 分类问题中Sigmoid与Softmax区别&rdquo;&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:2">
+<p><a href="https://devpress.csdn.net/xian/64a6246db1e197348be16c6a.html" target="_blank" rel="noopener noreffer ">https://devpress.csdn.net/xian/64a6246db1e197348be16c6a.html</a> &ldquo;论坛: 三分钟认知Softmax和Sigmoid的详细区别&rdquo;&#160;<a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:3">
+<p><a href="https://www.jianshu.com/p/7409c8f1cdca" target="_blank" rel="noopener noreffer ">https://www.jianshu.com/p/7409c8f1cdca</a> &ldquo;简书: 神经网络中的激活函数-tanh&rdquo;&#160;<a href="#fnref:3" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:4">
+<p><a href="https://zhuanlan.zhihu.com/p/352877584" target="_blank" rel="noopener noreffer ">https://zhuanlan.zhihu.com/p/352877584</a> &ldquo;知乎: 图解PyTorch中的torch.gather函数&rdquo;&#160;<a href="#fnref:4" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:5">
+<p><a href="https://zhuanlan.zhihu.com/p/32085405" target="_blank" rel="noopener noreffer ">https://zhuanlan.zhihu.com/p/32085405</a> &ldquo;知乎: 人人都能看懂的LSTM&rdquo;&#160;<a href="#fnref:5" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:6">
+<p><a href="https://zhuanlan.zhihu.com/p/42717426" target="_blank" rel="noopener noreffer ">https://zhuanlan.zhihu.com/p/42717426</a> &ldquo;知乎: 详解LSTM&rdquo;&#160;<a href="#fnref:6" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:7">
+<p><a href="https://zhuanlan.zhihu.com/p/32481747" target="_blank" rel="noopener noreffer ">https://zhuanlan.zhihu.com/p/32481747</a> &ldquo;知乎: 人人都能看懂的GRU&rdquo;&#160;<a href="#fnref:7" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:8">
+<p><a href="https://arxiv.org/pdf/1412.3555.pdf" target="_blank" rel="noopener noreffer ">https://arxiv.org/pdf/1412.3555.pdf</a> &ldquo;论文: Empirical Evaluation of Gated Recurrent Neural Networks on Sequence Modeling&rdquo;&#160;<a href="#fnref:8" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:9">
+<p><a href="https://zhuanlan.zhihu.com/p/46313756" target="_blank" rel="noopener noreffer ">https://zhuanlan.zhihu.com/p/46313756</a> &ldquo;知乎: Attention机制简单总结&rdquo;&#160;<a href="#fnref:9" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:10">
+<p><a href="https://www.bilibili.com/video/BV1q3411U7Hi" target="_blank" rel="noopener noreffer ">https://www.bilibili.com/video/BV1q3411U7Hi</a> &ldquo;Bili: Attention、Transformer公式推导和矩阵变化&rdquo;&#160;<a href="#fnref:10" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:11">
+<p><a href="https://zhuanlan.zhihu.com/p/46313756" target="_blank" rel="noopener noreffer ">https://zhuanlan.zhihu.com/p/46313756</a> &ldquo;知乎: Attention机制简单总结&rdquo;&#160;<a href="#fnref:11" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:12">
+<p><a href="https://zhuanlan.zhihu.com/p/166608727" target="_blank" rel="noopener noreffer ">https://zhuanlan.zhihu.com/p/166608727</a> &ldquo;知乎: 举个例子讲下transformer的输入输出细节及其他&rdquo;&#160;<a href="#fnref:12" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:13">
+<p>./RL/common_alg/SARSA.md &ldquo;文档: SARSA&rdquo;&#160;<a href="#fnref:13" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:14">
+<p>./RL/common_alg/Q-Learning.md &ldquo;文档: Q-Learning&rdquo;&#160;<a href="#fnref:14" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:15">
+<p><a href="https://paddlepedia.readthedocs.io/en/latest/tutorials/reinforcement_learning/DQN.html" target="_blank" rel="noopener noreffer ">https://paddlepedia.readthedocs.io/en/latest/tutorials/reinforcement_learning/DQN.html</a> &ldquo;文档: DQN&rdquo;&#160;<a href="#fnref:15" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</div></div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>更新于 2023/07/31</span>
+            </div></div>
+        <div class="post-info-line">
+            <div class="post-info-md"><span>
+                            <a class="link-to-markdown" href="/research/index.md" target="_blank">阅读原始文档</a>
+                        </span></div>
+            <div class="post-info-share">
+                <span><a href="javascript:void(0);" title="分享到 X" data-sharer="x" data-url="http://afeng616.github.io/research/" data-title="论文那些事儿" data-hashtags="research"><i class="fab fa-x-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Threads" data-sharer="threads" data-url="http://afeng616.github.io/research/" data-title="论文那些事儿"><i class="fab fa-threads fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Facebook" data-sharer="facebook" data-url="http://afeng616.github.io/research/" data-hashtag="research"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Diaspora" data-sharer="diaspora" data-url="http://afeng616.github.io/research/" data-title="论文那些事儿" data-description="一些coding、论文、优化算法、强化学习、深度学习的知识。"><i class="fab fa-diaspora fa-fw" aria-hidden="true"></i></a><a href="https://t.me/share/url?url=http%3a%2f%2fafeng616.github.io%2fresearch%2f&amp;text=%e8%ae%ba%e6%96%87%e9%82%a3%e4%ba%9b%e4%ba%8b%e5%84%bf" target="_blank" title="分享到 Telegram"><i class="fab fa-telegram fa-fw" aria-hidden="true"></i></a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/research/">Research</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/pytorch-gpu-test/" class="prev" rel="prev" title="Pytorch测试GPU是否可用"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>Pytorch测试GPU是否可用</a>
+            <a href="/mydll/" class="next" rel="next" title="DLL调用方式测试">DLL调用方式测试<i class="fas fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
+</div>
+<div id="comments"><div id="giscus" class="comment"></div><noscript>
+                Please enable JavaScript to view the comments powered by <a href="https://giscus.app">Giscus</a>.
+            </noscript></div></article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">由 <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.145.0">Hugo</a> 强力驱动 | 主题 - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.3.1-DEV"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
+                </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2022 - 2025</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="https://github.com/afeng616" target="_blank">afeng</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="回到顶部">
+                <i class="fas fa-arrow-up fa-fw" aria-hidden="true"></i>
+            </a>
+        </div>
+
+        <div id="fixed-buttons-hidden"><a href="#" id="view-comments" class="fixed-button" title="查看评论">
+                <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
+            </a>
+        </div><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.5.0/css/lightgallery-bundle.min.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.0/katex.min.css"><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.1/autocomplete.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js"></script><script src="/lib/lunr/lunr.stemmer.support.min.js"></script><script src="/lib/lunr/lunr.zh.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.3.2/lazysizes.min.js"></script><script src="/lib/twemoji/twemoji.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.5.0/lightgallery.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.5.0/plugins/thumbnail/lg-thumbnail.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.5.0/plugins/zoom/lg-zoom.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.11/clipboard.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/sharer.js/0.5.1/sharer.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.0/katex.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.0/contrib/auto-render.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.0/contrib/copy-tex.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.0/contrib/mhchem.min.js"></script><script>window.config={"comment":{"giscus":{"category":"Announcements","categoryId":"DIC_kwDOJifAtM4Cbeom","darkTheme":"dark","emitMetadata":"0","inputPosition":"bottom","lang":"en","lazyLoading":true,"lightTheme":"light","mapping":"pathname","reactionsEnabled":"1","repo":"afeng616/afeng616.github.io","repoId":"R_kgDOJifAtA"}},"lightgallery":true,"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":true,"left":"\\begin{equation}","right":"\\end{equation}"},{"display":true,"left":"\\begin{equation*}","right":"\\end{equation*}"},{"display":true,"left":"\\begin{align}","right":"\\end{align}"},{"display":true,"left":"\\begin{align*}","right":"\\end{align*}"},{"display":true,"left":"\\begin{alignat}","right":"\\end{alignat}"},{"display":true,"left":"\\begin{alignat*}","right":"\\end{alignat*}"},{"display":true,"left":"\\begin{gather}","right":"\\end{gather}"},{"display":true,"left":"\\begin{CD}","right":"\\end{CD}"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"highlightTag":"em","lunrIndexURL":"/index.json","lunrLanguageCode":"zh","lunrSegmentitURL":"/lib/lunr/lunr.segmentit.js","maxResultLength":10,"noResultsFound":"没有找到结果","snippetLength":50,"type":"lunr"},"twemoji":true};</script><script src="/js/theme.min.js"></script></body>
+</html>

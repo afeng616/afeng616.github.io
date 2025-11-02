@@ -1,0 +1,16 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Research - 标签 - afeng滴blog</title>
+        <link>http://afeng616.github.io/tags/research/</link>
+        <description>Research - 标签 - afeng滴blog</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>afeng616@gmail.com (afeng)</managingEditor>
+            <webMaster>afeng616@gmail.com (afeng)</webMaster><lastBuildDate>Sun, 16 Jul 2023 15:36:43 &#43;0800</lastBuildDate><atom:link href="http://afeng616.github.io/tags/research/" rel="self" type="application/rss+xml" /><item>
+    <title>论文那些事儿</title>
+    <link>http://afeng616.github.io/research/</link>
+    <pubDate>Sun, 16 Jul 2023 15:36:43 &#43;0800</pubDate>
+    <author>afeng</author>
+    <guid>http://afeng616.github.io/research/</guid>
+    <description><![CDATA[一些coding、论文、优化算法、强化学习、深度学习的知识。]]></description>
+</item>
+</channel>
+</rss>

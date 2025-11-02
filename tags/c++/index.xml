@@ -1,0 +1,32 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>C&#43;&#43; - 标签 - afeng滴blog</title>
+        <link>http://afeng616.github.io/tags/c&#43;&#43;/</link>
+        <description>C&#43;&#43; - 标签 - afeng滴blog</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>afeng616@gmail.com (afeng)</managingEditor>
+            <webMaster>afeng616@gmail.com (afeng)</webMaster><lastBuildDate>Sat, 12 Apr 2025 09:57:45 &#43;0800</lastBuildDate><atom:link href="http://afeng616.github.io/tags/c&#43;&#43;/" rel="self" type="application/rss+xml" /><item>
+    <title>操作系统学习</title>
+    <link>http://afeng616.github.io/operation-system/</link>
+    <pubDate>Sat, 12 Apr 2025 09:57:45 &#43;0800</pubDate>
+    <author>afeng</author>
+    <guid>http://afeng616.github.io/operation-system/</guid>
+    <description><![CDATA[记录操作系统学习的美妙时刻。]]></description>
+</item>
+<item>
+    <title>数据结构学习</title>
+    <link>http://afeng616.github.io/data-structure/</link>
+    <pubDate>Fri, 11 Apr 2025 18:48:32 &#43;0800</pubDate>
+    <author>afeng</author>
+    <guid>http://afeng616.github.io/data-structure/</guid>
+    <description><![CDATA[记录数据结构学习的奇妙旅程。]]></description>
+</item>
+<item>
+    <title>DLL调用方式测试</title>
+    <link>http://afeng616.github.io/mydll/</link>
+    <pubDate>Wed, 26 Jul 2023 14:42:20 &#43;0800</pubDate>
+    <author>afeng</author>
+    <guid>http://afeng616.github.io/mydll/</guid>
+    <description><![CDATA[分别使用静态调用（隐式链接）和动态调用（显式链接）的方式调用dll]]></description>
+</item>
+</channel>
+</rss>

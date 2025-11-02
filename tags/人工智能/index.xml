@@ -1,0 +1,40 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>人工智能 - 标签 - afeng滴blog</title>
+        <link>http://afeng616.github.io/tags/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/</link>
+        <description>人工智能 - 标签 - afeng滴blog</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>afeng616@gmail.com (afeng)</managingEditor>
+            <webMaster>afeng616@gmail.com (afeng)</webMaster><lastBuildDate>Fri, 23 May 2025 15:15:09 &#43;0800</lastBuildDate><atom:link href="http://afeng616.github.io/tags/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/" rel="self" type="application/rss+xml" /><item>
+    <title>agent的关键环节</title>
+    <link>http://afeng616.github.io/llm-agent/</link>
+    <pubDate>Fri, 23 May 2025 15:15:09 &#43;0800</pubDate>
+    <author>afeng</author>
+    <guid>http://afeng616.github.io/llm-agent/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
+    <title>理解Transformer</title>
+    <link>http://afeng616.github.io/transformer/</link>
+    <pubDate>Tue, 15 Apr 2025 15:35:46 &#43;0800</pubDate>
+    <author>afeng</author>
+    <guid>http://afeng616.github.io/transformer/</guid>
+    <description><![CDATA[学习Transformer的基本原理和应用]]></description>
+</item>
+<item>
+    <title>pdd算法工程师二面</title>
+    <link>http://afeng616.github.io/pdd-2-interview/</link>
+    <pubDate>Thu, 03 Apr 2025 19:20:44 &#43;0800</pubDate>
+    <author>afeng</author>
+    <guid>http://afeng616.github.io/pdd-2-interview/</guid>
+    <description><![CDATA[把现在还记得的pdd二面问题都记下来]]></description>
+</item>
+<item>
+    <title>备战深度学习算法工程师</title>
+    <link>http://afeng616.github.io/dl-engineer/</link>
+    <pubDate>Thu, 03 Apr 2025 09:20:21 &#43;0800</pubDate>
+    <author>afeng</author>
+    <guid>http://afeng616.github.io/dl-engineer/</guid>
+    <description><![CDATA[备考深度学习算法工程师面试题]]></description>
+</item>
+</channel>
+</rss>

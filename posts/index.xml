@@ -1,0 +1,89 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>所有文章 - afeng滴blog</title>
+        <link>http://afeng616.github.io/posts/</link>
+        <description>所有文章 | afeng滴blog</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>afeng616@gmail.com (afeng)</managingEditor>
+            <webMaster>afeng616@gmail.com (afeng)</webMaster><lastBuildDate>Sun, 02 Nov 2025 15:11:55 &#43;0000</lastBuildDate><atom:link href="http://afeng616.github.io/posts/" rel="self" type="application/rss+xml" /><item>
+    <title>这是一个Front Matter插件测试</title>
+    <link>http://afeng616.github.io/front-matter-test/</link>
+    <pubDate>Sun, 02 Nov 2025 15:11:55 &#43;0000</pubDate>
+    <author>afeng</author>
+    <guid>http://afeng616.github.io/front-matter-test/</guid>
+    <description><![CDATA[<h1 id="问题">问题</h1>
+<p>Front Matter插件通过<code>Contents</code>分栏中的<code>Create content</code>按钮生成的新文章，默认生成位置与之前不同（不在posts下），是否会影响最终文章生成？</p>]]></description>
+</item>
+<item>
+    <title>这是一个自动部署测试</title>
+    <link>http://afeng616.github.io/auto-deploy-test/</link>
+    <pubDate>Sun, 02 Nov 2025 10:45:25 &#43;0800</pubDate>
+    <author>afeng</author>
+    <guid>http://afeng616.github.io/auto-deploy-test/</guid>
+    <description><![CDATA[测试利用GitHub Actions自动完成Hugo静态生成，及GitHub Page部署。]]></description>
+</item>
+<item>
+    <title>agent的关键环节</title>
+    <link>http://afeng616.github.io/llm-agent/</link>
+    <pubDate>Fri, 23 May 2025 15:15:09 &#43;0800</pubDate>
+    <author>afeng</author>
+    <guid>http://afeng616.github.io/llm-agent/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
+    <title>组合求和问题</title>
+    <link>http://afeng616.github.io/group-sum/</link>
+    <pubDate>Tue, 15 Apr 2025 18:40:27 &#43;0800</pubDate>
+    <author>afeng</author>
+    <guid>http://afeng616.github.io/group-sum/</guid>
+    <description><![CDATA[一组数中，能否选出一些数，使得它们的和为目标值？]]></description>
+</item>
+<item>
+    <title>理解Transformer</title>
+    <link>http://afeng616.github.io/transformer/</link>
+    <pubDate>Tue, 15 Apr 2025 15:35:46 &#43;0800</pubDate>
+    <author>afeng</author>
+    <guid>http://afeng616.github.io/transformer/</guid>
+    <description><![CDATA[学习Transformer的基本原理和应用]]></description>
+</item>
+<item>
+    <title>操作系统学习</title>
+    <link>http://afeng616.github.io/operation-system/</link>
+    <pubDate>Sat, 12 Apr 2025 09:57:45 &#43;0800</pubDate>
+    <author>afeng</author>
+    <guid>http://afeng616.github.io/operation-system/</guid>
+    <description><![CDATA[记录操作系统学习的美妙时刻。]]></description>
+</item>
+<item>
+    <title>数据结构学习</title>
+    <link>http://afeng616.github.io/data-structure/</link>
+    <pubDate>Fri, 11 Apr 2025 18:48:32 &#43;0800</pubDate>
+    <author>afeng</author>
+    <guid>http://afeng616.github.io/data-structure/</guid>
+    <description><![CDATA[记录数据结构学习的奇妙旅程。]]></description>
+</item>
+<item>
+    <title>寻找子集问题</title>
+    <link>http://afeng616.github.io/find-subsets/</link>
+    <pubDate>Sun, 06 Apr 2025 09:27:23 &#43;0800</pubDate>
+    <author>afeng</author>
+    <guid>http://afeng616.github.io/find-subsets/</guid>
+    <description><![CDATA[记录列表寻找子集的求解方法。]]></description>
+</item>
+<item>
+    <title>pdd算法工程师二面</title>
+    <link>http://afeng616.github.io/pdd-2-interview/</link>
+    <pubDate>Thu, 03 Apr 2025 19:20:44 &#43;0800</pubDate>
+    <author>afeng</author>
+    <guid>http://afeng616.github.io/pdd-2-interview/</guid>
+    <description><![CDATA[把现在还记得的pdd二面问题都记下来]]></description>
+</item>
+<item>
+    <title>备战深度学习算法工程师</title>
+    <link>http://afeng616.github.io/dl-engineer/</link>
+    <pubDate>Thu, 03 Apr 2025 09:20:21 &#43;0800</pubDate>
+    <author>afeng</author>
+    <guid>http://afeng616.github.io/dl-engineer/</guid>
+    <description><![CDATA[备考深度学习算法工程师面试题]]></description>
+</item>
+</channel>
+</rss>

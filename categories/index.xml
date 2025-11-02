@@ -1,0 +1,40 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Categories - 分类 - afeng滴blog</title>
+        <link>http://afeng616.github.io/categories/</link>
+        <description>Categories - 分类 - afeng滴blog</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>afeng616@gmail.com (afeng)</managingEditor>
+            <webMaster>afeng616@gmail.com (afeng)</webMaster><lastBuildDate>Fri, 23 May 2025 15:15:09 &#43;0800</lastBuildDate><atom:link href="http://afeng616.github.io/categories/" rel="self" type="application/rss+xml" /><item>
+    <title>笔记</title>
+    <link>http://afeng616.github.io/categories/%E7%AC%94%E8%AE%B0/</link>
+    <pubDate>Fri, 23 May 2025 15:15:09 &#43;0800</pubDate>
+    <author>afeng</author>
+    <guid>http://afeng616.github.io/categories/%E7%AC%94%E8%AE%B0/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
+    <title>示例</title>
+    <link>http://afeng616.github.io/categories/%E7%A4%BA%E4%BE%8B/</link>
+    <pubDate>Wed, 26 Jul 2023 14:42:20 &#43;0800</pubDate>
+    <author>afeng</author>
+    <guid>http://afeng616.github.io/categories/%E7%A4%BA%E4%BE%8B/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
+    <title>杂谈</title>
+    <link>http://afeng616.github.io/categories/%E6%9D%82%E8%B0%88/</link>
+    <pubDate>Sat, 27 May 2023 10:17:59 &#43;0800</pubDate>
+    <author>afeng</author>
+    <guid>http://afeng616.github.io/categories/%E6%9D%82%E8%B0%88/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
+    <title>折腾</title>
+    <link>http://afeng616.github.io/categories/%E6%8A%98%E8%85%BE/</link>
+    <pubDate>Sun, 21 May 2023 12:01:49 &#43;0800</pubDate>
+    <author>afeng</author>
+    <guid>http://afeng616.github.io/categories/%E6%8A%98%E8%85%BE/</guid>
+    <description><![CDATA[]]></description>
+</item>
+</channel>
+</rss>

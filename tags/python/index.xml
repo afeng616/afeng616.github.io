@@ -1,0 +1,56 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Python - 标签 - afeng滴blog</title>
+        <link>http://afeng616.github.io/tags/python/</link>
+        <description>Python - 标签 - afeng滴blog</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>afeng616@gmail.com (afeng)</managingEditor>
+            <webMaster>afeng616@gmail.com (afeng)</webMaster><lastBuildDate>Tue, 15 Apr 2025 18:40:27 &#43;0800</lastBuildDate><atom:link href="http://afeng616.github.io/tags/python/" rel="self" type="application/rss+xml" /><item>
+    <title>组合求和问题</title>
+    <link>http://afeng616.github.io/group-sum/</link>
+    <pubDate>Tue, 15 Apr 2025 18:40:27 &#43;0800</pubDate>
+    <author>afeng</author>
+    <guid>http://afeng616.github.io/group-sum/</guid>
+    <description><![CDATA[一组数中，能否选出一些数，使得它们的和为目标值？]]></description>
+</item>
+<item>
+    <title>寻找子集问题</title>
+    <link>http://afeng616.github.io/find-subsets/</link>
+    <pubDate>Sun, 06 Apr 2025 09:27:23 &#43;0800</pubDate>
+    <author>afeng</author>
+    <guid>http://afeng616.github.io/find-subsets/</guid>
+    <description><![CDATA[记录列表寻找子集的求解方法。]]></description>
+</item>
+<item>
+    <title>爬楼问题笔记</title>
+    <link>http://afeng616.github.io/climb/</link>
+    <pubDate>Mon, 31 Mar 2025 22:37:29 &#43;0800</pubDate>
+    <author>afeng</author>
+    <guid>http://afeng616.github.io/climb/</guid>
+    <description><![CDATA[LeetCode.70.爬楼梯，记录爬楼问题求解的分析过程。]]></description>
+</item>
+<item>
+    <title>Pytorch测试GPU是否可用</title>
+    <link>http://afeng616.github.io/pytorch-gpu-test/</link>
+    <pubDate>Sat, 03 Jun 2023 15:54:33 &#43;0800</pubDate>
+    <author>afeng</author>
+    <guid>http://afeng616.github.io/pytorch-gpu-test/</guid>
+    <description><![CDATA[Pytorch测试GPU是否可用。]]></description>
+</item>
+<item>
+    <title>将第三方手柄输出映射到鼠标上</title>
+    <link>http://afeng616.github.io/diy-gamepad/</link>
+    <pubDate>Sun, 21 May 2023 12:01:49 &#43;0800</pubDate>
+    <author>afeng</author>
+    <guid>http://afeng616.github.io/diy-gamepad/</guid>
+    <description><![CDATA[将第三方手柄输出映射到鼠标上。]]></description>
+</item>
+<item>
+    <title>B站取关脚本分析</title>
+    <link>http://afeng616.github.io/unscript-bili/</link>
+    <pubDate>Fri, 07 Jan 2022 20:21:06 &#43;0800</pubDate>
+    <author>afeng</author>
+    <guid>http://afeng616.github.io/unscript-bili/</guid>
+    <description><![CDATA[B站取关脚本分析。]]></description>
+</item>
+</channel>
+</rss>

@@ -1,0 +1,72 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>折腾 - 分类 - afeng滴blog</title>
+        <link>http://afeng616.github.io/categories/%E6%8A%98%E8%85%BE/</link>
+        <description>折腾 - 分类 - afeng滴blog</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>afeng616@gmail.com (afeng)</managingEditor>
+            <webMaster>afeng616@gmail.com (afeng)</webMaster><lastBuildDate>Sun, 21 May 2023 12:01:49 &#43;0800</lastBuildDate><atom:link href="http://afeng616.github.io/categories/%E6%8A%98%E8%85%BE/" rel="self" type="application/rss+xml" /><item>
+    <title>将第三方手柄输出映射到鼠标上</title>
+    <link>http://afeng616.github.io/diy-gamepad/</link>
+    <pubDate>Sun, 21 May 2023 12:01:49 &#43;0800</pubDate>
+    <author>afeng</author>
+    <guid>http://afeng616.github.io/diy-gamepad/</guid>
+    <description><![CDATA[将第三方手柄输出映射到鼠标上。]]></description>
+</item>
+<item>
+    <title>快手取关脚本</title>
+    <link>http://afeng616.github.io/kuaishou-unsubscript/</link>
+    <pubDate>Mon, 04 Apr 2022 23:41:20 &#43;0800</pubDate>
+    <author>afeng</author>
+    <guid>http://afeng616.github.io/kuaishou-unsubscript/</guid>
+    <description><![CDATA[快手取关脚本。]]></description>
+</item>
+<item>
+    <title>Twitter取关脚本</title>
+    <link>http://afeng616.github.io/twitter-unsubscript/</link>
+    <pubDate>Sun, 03 Apr 2022 23:32:44 &#43;0800</pubDate>
+    <author>afeng</author>
+    <guid>http://afeng616.github.io/twitter-unsubscript/</guid>
+    <description><![CDATA[Twitter取关脚本。]]></description>
+</item>
+<item>
+    <title>删除设备和驱动器中的图标</title>
+    <link>http://afeng616.github.io/delete-win-driver-logo/</link>
+    <pubDate>Fri, 01 Apr 2022 19:06:52 &#43;0800</pubDate>
+    <author>afeng</author>
+    <guid>http://afeng616.github.io/delete-win-driver-logo/</guid>
+    <description><![CDATA[删除设备和驱动器中的图标。]]></description>
+</item>
+<item>
+    <title>重装CentOS环境</title>
+    <link>http://afeng616.github.io/centos-reinstall-sth/</link>
+    <pubDate>Thu, 17 Feb 2022 23:16:26 &#43;0800</pubDate>
+    <author>afeng</author>
+    <guid>http://afeng616.github.io/centos-reinstall-sth/</guid>
+    <description><![CDATA[CentOS7重装python以及yum。]]></description>
+</item>
+<item>
+    <title>远程开机的实现分析</title>
+    <link>http://afeng616.github.io/remote-wol/</link>
+    <pubDate>Tue, 25 Jan 2022 22:35:25 &#43;0800</pubDate>
+    <author>afeng</author>
+    <guid>http://afeng616.github.io/remote-wol/</guid>
+    <description><![CDATA[远程开机的实现分析。]]></description>
+</item>
+<item>
+    <title>Win10自启动管理</title>
+    <link>http://afeng616.github.io/win-self-startup/</link>
+    <pubDate>Wed, 12 Jan 2022 20:51:18 &#43;0800</pubDate>
+    <author>afeng</author>
+    <guid>http://afeng616.github.io/win-self-startup/</guid>
+    <description><![CDATA[Win10自启动管理。]]></description>
+</item>
+<item>
+    <title>B站取关脚本分析</title>
+    <link>http://afeng616.github.io/unscript-bili/</link>
+    <pubDate>Fri, 07 Jan 2022 20:21:06 &#43;0800</pubDate>
+    <author>afeng</author>
+    <guid>http://afeng616.github.io/unscript-bili/</guid>
+    <description><![CDATA[B站取关脚本分析。]]></description>
+</item>
+</channel>
+</rss>

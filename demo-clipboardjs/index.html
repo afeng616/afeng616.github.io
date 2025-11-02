@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <title>Clipboard.js使用实例 - afeng滴blog</title><meta name="Description" content="Clipboard.js使用实例。"><meta property="og:url" content="http://afeng616.github.io/demo-clipboardjs/">
+  <meta property="og:site_name" content="afeng滴blog">
+  <meta property="og:title" content="Clipboard.js使用实例">
+  <meta property="og:description" content="Clipboard.js使用实例。">
+  <meta property="og:locale" content="zh_CN">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2022-01-13T21:01:13+08:00">
+    <meta property="article:modified_time" content="2023-07-28T11:06:15+08:00">
+    <meta property="article:tag" content="Javascript">
+    <meta property="og:image" content="http://afeng616.github.io/favicon.png">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="http://afeng616.github.io/favicon.png">
+  <meta name="twitter:title" content="Clipboard.js使用实例">
+  <meta name="twitter:description" content="Clipboard.js使用实例。">
+<meta name="application-name" content="afeng滴blog">
+<meta name="apple-mobile-web-app-title" content="afeng滴blog">
+<meta name="referrer" content="no-referrer" /><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="http://afeng616.github.io/demo-clipboardjs/" /><link rel="prev" href="http://afeng616.github.io/win-self-startup/" /><link rel="next" href="http://afeng616.github.io/remote-wol/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"></noscript><link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"></noscript><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Clipboard.js使用实例",
+        "inLanguage": "zh-CN",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "http:\/\/afeng616.github.io\/demo-clipboardjs\/"
+        },"genre": "posts","keywords": "javascript","wordcount":  551 ,
+        "url": "http:\/\/afeng616.github.io\/demo-clipboardjs\/","datePublished": "2022-01-13T21:01:13+08:00","dateModified": "2023-07-28T11:06:15+08:00","publisher": {
+            "@type": "Organization",
+            "name": "afeng"},"author": {
+                "@type": "Person",
+                "name": "afeng"
+            },"description": "Clipboard.js使用实例。"
+    }
+    </script></head>
+    <body data-header-desktop="fixed" data-header-mobile="auto"><script>(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="afeng滴blog"><img
+        class="lazyload logo"
+        src="/svg/loading.min.svg"
+        data-src="/favicon.png"
+        data-srcset="/favicon.png, /favicon.png 1.5x, /favicon.png 2x"
+        data-sizes="auto"
+        alt="/favicon.png"
+        title="/favicon.png" />afeng滴blog</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/"> 所有文章 </a><a class="menu-item" href="/tags/"> 标签 </a><a class="menu-item" href="/categories/"> 分类 </a><a class="menu-item" href="/about/"> 关于 </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="搜索文章标题或内容..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="搜索">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="清空">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+                </a></div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="afeng滴blog"><img
+        class="lazyload logo"
+        src="/svg/loading.min.svg"
+        data-src="/favicon.png"
+        data-srcset="/favicon.png, /favicon.png 1.5x, /favicon.png 2x"
+        data-sizes="auto"
+        alt="/favicon.png"
+        title="/favicon.png" />afeng滴blog</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="搜索文章标题或内容..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="搜索">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="清空">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        取消
+                    </a>
+                </div><a class="menu-item" href="/posts/" title="">所有文章</a><a class="menu-item" href="/tags/" title="">标签</a><a class="menu-item" href="/categories/" title="">分类</a><a class="menu-item" href="/about/" title="">关于</a><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a></div>
+    </div>
+</header><div class="search-dropdown desktop">
+        <div id="search-dropdown-desktop"></div>
+    </div>
+    <div class="search-dropdown mobile">
+        <div id="search-dropdown-mobile"></div>
+    </div><main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">目录</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">Clipboard.js使用实例</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="https://github.com/afeng616" title="Author" target="_blank" rel="noopener noreffer author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>afeng</a></span>&nbsp;<span class="post-category">收录于 <a href="/categories/%E7%A4%BA%E4%BE%8B/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>示例</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2022/01/13">2022/01/13</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;约 551 字&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;预计阅读 2 分钟&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  data-kept="">
+                <div class="details-summary toc-title">
+                    <span>目录</span>
+                    <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#说明">说明</a></li>
+    <li><a href="#代码说明">代码说明</a>
+      <ul>
+        <li><a href="#动态添加复制按钮">动态添加复制按钮</a></li>
+        <li><a href="#动态指定复制目标">动态指定复制目标</a></li>
+        <li><a href="#编写回调函数">编写回调函数</a></li>
+      </ul>
+    </li>
+    <li><a href="#完整代码">完整代码</a></li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><h2 id="说明">说明</h2>
+<p>通过<code>Clipboard.js</code>可以完成对指定元素原格式内容的复制功能。
+使用时需要注意以下两点：</p>
+<ol>
+<li>新建<code>Clipboard</code>对象时，指定触发对象</li>
+<li>触发对象最好使用<code>&lt;button&gt;</code>元素</li>
+</ol>
+<h2 id="代码说明">代码说明</h2>
+<h3 id="动态添加复制按钮">动态添加复制按钮</h3>
+<p>在网页指定位置添加触发器，即按钮（使用了<code>JQuery</code>，也可通过<code>JavaScript</code>原生代码编写）</p>
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-javascript">
+        <span class="code-title"><i class="arrow fas fa-angle-right fa-fw" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h fa-fw" aria-hidden="true"></i></span>
+        <span class="copy" title="复制到剪贴板"><i class="far fa-copy fa-fw" aria-hidden="true"></i></span>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="c1">// 添加复制按钮
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nx">$</span><span class="p">(</span><span class="s1">&#39;.toolbar&#39;</span><span class="p">).</span><span class="nx">append</span><span class="p">(</span><span class="s1">&#39;&lt;button class=&#34;button copy-button&#34;&gt;&lt;span&gt;Copy&lt;/span&gt;&lt;/button&gt;&#39;</span><span class="p">);</span></span></span></code></pre></div></div>
+<h3 id="动态指定复制目标">动态指定复制目标</h3>
+<p>可以在不修改<code>html</code>的情况下，通过编辑<code>js</code>代码完成创建<code>Clipboard</code>对象，并添加触发器</p>
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-javascript">
+        <span class="code-title"><i class="arrow fas fa-angle-right fa-fw" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h fa-fw" aria-hidden="true"></i></span>
+        <span class="copy" title="复制到剪贴板"><i class="far fa-copy fa-fw" aria-hidden="true"></i></span>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="c1">// 创建Clipboard对象并完成初始化
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kd">var</span> <span class="nx">copyCode</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Clipboard</span><span class="p">(</span><span class="s1">&#39;.copy-button&#39;</span><span class="p">,</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">target</span><span class="o">:</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">trigger</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="nx">trigger</span><span class="p">.</span><span class="nx">parentElement</span><span class="p">.</span><span class="nx">previousElementSibling</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">});</span></span></span></code></pre></div></div>
+<h3 id="编写回调函数">编写回调函数</h3>
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-javascript">
+        <span class="code-title"><i class="arrow fas fa-angle-right fa-fw" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h fa-fw" aria-hidden="true"></i></span>
+        <span class="copy" title="复制到剪贴板"><i class="far fa-copy fa-fw" aria-hidden="true"></i></span>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="c1">// Clipboard对象的回调函数（复制成功，复制失败）
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nx">copyCode</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;success&#39;</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">event</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">event</span><span class="p">.</span><span class="nx">clearSelection</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">event</span><span class="p">.</span><span class="nx">trigger</span><span class="p">.</span><span class="nx">textContent</span> <span class="o">=</span> <span class="s1">&#39;Copied&#39;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">window</span><span class="p">.</span><span class="nx">setTimeout</span><span class="p">(</span><span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">event</span><span class="p">.</span><span class="nx">trigger</span><span class="p">.</span><span class="nx">textContent</span> <span class="o">=</span> <span class="s1">&#39;Copy&#39;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">},</span> <span class="mi">2000</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">});</span>
+</span></span><span class="line"><span class="cl"><span class="nx">copyCode</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;error&#39;</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">event</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">event</span><span class="p">.</span><span class="nx">trigger</span><span class="p">.</span><span class="nx">textContent</span> <span class="o">=</span> <span class="s1">&#39;Error&#39;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">window</span><span class="p">.</span><span class="nx">setTimeout</span><span class="p">(</span><span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">event</span><span class="p">.</span><span class="nx">trigger</span><span class="p">.</span><span class="nx">textContent</span> <span class="o">=</span> <span class="s1">&#39;Copy&#39;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">},</span> <span class="mi">2000</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">});</span></span></span></code></pre></div></div>
+<h2 id="完整代码">完整代码</h2>
+<div class="code-block code-line-numbers" style="counter-reset: code-block 0">
+    <div class="code-header language-javascript">
+        <span class="code-title"><i class="arrow fas fa-angle-right fa-fw" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h fa-fw" aria-hidden="true"></i></span>
+        <span class="copy" title="复制到剪贴板"><i class="far fa-copy fa-fw" aria-hidden="true"></i></span>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="o">&lt;!</span><span class="nx">DOCTYPE</span> <span class="nx">html</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="o">&lt;</span><span class="nx">html</span> <span class="nx">lang</span><span class="o">=</span><span class="s2">&#34;en&#34;</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="o">&lt;</span><span class="nx">head</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="o">&lt;</span><span class="nx">meta</span> <span class="nx">charset</span><span class="o">=</span><span class="s2">&#34;UTF-8&#34;</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="o">&lt;</span><span class="nx">meta</span> <span class="nx">http</span><span class="o">-</span><span class="nx">equiv</span><span class="o">=</span><span class="s2">&#34;X-UA-Compatible&#34;</span> <span class="nx">content</span><span class="o">=</span><span class="s2">&#34;IE=edge&#34;</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="o">&lt;</span><span class="nx">meta</span> <span class="nx">name</span><span class="o">=</span><span class="s2">&#34;viewport&#34;</span> <span class="nx">content</span><span class="o">=</span><span class="s2">&#34;width=device-width, initial-scale=1.0&#34;</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="o">&lt;</span><span class="nx">title</span><span class="o">&gt;</span><span class="nx">Clipboard</span><span class="p">.</span><span class="nx">js使用实例</span><span class="o">&lt;</span><span class="err">/title&gt;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="o">&lt;</span><span class="nx">style</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">.</span><span class="nx">button</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="nx">display</span><span class="o">:</span> <span class="nx">inline</span><span class="o">-</span><span class="nx">block</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">            <span class="nx">height</span><span class="o">:</span> <span class="nx">auto</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">            <span class="nx">border</span><span class="o">-</span><span class="nx">radius</span><span class="o">:</span> <span class="mi">5</span><span class="nx">px</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">            <span class="nx">padding</span><span class="o">:</span> <span class="mi">3</span><span class="nx">px</span> <span class="mi">8</span><span class="nx">px</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">            <span class="nx">border</span><span class="o">:</span> <span class="mi">2</span><span class="nx">px</span> <span class="nx">solid</span> <span class="nx">rgb</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">230</span><span class="p">,</span> <span class="mi">238</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="p">.</span><span class="nx">container</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="nx">display</span><span class="o">:</span> <span class="nx">inline</span><span class="o">-</span><span class="nx">block</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">            <span class="nx">height</span><span class="o">:</span> <span class="nx">auto</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">            <span class="nx">padding</span><span class="o">:</span> <span class="mi">10</span><span class="nx">px</span> <span class="mi">15</span><span class="nx">px</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">            <span class="nx">border</span><span class="o">:</span> <span class="mi">3</span><span class="nx">px</span> <span class="nx">dotted</span> <span class="nx">greenyellow</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">            <span class="nx">border</span><span class="o">-</span><span class="nx">radius</span><span class="o">:</span> <span class="mi">5</span><span class="nx">px</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="o">&lt;</span><span class="err">/style&gt;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="o">&lt;</span><span class="nx">script</span> <span class="nx">src</span><span class="o">=</span><span class="s2">&#34;https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.4.0/clipboard.min.js&#34;</span><span class="o">&gt;&lt;</span><span class="err">/script&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="o">&lt;</span><span class="nx">script</span> <span class="nx">src</span><span class="o">=</span><span class="s2">&#34;https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js&#34;</span><span class="o">&gt;&lt;</span><span class="err">/script&gt;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="o">&lt;</span><span class="err">/head&gt;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="o">&lt;</span><span class="nx">body</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="o">&lt;</span><span class="nx">div</span> <span class="nx">style</span><span class="o">=</span><span class="s2">&#34;text-align: center;&#34;</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="o">&lt;</span><span class="nx">div</span> <span class="kr">class</span><span class="o">=</span><span class="s2">&#34;container&#34;</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="cl">            <span class="o">&lt;</span><span class="nx">code</span><span class="o">&gt;</span><span class="nx">Clipboard</span><span class="o">&lt;</span><span class="err">/code&gt;</span>
+</span></span><span class="line"><span class="cl">            <span class="o">&lt;</span><span class="nx">div</span> <span class="kr">class</span><span class="o">=</span><span class="s2">&#34;toolbar&#34;</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="cl">            <span class="o">&lt;</span><span class="err">/div&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="o">&lt;</span><span class="err">/div&gt;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="o">&lt;</span><span class="nx">div</span> <span class="kr">class</span><span class="o">=</span><span class="s2">&#34;container&#34;</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="cl">            <span class="o">&lt;</span><span class="nx">code</span><span class="o">&gt;</span><span class="nx">使用</span><span class="o">&lt;</span><span class="err">/code&gt;</span>
+</span></span><span class="line"><span class="cl">            <span class="o">&lt;</span><span class="nx">div</span> <span class="kr">class</span><span class="o">=</span><span class="s2">&#34;toolbar&#34;</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="cl">            <span class="o">&lt;</span><span class="err">/div&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="o">&lt;</span><span class="err">/div&gt;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="o">&lt;</span><span class="nx">div</span> <span class="kr">class</span><span class="o">=</span><span class="s2">&#34;container&#34;</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="cl">            <span class="o">&lt;</span><span class="nx">code</span><span class="o">&gt;</span><span class="nx">实例</span><span class="o">&lt;</span><span class="err">/code&gt;</span>
+</span></span><span class="line"><span class="cl">            <span class="o">&lt;</span><span class="nx">div</span> <span class="kr">class</span><span class="o">=</span><span class="s2">&#34;toolbar&#34;</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="cl">            <span class="o">&lt;</span><span class="err">/div&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="o">&lt;</span><span class="err">/div&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="o">&lt;</span><span class="err">/div&gt;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="o">&lt;</span><span class="nx">script</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">$</span><span class="p">(</span><span class="s1">&#39;.toolbar&#39;</span><span class="p">).</span><span class="nx">append</span><span class="p">(</span><span class="s1">&#39;&lt;button class=&#34;button copy-button&#34;&gt;&lt;span&gt;Copy&lt;/span&gt;&lt;/button&gt;&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="kd">var</span> <span class="nx">copyCode</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Clipboard</span><span class="p">(</span><span class="s1">&#39;.copy-button&#39;</span><span class="p">,</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="nx">target</span><span class="o">:</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">trigger</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">                <span class="k">return</span> <span class="nx">trigger</span><span class="p">.</span><span class="nx">parentElement</span><span class="p">.</span><span class="nx">previousElementSibling</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">            <span class="p">}</span>
+</span></span><span class="line"><span class="cl">        <span class="p">});</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">copyCode</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;success&#39;</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">event</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="nx">event</span><span class="p">.</span><span class="nx">clearSelection</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">            <span class="nx">event</span><span class="p">.</span><span class="nx">trigger</span><span class="p">.</span><span class="nx">textContent</span> <span class="o">=</span> <span class="s1">&#39;Copied&#39;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">            <span class="nb">window</span><span class="p">.</span><span class="nx">setTimeout</span><span class="p">(</span><span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">                <span class="nx">event</span><span class="p">.</span><span class="nx">trigger</span><span class="p">.</span><span class="nx">textContent</span> <span class="o">=</span> <span class="s1">&#39;Copy&#39;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">            <span class="p">},</span> <span class="mi">2000</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="p">});</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">copyCode</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;error&#39;</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">event</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="nx">event</span><span class="p">.</span><span class="nx">trigger</span><span class="p">.</span><span class="nx">textContent</span> <span class="o">=</span> <span class="s1">&#39;Error&#39;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">            <span class="nb">window</span><span class="p">.</span><span class="nx">setTimeout</span><span class="p">(</span><span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">                <span class="nx">event</span><span class="p">.</span><span class="nx">trigger</span><span class="p">.</span><span class="nx">textContent</span> <span class="o">=</span> <span class="s1">&#39;Copy&#39;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">            <span class="p">},</span> <span class="mi">2000</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="p">});</span>
+</span></span><span class="line"><span class="cl">    <span class="o">&lt;</span><span class="err">/script&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="o">&lt;</span><span class="err">/body&gt;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="o">&lt;</span><span class="err">/html&gt;</span></span></span></code></pre></div></div></div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>更新于 2023/07/28</span>
+            </div></div>
+        <div class="post-info-line">
+            <div class="post-info-md"><span>
+                            <a class="link-to-markdown" href="/demo-clipboardjs/index.md" target="_blank">阅读原始文档</a>
+                        </span></div>
+            <div class="post-info-share">
+                <span><a href="javascript:void(0);" title="分享到 X" data-sharer="x" data-url="http://afeng616.github.io/demo-clipboardjs/" data-title="Clipboard.js使用实例" data-hashtags="javascript"><i class="fab fa-x-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Threads" data-sharer="threads" data-url="http://afeng616.github.io/demo-clipboardjs/" data-title="Clipboard.js使用实例"><i class="fab fa-threads fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Facebook" data-sharer="facebook" data-url="http://afeng616.github.io/demo-clipboardjs/" data-hashtag="javascript"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Diaspora" data-sharer="diaspora" data-url="http://afeng616.github.io/demo-clipboardjs/" data-title="Clipboard.js使用实例" data-description="Clipboard.js使用实例。"><i class="fab fa-diaspora fa-fw" aria-hidden="true"></i></a><a href="https://t.me/share/url?url=http%3a%2f%2fafeng616.github.io%2fdemo-clipboardjs%2f&amp;text=Clipboard.js%e4%bd%bf%e7%94%a8%e5%ae%9e%e4%be%8b" target="_blank" title="分享到 Telegram"><i class="fab fa-telegram fa-fw" aria-hidden="true"></i></a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/javascript/">Javascript</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/win-self-startup/" class="prev" rel="prev" title="Win10自启动管理"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>Win10自启动管理</a>
+            <a href="/remote-wol/" class="next" rel="next" title="远程开机的实现分析">远程开机的实现分析<i class="fas fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
+</div>
+<div id="comments"><div id="giscus" class="comment"></div><noscript>
+                Please enable JavaScript to view the comments powered by <a href="https://giscus.app">Giscus</a>.
+            </noscript></div></article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">由 <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.145.0">Hugo</a> 强力驱动 | 主题 - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.3.1-DEV"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
+                </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2022 - 2025</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="https://github.com/afeng616" target="_blank">afeng</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="回到顶部">
+                <i class="fas fa-arrow-up fa-fw" aria-hidden="true"></i>
+            </a>
+        </div>
+
+        <div id="fixed-buttons-hidden"><a href="#" id="view-comments" class="fixed-button" title="查看评论">
+                <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
+            </a>
+        </div><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.5.0/css/lightgallery-bundle.min.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.0/katex.min.css"><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.1/autocomplete.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js"></script><script src="/lib/lunr/lunr.stemmer.support.min.js"></script><script src="/lib/lunr/lunr.zh.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.3.2/lazysizes.min.js"></script><script src="/lib/twemoji/twemoji.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.5.0/lightgallery.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.5.0/plugins/thumbnail/lg-thumbnail.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.5.0/plugins/zoom/lg-zoom.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.11/clipboard.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/sharer.js/0.5.1/sharer.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.0/katex.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.0/contrib/auto-render.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.0/contrib/copy-tex.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.0/contrib/mhchem.min.js"></script><script>window.config={"comment":{"giscus":{"category":"Announcements","categoryId":"DIC_kwDOJifAtM4Cbeom","darkTheme":"dark","emitMetadata":"0","inputPosition":"bottom","lang":"en","lazyLoading":true,"lightTheme":"light","mapping":"pathname","reactionsEnabled":"1","repo":"afeng616/afeng616.github.io","repoId":"R_kgDOJifAtA"}},"lightgallery":true,"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":true,"left":"\\begin{equation}","right":"\\end{equation}"},{"display":true,"left":"\\begin{equation*}","right":"\\end{equation*}"},{"display":true,"left":"\\begin{align}","right":"\\end{align}"},{"display":true,"left":"\\begin{align*}","right":"\\end{align*}"},{"display":true,"left":"\\begin{alignat}","right":"\\end{alignat}"},{"display":true,"left":"\\begin{alignat*}","right":"\\end{alignat*}"},{"display":true,"left":"\\begin{gather}","right":"\\end{gather}"},{"display":true,"left":"\\begin{CD}","right":"\\end{CD}"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"highlightTag":"em","lunrIndexURL":"/index.json","lunrLanguageCode":"zh","lunrSegmentitURL":"/lib/lunr/lunr.segmentit.js","maxResultLength":10,"noResultsFound":"没有找到结果","snippetLength":50,"type":"lunr"},"twemoji":true};</script><script src="/js/theme.min.js"></script></body>
+</html>

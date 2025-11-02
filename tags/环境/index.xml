@@ -1,0 +1,16 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>环境 - 标签 - afeng滴blog</title>
+        <link>http://afeng616.github.io/tags/%E7%8E%AF%E5%A2%83/</link>
+        <description>环境 - 标签 - afeng滴blog</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>afeng616@gmail.com (afeng)</managingEditor>
+            <webMaster>afeng616@gmail.com (afeng)</webMaster><lastBuildDate>Thu, 17 Feb 2022 23:16:26 &#43;0800</lastBuildDate><atom:link href="http://afeng616.github.io/tags/%E7%8E%AF%E5%A2%83/" rel="self" type="application/rss+xml" /><item>
+    <title>重装CentOS环境</title>
+    <link>http://afeng616.github.io/centos-reinstall-sth/</link>
+    <pubDate>Thu, 17 Feb 2022 23:16:26 &#43;0800</pubDate>
+    <author>afeng</author>
+    <guid>http://afeng616.github.io/centos-reinstall-sth/</guid>
+    <description><![CDATA[CentOS7重装python以及yum。]]></description>
+</item>
+</channel>
+</rss>

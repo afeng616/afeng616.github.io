@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <title>备战深度学习算法工程师 - afeng滴blog</title><meta name="Description" content="备考深度学习算法工程师面试题"><meta property="og:url" content="http://afeng616.github.io/dl-engineer/">
+  <meta property="og:site_name" content="afeng滴blog">
+  <meta property="og:title" content="备战深度学习算法工程师">
+  <meta property="og:description" content="备考深度学习算法工程师面试题">
+  <meta property="og:locale" content="zh_CN">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2025-04-03T09:20:21+08:00">
+    <meta property="article:modified_time" content="2025-04-03T09:20:21+08:00">
+    <meta property="article:tag" content="人工智能">
+    <meta property="og:image" content="http://afeng616.github.io/favicon.png">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="http://afeng616.github.io/favicon.png">
+  <meta name="twitter:title" content="备战深度学习算法工程师">
+  <meta name="twitter:description" content="备考深度学习算法工程师面试题">
+<meta name="application-name" content="afeng滴blog">
+<meta name="apple-mobile-web-app-title" content="afeng滴blog">
+<meta name="referrer" content="no-referrer" /><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="http://afeng616.github.io/dl-engineer/" /><link rel="prev" href="http://afeng616.github.io/climb/" /><link rel="next" href="http://afeng616.github.io/pdd-2-interview/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"></noscript><link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"></noscript><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "备战深度学习算法工程师",
+        "inLanguage": "zh-CN",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "http:\/\/afeng616.github.io\/dl-engineer\/"
+        },"genre": "posts","keywords": "人工智能","wordcount":  4360 ,
+        "url": "http:\/\/afeng616.github.io\/dl-engineer\/","datePublished": "2025-04-03T09:20:21+08:00","dateModified": "2025-04-03T09:20:21+08:00","publisher": {
+            "@type": "Organization",
+            "name": "afeng"},"author": {
+                "@type": "Person",
+                "name": "afeng"
+            },"description": "备考深度学习算法工程师面试题"
+    }
+    </script></head>
+    <body data-header-desktop="fixed" data-header-mobile="auto"><script>(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="afeng滴blog"><img
+        class="lazyload logo"
+        src="/svg/loading.min.svg"
+        data-src="/favicon.png"
+        data-srcset="/favicon.png, /favicon.png 1.5x, /favicon.png 2x"
+        data-sizes="auto"
+        alt="/favicon.png"
+        title="/favicon.png" />afeng滴blog</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/"> 所有文章 </a><a class="menu-item" href="/tags/"> 标签 </a><a class="menu-item" href="/categories/"> 分类 </a><a class="menu-item" href="/about/"> 关于 </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="搜索文章标题或内容..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="搜索">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="清空">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+                </a></div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="afeng滴blog"><img
+        class="lazyload logo"
+        src="/svg/loading.min.svg"
+        data-src="/favicon.png"
+        data-srcset="/favicon.png, /favicon.png 1.5x, /favicon.png 2x"
+        data-sizes="auto"
+        alt="/favicon.png"
+        title="/favicon.png" />afeng滴blog</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="搜索文章标题或内容..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="搜索">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="清空">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        取消
+                    </a>
+                </div><a class="menu-item" href="/posts/" title="">所有文章</a><a class="menu-item" href="/tags/" title="">标签</a><a class="menu-item" href="/categories/" title="">分类</a><a class="menu-item" href="/about/" title="">关于</a><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a></div>
+    </div>
+</header><div class="search-dropdown desktop">
+        <div id="search-dropdown-desktop"></div>
+    </div>
+    <div class="search-dropdown mobile">
+        <div id="search-dropdown-mobile"></div>
+    </div><main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">目录</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">备战深度学习算法工程师</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="https://github.com/afeng616" title="Author" target="_blank" rel="noopener noreffer author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>afeng</a></span>&nbsp;<span class="post-category">收录于 <a href="/categories/%E7%AC%94%E8%AE%B0/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>笔记</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2025/04/03">2025/04/03</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;约 4360 字&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;预计阅读 9 分钟&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  data-kept="">
+                <div class="details-summary toc-title">
+                    <span>目录</span>
+                    <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#如何解决正负样本不均衡">如何解决正负样本不均衡？</a></li>
+        <li><a href="#评价指标">评价指标</a></li>
+        <li><a href="#损失函数">损失函数</a>
+          <ul>
+            <li><a href="#mae和mse">MAE和MSE</a></li>
+            <li><a href="#l1-lossl2-loss和smooth-l1-loss">l1 loss、l2 loss和smooth l1 loss</a></li>
+            <li><a href="#focal-loss">focal loss</a></li>
+          </ul>
+        </li>
+        <li><a href="#卷积的特点">卷积的特点</a></li>
+        <li><a href="#关于计算">关于计算</a>
+          <ul>
+            <li><a href="#参数量和计算量">参数量和计算量</a></li>
+            <li><a href="#卷积和池化后的patch计算">卷积和池化后的patch计算</a></li>
+            <li><a href="#感受野的计算">感受野的计算</a></li>
+          </ul>
+        </li>
+        <li><a href="#bn">BN</a>
+          <ul>
+            <li><a href="#训练时为什么要分batch">训练时为什么要分batch</a></li>
+            <li><a href="#优缺点">优缺点</a></li>
+          </ul>
+        </li>
+        <li><a href="#优化器">优化器</a></li>
+        <li><a href="#激活函数">激活函数</a>
+          <ul>
+            <li><a href="#均值为0的影响">均值为0的影响</a></li>
+          </ul>
+        </li>
+        <li><a href="#强化学习ppo">强化学习ppo</a></li>
+        <li><a href="#batch-size对训练的影响">batch size对训练的影响</a></li>
+        <li><a href="#非极大值抑制nms">非极大值抑制NMS</a>
+          <ul>
+            <li><a href="#改进">改进</a></li>
+          </ul>
+        </li>
+        <li><a href="#过拟合">过拟合</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><p>题目来自<a href="https://www.bilibili.com/video/BV172421K72R" target="_blank" rel="noopener noreffer ">B站视频</a>，针对p1和p2的大部分面试题，结合<a href="https://chatgpt.com/share/67edef10-1130-8005-b545-f54e8a76a6c4" target="_blank" rel="noopener noreffer ">ChatGPT</a>进行解析和记录。</p>
+<h3 id="如何解决正负样本不均衡">如何解决正负样本不均衡？</h3>
+<p>样本不均衡是指在分类问题中，不同类别的样本数量差异较大，这会导致模型偏向于数量较多的类别。
+常见的解决方法包括：</p>
+<ol>
+<li><strong>采样</strong>，对样本进行过采样或欠采样，如对少数类进行重复采样，或对多数类进行随机删除。</li>
+<li><strong>加权损失函数</strong>，在损失函数中对少数类样本赋予更高的权重，以平衡不同类别的影响，如focal loss。</li>
+<li><strong>数据增强</strong>，对少数类样本进行数据增强，如旋转、平移、缩放等操作，增加样本数量。</li>
+<li><strong>评价指标</strong>，使用适合不均衡数据集的评价指标，如F1-score、AUC等，而不是简单的准确率。</li>
+</ol>
+<h3 id="评价指标">评价指标</h3>
+<p>混淆矩阵：TP、TN、FP、FN，其中T和F分别表示真和假，是对预测结果的评价，P和N分别表示正和负/阳和阴，表示预测结果。如TP为真正例，表示预测为正，预测正确，实际上也为正；FN为假负例，预测为负，预测错误，实际上是正。特别提醒，一般情况下认为，FP是误报，FN是漏检。<br>
+准确性 $Accuracy = \frac{TP+TN}{TP+TN+FP+FN}$，反映预测正确所占的比例。<br>
+精确率 $Precision = \frac{TP}{TP+FP}$，反映预测为正的样本中，实际为正的比例。<br>
+召回率 $Recall = \frac{TP}{TP+FN}$，反映模型对实际为正类的样本识别的准确性。<br>
+F1-score $F1 = \frac{2 \cdot Precision \cdot Recall}{Precision + Recall}$，综合考虑精确率和召回率的指标。<br>
+ROC曲线：以假正率为横坐标，真正率为纵坐标，曲线下面积AUC表示模型的分类能力。<br>
+PR曲线：以精确率为横坐标，召回率为纵坐标，曲线下面积AP表示模型的分类能力，适用于极度不均衡的数据。</p>
+<h3 id="损失函数">损失函数</h3>
+<h4 id="mae和mse">MAE和MSE</h4>
+<p>平均绝对误差，MAE，表示预测值与真实值之间的绝对差的平均值，不易被极端值影响，适用于异常值较多的情况。<br>
+绝对误差，对大误差更敏感，适用于需要关注大误差的任务，如金融、医疗预测。</p>
+<h4 id="l1-lossl2-loss和smooth-l1-loss">l1 loss、l2 loss和smooth l1 loss</h4>
+<p>实际上，l1 loss、l2 loss分别是MAE和MSE的另一种表示方式，相比之下少了个平均。<br>
+smooth l1 loss是l1 loss和l2 loss的结合，误差小时使用l2 loss，避免梯度不稳定；误差大时使用l1 loss，避免异常值的影响。<br>
+$$
+L_{smooth} = \begin{cases}
+\frac{1}{2}x^2 &amp; \text{if } |x| &lt; 1 \
+|x| - \frac{1}{2} &amp; \text{otherwise}
+\end{cases}
+$$</p>
+<h4 id="focal-loss">focal loss</h4>
+<p>传统交叉熵损失函数在处理正负样本不均衡时，容易导致模型对多数类样本的过拟合，而忽略少数类样本。
+$$
+CE(p_t) = -\log(p_t)
+$$
+focal loss通过引入调节因子$\gamma$，使得模型在训练时更加关注难分类的样本，从而提高模型对少数类样本的识别能力。
+$$
+FL(p_t) = -\alpha_t(1-p_t)^\gamma \log(p_t)
+$$
+其中，$p_t$为预测概率，$\alpha_t$为平衡因子，用于调整正负样本的重要性，适用于不均衡数据集，$\gamma$为调节因子，控制难易样本的影响程度，样本容易分类时，$FL$的值会减小，反之则增大。</p>
+<h3 id="卷积的特点">卷积的特点</h3>
+<ol>
+<li><strong>局部连接</strong>，卷积核只与输入数据的局部区域进行计算，减少了参数数量，提高了计算效率。</li>
+<li><strong>权值共享</strong>，卷积核在输入数据的不同位置共享相同的权值，减少了模型的复杂度，提高了模型的泛化能力。</li>
+<li><strong>下采样</strong>，通过步长和池化操作，减少了输入数据的尺寸，提高了计算效率。</li>
+<li><strong>平移不变性</strong>，卷积操作对输入数据的平移具有不变性，即输入数据的平移不会影响卷积结果，增强了模型对输入数据的鲁棒性。</li>
+</ol>
+<h3 id="关于计算">关于计算</h3>
+<h4 id="参数量和计算量">参数量和计算量</h4>
+<p>需要注意的是，参数量和计算量不是一回事，参数指模型中可训练的参数总数，通常指权重和偏置，它决定了模型的大小；计算量指在推理或训练时所需的计算量，通常指乘法和加法的次数，决定了模型的运行速度。<br>
+用卷积层举例，参数量=每个卷积核的参数$\times$卷积核的数量；计算量=每个像素点的计算量$\times$输出特征图的大小。<br>
+假设有一个3x3的卷积核，输入通道为64，输出通道为128，输入特征图大小为224x224，步长为1，无填充，输出特征图大小仍为224x224。<br>
+参数量=(3x3x64+1)x128=73792<br>
+计算量=2x(3x3x64)x224x224x128=7.4G</p>
+<h4 id="卷积和池化后的patch计算">卷积和池化后的patch计算</h4>
+<p>再来说一下，经过卷积层后的patch计算。<br>
+假设输入大小为$H_{in} \times W_{in}$，卷积核大小为$K_h \times K_w$，步长为$S$，填充为$P$，输出大小为$H_{out} \times W_{out}$。卷积输出大小计算公式如下：
+$$
+H_{out} = \frac{H_{in} - K_h + 2P}{S} + 1 \
+W_{out} = \frac{W_{in} - K_w + 2P}{S} + 1
+$$
+假设池化窗口大小为$K_h \times K_w$，步长为$S$，池化输出大小计算公式如下：
+$$
+H_{out} = \frac{H_{in} - K_h}{S} + 1 \
+W_{out} = \frac{W_{in} - K_w}{S} + 1
+$$</p>
+<h4 id="感受野的计算">感受野的计算</h4>
+<p>感受野是指卷积神经网络中某一层的神经元所能感知到的输入数据的区域大小。感受野越大，模型对输入数据的上下文信息捕捉能力越强。感受野的计算公式如下：<br>
+$$R_{out} = R_{in} + (K - 1) \times \prod_{i=1}^{j-1} S_i$$
+其中，$R_{out}$为输出层的感受野，$R_{in}$为输入层的感受野，$K$为卷积核大小，$S_i$为步长，$j$为前几层的层数。</p>
+<h3 id="bn">BN</h3>
+<p>批量归一化（Batch Normalization）是一种加速深度神经网络训练的技术，通过对每一层的输入进行标准化，使其均值为0，方差为1，从而加快收敛速度，减小对初始化的依赖。</p>
+<ol>
+<li>在batch维度上计算均值和方差，进行标准化。</li>
+<li>通过可学习的参数$\gamma$和$\beta$进行缩放和平移，恢复模型的表达能力。</li>
+<li>在推理阶段，使用整个训练集的均值和方差进行标准化，避免了batch size对模型性能的影响。
+BN通常用在激活函数之前，避免了激活函数的非线性影响。</li>
+</ol>
+<p>BN层的参数量为$2 \times C$，其中$C$为通道数。</p>
+<h4 id="训练时为什么要分batch">训练时为什么要分batch</h4>
+<ol>
+<li><strong>内存限制</strong>，一次性处理整个数据集可能会导致内存不足，分batch可以有效利用内存。</li>
+<li><strong>随机性</strong>，分batch可以引入随机性，增加模型的泛化能力，避免过拟合。</li>
+<li><strong>并行计算</strong>，分batch可以利用GPU的并行计算能力，提高训练速度。</li>
+<li><strong>内部协方差偏移</strong>，分batch可以减少内部协方差偏移，提高模型的收敛速度。</li>
+</ol>
+<h4 id="优缺点">优缺点</h4>
+<p>优点：</p>
+<ol>
+<li>使网络对初始化不敏感。</li>
+<li>均值和方差引入了一定的噪声类似dropout，具有一定的正则化效果，减少过拟合。</li>
+<li>解决梯度消失和梯度爆炸问题，训练更稳定。</li>
+<li>减少内部协方差偏移，加快收敛速度。
+缺点：</li>
+<li>BN对batch size敏感，batch size过小会导致均值和方差不稳定，影响模型性能。</li>
+<li>额外的计算开销，增加了训练时间和内存消耗。</li>
+</ol>
+<h3 id="优化器">优化器</h3>
+<p>通过梯度下降法及其变种，利用反向传播计算出梯度来更新网络的参数。<br>
+SGD：随机梯度下降，计算每个样本的梯度，更新参数。震荡，收敛慢；容易陷入局部最优。<br>
+Momentum：在SGD的基础上，引入动量项，考虑历史梯度，减少震荡，加快收敛速度。仍可能陷入局部最优。 <br>
+AdaGrad：自适应学习率，针对每个参数计算不同的学习率，适用于稀疏数据。学习率会逐渐减小，可能导致收敛过慢。<br>
+RMSProp：对AdaGrad的改进，使用指数衰减平均来计算学习率，避免学习率过小的问题。适用于非平稳目标。依赖于超参数的选择。<br>
+Adam：结合了Momentum和RMSProp的优点，使用动量和自适应学习率，适用于大规模数据和高维参数。计算复杂度较高，依赖于超参数的选择。其中，一阶矩（期望）用于平滑梯度更新方向，加速收敛；二阶矩（方差）用于自适应学习率，避免震荡。</p>
+<h3 id="激活函数">激活函数</h3>
+<p>激活函数用于引入非线性特性，使得神经网络能够学习复杂的函数映射关系。<br>
+sigmoid函数：$f(x) = \frac{1}{1 + e^{-x}}$，输出范围在(0, 1)，适用于二分类问题。在极端值处容易导致梯度消失；输出范围均值不为0，影响梯度流动；计算涉及指数，计算成本高。<br>
+tanh函数：$f(x) = \frac{e^x - e^{-x}}{e^x + e^{-x}}$，输出范围在(-1, 1)，适用于二分类问题。零均值梯度流动更稳定；梯度消失仍存在；计算涉及指数，计算成本高。<br>
+ReLU函数：$f(x) = \max(0, x)$，输出范围在[0, +∞)。计算简单，收敛速度快；负半轴梯度为0，可能导致神经元死亡；不能用于rnn等依赖梯度流动的网络，可能导致梯度爆炸。<br>
+Leaky ReLU函数：$f(x) = \max(\alpha x, x)$.解决了ReLU的神经元死亡问题；计算简单，收敛速度快；仍然存在梯度爆炸问题。<br>
+softmax函数：$f(x) = \frac{e^{x_i}}{\sum_{j=1}^{n} e^{x_j}}$，用于多分类问题，输出范围在(0, 1)，且和为1。计算涉及指数，计算成本高；对异常值敏感，可能导致梯度爆炸。</p>
+<h4 id="均值为0的影响">均值为0的影响</h4>
+<ol>
+<li>非线形特性，在接近0处有更大的梯度，避免了梯度消失问题。</li>
+<li>梯度传播中的偏移，可能导致梯度爆炸或消失，影响模型的收敛速度。</li>
+</ol>
+<p>解决方案：</p>
+<ol>
+<li>使用ReLU等激活函数代替sigmoid和tanh。</li>
+<li>使用BN层进行标准化，保持均值为0，方差为1。</li>
+</ol>
+<h3 id="强化学习ppo">强化学习ppo</h3>
+<p>PPO是一种更新策略的方法。<br>
+ppo的损失分为三部分：</p>
+<ol>
+<li>策略损失，使用当前策略和旧策略的比值来计算重要性采样权重，然后通过clip函数限制比值的范围，从而确定策略损失；</li>
+<li>值函数损失，使用值网络估计状态的价值，通过均方误差计算损失；</li>
+<li>熵损失，动作越不确定熵值越大，增加策略的随机性，避免过拟合。
+对于一批数据重复多次更新参数。</li>
+</ol>
+<h3 id="batch-size对训练的影响">batch size对训练的影响</h3>
+<p>小，训练时间长，梯度变化大，导致参数更新方向不稳定，但有助于跳出局部最优解，泛化能力更强。 可以通过提高学习率或GroupNorm来缓解。
+大，梯度平滑，训练稳定，需要更多显存。可以通过降低学习率或分批进行反向传播缓解。</p>
+<h3 id="非极大值抑制nms">非极大值抑制NMS</h3>
+<p>主要用于目标检测中，去除重叠度较高的候选框。<br>
+对于检测器可能输出的多个重叠框（IOU很高），NMS通过置信度排序+IOU阈值抑制低质量框，达到保留最优框的效果。</p>
+<ol>
+<li>选择置信度最高的框作为基准框。</li>
+<li>计算基准框与其他框的IOU，去除IOU大于设定阈值的框。</li>
+<li>重复步骤1和2，直到处理完所有框。</li>
+</ol>
+<p>高效去重，计算简单；若多个目标位置相近，容易误删；所有框统一处理，不能按照不能类别处理。</p>
+<h4 id="改进">改进</h4>
+<p>Soft-NMS：不直接删除重叠框，而是根据IOU值调整置信度，保留重叠框，降低置信度。<br>
+Multi-Class NMS：针对多类别目标检测，分别计算每个类别的NMS，避免误删其他类别的框。</p>
+<h3 id="过拟合">过拟合</h3>
+<p>过拟合是指模型在训练集上表现良好，但在测试集上表现不佳，泛化能力差。解决方法如下：</p>
+<ol>
+<li><strong>数据增强</strong>，通过旋转、平移、缩放等方式增加训练数据的多样性。</li>
+<li><strong>正则化</strong>，如L1、L2正则化，限制模型参数的大小，防止过拟合。</li>
+<li><strong>Dropout</strong>，在训练过程中随机丢弃一部分神经元，减少模型的复杂度。</li>
+<li><strong>早停法</strong>，在验证集上监控模型性能，当性能不再提升时停止训练。</li>
+<li><strong>交叉验证</strong>，将数据集划分为多个子集，轮流使用其中一个子集作为验证集，其余作为训练集，评估模型的泛化能力。</li>
+</ol>
+<p>其中L1正则会促使一些权重变为0，使得模型稀疏化，适用于特征选择和高纬数据场景；L2正则会促使权重变小，使训练更稳定，适用于深度神经网络或回归任务。<br>
+Elastic Net结合了L1和L2正则化的优点，适用于高维数据和特征选择。</p></div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>更新于 2025/04/03</span>
+            </div></div>
+        <div class="post-info-line">
+            <div class="post-info-md"><span>
+                            <a class="link-to-markdown" href="/dl-engineer/index.md" target="_blank">阅读原始文档</a>
+                        </span></div>
+            <div class="post-info-share">
+                <span><a href="javascript:void(0);" title="分享到 X" data-sharer="x" data-url="http://afeng616.github.io/dl-engineer/" data-title="备战深度学习算法工程师" data-hashtags="人工智能"><i class="fab fa-x-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Threads" data-sharer="threads" data-url="http://afeng616.github.io/dl-engineer/" data-title="备战深度学习算法工程师"><i class="fab fa-threads fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Facebook" data-sharer="facebook" data-url="http://afeng616.github.io/dl-engineer/" data-hashtag="人工智能"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Diaspora" data-sharer="diaspora" data-url="http://afeng616.github.io/dl-engineer/" data-title="备战深度学习算法工程师" data-description="备考深度学习算法工程师面试题"><i class="fab fa-diaspora fa-fw" aria-hidden="true"></i></a><a href="https://t.me/share/url?url=http%3a%2f%2fafeng616.github.io%2fdl-engineer%2f&amp;text=%e5%a4%87%e6%88%98%e6%b7%b1%e5%ba%a6%e5%ad%a6%e4%b9%a0%e7%ae%97%e6%b3%95%e5%b7%a5%e7%a8%8b%e5%b8%88" target="_blank" title="分享到 Telegram"><i class="fab fa-telegram fa-fw" aria-hidden="true"></i></a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/">人工智能</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/climb/" class="prev" rel="prev" title="爬楼问题笔记"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>爬楼问题笔记</a>
+            <a href="/pdd-2-interview/" class="next" rel="next" title="pdd算法工程师二面">pdd算法工程师二面<i class="fas fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
+</div>
+<div id="comments"><div id="giscus" class="comment"></div><noscript>
+                Please enable JavaScript to view the comments powered by <a href="https://giscus.app">Giscus</a>.
+            </noscript></div></article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">由 <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.145.0">Hugo</a> 强力驱动 | 主题 - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.3.1-DEV"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
+                </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2022 - 2025</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="https://github.com/afeng616" target="_blank">afeng</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="回到顶部">
+                <i class="fas fa-arrow-up fa-fw" aria-hidden="true"></i>
+            </a>
+        </div>
+
+        <div id="fixed-buttons-hidden"><a href="#" id="view-comments" class="fixed-button" title="查看评论">
+                <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
+            </a>
+        </div><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.5.0/css/lightgallery-bundle.min.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.0/katex.min.css"><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.1/autocomplete.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js"></script><script src="/lib/lunr/lunr.stemmer.support.min.js"></script><script src="/lib/lunr/lunr.zh.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.3.2/lazysizes.min.js"></script><script src="/lib/twemoji/twemoji.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.5.0/lightgallery.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.5.0/plugins/thumbnail/lg-thumbnail.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.5.0/plugins/zoom/lg-zoom.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.11/clipboard.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/sharer.js/0.5.1/sharer.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.0/katex.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.0/contrib/auto-render.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.0/contrib/copy-tex.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.0/contrib/mhchem.min.js"></script><script>window.config={"comment":{"giscus":{"category":"Announcements","categoryId":"DIC_kwDOJifAtM4Cbeom","darkTheme":"dark","emitMetadata":"0","inputPosition":"bottom","lang":"en","lazyLoading":true,"lightTheme":"light","mapping":"pathname","reactionsEnabled":"1","repo":"afeng616/afeng616.github.io","repoId":"R_kgDOJifAtA"}},"lightgallery":true,"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":true,"left":"\\begin{equation}","right":"\\end{equation}"},{"display":true,"left":"\\begin{equation*}","right":"\\end{equation*}"},{"display":true,"left":"\\begin{align}","right":"\\end{align}"},{"display":true,"left":"\\begin{align*}","right":"\\end{align*}"},{"display":true,"left":"\\begin{alignat}","right":"\\end{alignat}"},{"display":true,"left":"\\begin{alignat*}","right":"\\end{alignat*}"},{"display":true,"left":"\\begin{gather}","right":"\\end{gather}"},{"display":true,"left":"\\begin{CD}","right":"\\end{CD}"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"highlightTag":"em","lunrIndexURL":"/index.json","lunrLanguageCode":"zh","lunrSegmentitURL":"/lib/lunr/lunr.segmentit.js","maxResultLength":10,"noResultsFound":"没有找到结果","snippetLength":50,"type":"lunr"},"twemoji":true};</script><script src="/js/theme.min.js"></script></body>
+</html>
